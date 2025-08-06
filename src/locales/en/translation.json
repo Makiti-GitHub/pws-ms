@@ -1,0 +1,48 @@
+{
+    "hello": "Hallo",
+    "nav": {
+        "links": {
+            "home": "Home",
+            "services": "Services",
+            "shop": "Shop",
+            "about": "About",
+            "contacts": "Contacts"
+        }
+    },
+    "language": {
+        "en": "English",
+        "fr": "French",
+        "de": "German"
+    },
+    "footer": {
+        "upperSection": {
+            "leftSection": {
+                "makitiActivityDescription": "Your trusted partner for secure tech solutions and smart product sourcing — simplifying connectivity, infrastructure, and innovation for every business."
+            },
+            "rightSection": {
+                "quickLinks": {
+                    "title": "Quick Links"
+                },
+                "services": {
+                    "title": "Services",
+                    "options": {
+                        "serverSecurity": "Server Security",
+                        "internetKitConfiguration": "Internet Kit Configuration",
+                        "streamingServices": "Streaming Services"
+                    }
+                },
+                "contactUs": {
+                    "title": "Contact Us"
+                }
+            }
+        },
+        "lowerSection": {
+            "copyright": "© {{year}} Makiti SARL. All rights reserved.",
+            "nav": {
+                "privacyPolicy": "Privacy Policy",
+                "termsOfService": "Terms of Service",
+                "legalNotice": "Legal Notice"
+            }
+        }
+    }
+}
