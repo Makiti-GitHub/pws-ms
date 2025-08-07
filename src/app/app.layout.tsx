@@ -9,7 +9,11 @@ const AppLayout: LayoutComponent = () => {
 	const { isOpened } = useMenuContext()
 	return (
 		<React.Fragment>
-			<main className={`relative ${isOpened ? 'max-h-screen overflow-hidden' : ''}`}>
+			<main
+				className={`relative ${
+					isOpened ? 'max-h-screen overflow-hidden' : ''
+				} font-seravek_regular`}
+			>
 				{/* === Navigation  === */}
 
 				<MobileNavigation />

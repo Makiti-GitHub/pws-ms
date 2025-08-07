@@ -84,7 +84,7 @@ const Footer = () => {
 									)}
 								</Link>
 							</li>
-							<li>
+							<li className="text-nowrap">
 								<Link to="#">
 									{t(
 										'footer.upperSection.rightSection.services.options.internetKitConfiguration',
@@ -104,7 +104,7 @@ const Footer = () => {
 						<p className="font-seravek_medium text-base text-secondary">
 							{t('footer.upperSection.rightSection.contactUs.title')}
 						</p>
-						<div className="flex flex-col xl:flex-row gap-2 text-secondary">
+						<div className="flex flex-col xl:flex-row justify-between gap-4 text-secondary">
 							<div className="xl:w-1/2 space-y-2">
 								{locationMock.place ? (
 									<div className="flex gap-4 items-center">

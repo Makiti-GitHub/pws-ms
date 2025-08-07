@@ -1,5 +1,12 @@
 {
     "hello": "Hallo",
+    "moreProducts": "More Products",
+    "moreDetails": "More Details",
+    "language": {
+        "en": "English",
+        "fr": "French",
+        "de": "German"
+    },
     "nav": {
         "links": {
             "home": "Home",
@@ -9,10 +16,16 @@
             "contacts": "Contacts"
         }
     },
-    "language": {
-        "en": "English",
-        "fr": "French",
-        "de": "German"
+    "pages": {
+        "home": {
+            "sections": {
+                "featuredProducts": {
+                    "title": "Featured Products",
+                    "subtitle": "Discover some of our most popular and highly rated products that customers love for their reliability, performance, and great value.",
+                    "cta": "View all Products"
+                }
+            }
+        }
     },
     "footer": {
         "upperSection": {

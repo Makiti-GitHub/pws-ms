@@ -258,3 +258,7 @@ html {
 		}
 	}
 }
+
+.box_shadow_product_card {
+	box-shadow: 0.5px 0.5px 6px 0px #0000001a, -0.5px -0.5px 4px 2px #0000001a;
+}

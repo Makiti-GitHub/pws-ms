@@ -1,3 +1,5 @@
+import makitiLogo from '@/assets/Makiti_logo_secondary.svg'
+
 /* -- Hero videos -- */
 import heroVideo1 from '@/assets/hero/videos/hero-video1.mp4'
 import heroVideo2 from '@/assets/hero/videos/hero-video2.mp4'
@@ -443,3 +445,92 @@ export const formProjectTimelines = [
 	'9–12 Months',
 	'12+ Months',
 ] as const
+
+/* Products mock */
+type ProductTagType = 'new' | 'topRated' | 'inStock'
+
+export const productsMock: {
+	images: string[]
+	name: string
+	description: string
+	rating: number
+	reviews: number
+	id: string
+	tags?: ProductTagType[]
+	price: string
+	quantity: number
+	creationDate: string
+}[] = [
+	{
+		id: '1',
+		name: 'Dell PowerEdge R740XD',
+		description:
+			'A powerful, high-capacity rack server designed for data-intensive workloads, offering scalable storage, dual CPUs, and enterprise-grade performance.',
+		rating: 4.7,
+		reviews: 162,
+		images: [makitiLogo],
+		price: '50,000',
+		quantity: 5,
+		creationDate: '2025-02-06',
+	},
+	{
+		id: '2',
+		name: 'PROXMOX Licences',
+		description:
+			'Unlimited VM support, Full Enterprise Repository Access, Centralized Web-Based Management, Advanced Backup & Restore, Seamless Cluster Management; Annual Subscription',
+		rating: 4.7,
+		reviews: 162,
+		images: [makitiLogo],
+		price: '50,000',
+		quantity: 5,
+		creationDate: '2025-02-06',
+	},
+	{
+		id: '3',
+		name: 'SanDisk Extreme Portable',
+		description:
+			'A rugged, compact SSD with fast NVMe speeds, ideal for creatives and professionals who need reliable, high-speed storage on the go.',
+		rating: 4.7,
+		reviews: 162,
+		images: [makitiLogo],
+		price: '75,000',
+		quantity: 5,
+		creationDate: '2025-02-06',
+	},
+	{
+		id: '4',
+		name: 'FRITZ Box 7530 AX WI-FI 6 DSL-Router',
+		description:
+			'Comprehensive package for home use, featuring high-speed internet and advanced user equipment.',
+		rating: 4.7,
+		reviews: 162,
+		images: [makitiLogo],
+		price: '50,000',
+		quantity: 5,
+		creationDate: '2025-02-06',
+	},
+	{
+		id: '5',
+		name: 'SanDisk Extreme Portable',
+		description:
+			'A rugged, compact SSD with fast NVMe speeds, ideal for creatives and professionals who need reliable, high-speed storage on the go.',
+		rating: 4.7,
+		reviews: 162,
+		images: [makitiLogo],
+		price: '8,700',
+		quantity: 5,
+		creationDate: '2025-02-06',
+	},
+	{
+		id: '6',
+		name: 'Folishine Cat7 Ethernet Cable 5m',
+		description:
+			'High-Speed ​​Gigabit RJ45 LAN Network Cable, 10Gbps 600Mhz Internet Patch Cable for Switch Router Modem Patch Panel PC (White)',
+		rating: 4.7,
+		reviews: 162,
+		images: [makitiLogo],
+		price: '4,500',
+		quantity: 5,
+		creationDate: '2025-02-06',
+	},
+]
