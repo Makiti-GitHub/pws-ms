@@ -2,22 +2,24 @@ import ProductCard from '@/components/molecules/cards/ProductCard'
 import SectionHeader from '@/components/molecules/SectionHeader'
 import { Button } from '@/components/ui/button'
 import { productsMock } from '@/data/mock'
-import { ArrowRightIcon, ArrowUpRightIcon } from 'lucide-react'
+import { ArrowUpRightIcon } from 'lucide-react'
+import { useNavigate } from 'rasengan'
 import { useTranslation } from 'react-i18next'
 
-const FeaturedProducts = () => {
+const FeaturedProductsSection = () => {
 	const { t } = useTranslation()
+	const navigate = useNavigate()
 	return (
 		<section
 			id="products"
-			className="flex flex-col items-center gap-8 px-4 sm:px-8 md:px-[80px] lg:px-[120px] py-16"
+			className="flex flex-col items-center gap-8 px-4 sm:px-8 md:px-8 lg:px-[120px] pb-16"
 		>
 			<div className="space-y-8">
 				<SectionHeader
 					title={t('pages.home.sections.featuredProducts.title')}
 					subTitle={t('pages.home.sections.featuredProducts.subtitle')}
 				/>
-				<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-6">
 					{productsMock.map((product, index) => (
 						<ProductCard key={`product-${index}`} product={product} />
 					))}
@@ -25,7 +27,7 @@ const FeaturedProducts = () => {
 			</div>
 
 			<Button
-				// onClick={() => navigate('/products')}
+				onClick={() => navigate('/shop')}
 				className="rounded-4xl w-max h-max !py-2 sm:!py-4 !px-8 hover:cursor-pointer border-[2.5px] border-secondary text-secondary bg-transparent hover:bg-accent/5"
 			>
 				<ArrowUpRightIcon className="size-5 sm:size-6" />
@@ -38,4 +40,4 @@ const FeaturedProducts = () => {
 	)
 }
 
-export default FeaturedProducts
+export default FeaturedProductsSection

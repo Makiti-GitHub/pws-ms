@@ -1,5 +1,3 @@
-import makitiLogo from '@/assets/Makiti_logo_secondary.svg'
-
 /* -- Hero videos -- */
 import heroVideo1 from '@/assets/hero/videos/hero-video1.mp4'
 import heroVideo2 from '@/assets/hero/videos/hero-video2.mp4'
@@ -9,6 +7,41 @@ import heroVideo3 from '@/assets/hero/videos/hero-video3.mp4'
 import instagramLogo from '@/assets/logo/instagram_logo.svg'
 import XLogo from '@/assets/logo/x_logo.svg'
 import linkedinLogo from '@/assets/logo/linkedin_logo.svg'
+
+/* == Shop images == */
+import DellPowerEdgeR740XD from '@/assets/shop/Dell PowerEdge R740XD.png'
+import proxmoxLicences from '@/assets/shop/PROXMOX Licences.png'
+import SanDiskExtremePortable from '@/assets/shop/SanDisk Extreme Portable.png'
+import FRITZBox from '@/assets/shop/FRITZ Box 7530 AX WI-FI 6 DSL-Router.png'
+import SanDiskExtremePortableUSB from '@/assets/shop/SanDisk Extreme Portable USB.png'
+import FolishineCat7 from '@/assets/shop/Folishine Cat7 Ethernet Cable 5m.png'
+
+// /* == Partners section == */
+import appleTvLogo from '@/assets/partners/appleTv.svg'
+import appleMusicLogo from '@/assets/partners/apple_music-update_hero_08242021.jpg.news_app_ed.svg'
+import beinSportsLogo from '@/assets/partners/bein_sports.svg'
+import ciscoLogo from '@/assets/partners/cisco.svg'
+import cloudflareLogo from '@/assets/partners/cloudflare-logo-vector-11573946103zsbxw5kpaj 1.svg'
+import dellLogo from '@/assets/partners/dell.svg'
+import disneyPlusLogo from '@/assets/partners/disney.svg'
+import ftVmwareWorkstationLogo from '@/assets/partners/ft_vmware_workstation.svg'
+import canalPlusLogo from '@/assets/partners/canal_plus.svg'
+import netflixLogo from '@/assets/partners/netflix.svg'
+import paramountLogo from '@/assets/partners/paramount.svg'
+import primeVideoLogo from '@/assets/partners/primeVideo.svg'
+import proxmoxLogo from '@/assets/partners/proxmox.svg'
+import setOfAmazonAwsLogo from '@/assets/partners/set-of-amazon-aws-logo-with-cloud-701751695133943bu7i9n6yvh.svg'
+import starlinkLogo from '@/assets/partners/starlink.svg'
+import ubuntuLogo from '@/assets/partners/ubuntu2x.png@.svg'
+import windowsServerLogo from '@/assets/partners/windows-server-blue-a517bed8722d2e781.svg'
+
+/* == Our Services == */
+import service1Number from '@/assets/ourServices/Frame 1618873693.svg'
+import service2Number from '@/assets/ourServices/Frame 1618873694.svg'
+import service3Number from '@/assets/ourServices/Frame 1618873695.svg'
+import serverSecurityImg from '@/assets/ourServices/server_security.png'
+import starlinkKitImg from '@/assets/ourServices/starlink_kit.png'
+import streamingServicesImg from '@/assets/ourServices/streaming_services.png'
 
 export const expertisesMock: {
 	title: string
@@ -68,7 +101,16 @@ export const expertisesMock: {
 	},
 ]
 
-export type ProjectCategoryType = 'web_app' | 'mobile_app' | 'e_commerce' | 'saas' | 'all'
+export type ProductCategoryType =
+	| 'electronics'
+	| 'license'
+	| 'fashion'
+	| 'beauty'
+	| 'home'
+	| 'baby&children'
+	| 'health'
+	| 'food'
+	| 'all'
 export type IndustriesType =
 	| 'transportation'
 	| 'travel'
@@ -447,7 +489,7 @@ export const formProjectTimelines = [
 ] as const
 
 /* Products mock */
-type ProductTagType = 'new' | 'topRated' | 'inStock'
+export type ProductTagType = 'new' | 'topRated' | 'inStock'
 
 export const productsMock: {
 	images: string[]
@@ -460,6 +502,7 @@ export const productsMock: {
 	price: string
 	quantity: number
 	creationDate: string
+	category: ProductCategoryType
 }[] = [
 	{
 		id: '1',
@@ -468,10 +511,12 @@ export const productsMock: {
 			'A powerful, high-capacity rack server designed for data-intensive workloads, offering scalable storage, dual CPUs, and enterprise-grade performance.',
 		rating: 4.7,
 		reviews: 162,
-		images: [makitiLogo],
+		images: [DellPowerEdgeR740XD],
 		price: '50,000',
 		quantity: 5,
 		creationDate: '2025-02-06',
+		category: 'electronics',
+		tags: ['inStock'],
 	},
 	{
 		id: '2',
@@ -480,10 +525,12 @@ export const productsMock: {
 			'Unlimited VM support, Full Enterprise Repository Access, Centralized Web-Based Management, Advanced Backup & Restore, Seamless Cluster Management; Annual Subscription',
 		rating: 4.7,
 		reviews: 162,
-		images: [makitiLogo],
+		images: [proxmoxLicences],
 		price: '50,000',
 		quantity: 5,
 		creationDate: '2025-02-06',
+		category: 'license',
+		tags: ['topRated'],
 	},
 	{
 		id: '3',
@@ -492,10 +539,12 @@ export const productsMock: {
 			'A rugged, compact SSD with fast NVMe speeds, ideal for creatives and professionals who need reliable, high-speed storage on the go.',
 		rating: 4.7,
 		reviews: 162,
-		images: [makitiLogo],
+		images: [SanDiskExtremePortable],
 		price: '75,000',
 		quantity: 5,
 		creationDate: '2025-02-06',
+		category: 'electronics',
+		tags: ['inStock'],
 	},
 	{
 		id: '4',
@@ -504,10 +553,12 @@ export const productsMock: {
 			'Comprehensive package for home use, featuring high-speed internet and advanced user equipment.',
 		rating: 4.7,
 		reviews: 162,
-		images: [makitiLogo],
+		images: [FRITZBox],
 		price: '50,000',
 		quantity: 5,
 		creationDate: '2025-02-06',
+		category: 'electronics',
+		tags: ['topRated'],
 	},
 	{
 		id: '5',
@@ -516,21 +567,100 @@ export const productsMock: {
 			'A rugged, compact SSD with fast NVMe speeds, ideal for creatives and professionals who need reliable, high-speed storage on the go.',
 		rating: 4.7,
 		reviews: 162,
-		images: [makitiLogo],
+		images: [SanDiskExtremePortableUSB],
 		price: '8,700',
 		quantity: 5,
 		creationDate: '2025-02-06',
+		category: 'electronics',
+		tags: ['inStock'],
 	},
 	{
 		id: '6',
 		name: 'Folishine Cat7 Ethernet Cable 5m',
 		description:
-			'High-Speed ​​Gigabit RJ45 LAN Network Cable, 10Gbps 600Mhz Internet Patch Cable for Switch Router Modem Patch Panel PC (White)',
+			'High-Speed Gigabit RJ45 LAN Network Cable, 10Gbps 600Mhz Internet Patch Cable for Switch Router Modem Patch Panel PC (White)',
 		rating: 4.7,
 		reviews: 162,
-		images: [makitiLogo],
+		images: [FolishineCat7],
 		price: '4,500',
 		quantity: 5,
 		creationDate: '2025-02-06',
+		category: 'electronics',
+		tags: ['new'],
+	},
+]
+
+export type PartnersCategoryType = 'serverSecurity' | 'internetConfiguration' | 'streamingServices'
+
+export const partnersMock: Record<PartnersCategoryType, string[]> = {
+	serverSecurity: [
+		cloudflareLogo,
+		setOfAmazonAwsLogo,
+		ciscoLogo,
+		ubuntuLogo,
+		proxmoxLogo,
+		ftVmwareWorkstationLogo,
+		windowsServerLogo,
+		dellLogo,
+	],
+	internetConfiguration: [starlinkLogo],
+	streamingServices: [
+		beinSportsLogo,
+		disneyPlusLogo,
+		paramountLogo,
+		canalPlusLogo,
+		appleTvLogo,
+		appleMusicLogo,
+		primeVideoLogo,
+		netflixLogo,
+	],
+}
+
+export const ourServicesMock: {
+	title: string
+	description: string
+	attributes: string[]
+	icon: string
+	image: string
+	price: string
+	cta: string
+}[] = [
+	{
+		title: 'Server Security',
+		description:
+			'From sourcing to secure installation, we build robust IT infrastructures that power your operations with confidence.',
+		attributes: [
+			'24/7 monitoring and threat detection',
+			'Advanced firewall configuration',
+			'Vulnerability assessments',
+		],
+		price: '250.000 CFA/month',
+		icon: service1Number,
+		cta: 'Stay secure',
+		image: serverSecurityImg,
+	},
+	{
+		title: 'Internet Kit Configuration',
+		description:
+			'Enjoy fast, reliable internet anywhere — even in remote areas. We sell, install, and maintain satellite kits to keep you connected.',
+		attributes: ['Global Shipping', '24/7 Remote Support', 'Coverage area mapping'],
+		price: '600.000 CFA/device',
+		icon: service2Number,
+		cta: 'Get connected',
+		image: starlinkKitImg,
+	},
+	{
+		title: 'Streaming Services',
+		description:
+			'Dive into endless entertainment with our curated IPTV, music & video streaming packages — including Netflix, live TV, and more.',
+		attributes: [
+			'Multi-device configuration',
+			'Channel lineup optimization',
+			'Streaming quality enhancement',
+		],
+		price: '50.000 CFA/device',
+		icon: service3Number,
+		cta: 'Stream without limits',
+		image: streamingServicesImg,
 	},
 ]

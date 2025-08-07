@@ -1,5 +1,7 @@
-import FeaturedProducts from '@/components/organisms/home/FeaturedProducts'
+import FeaturedProductsSection from '@/components/organisms/home/FeaturedProductsSection'
 import HeroSection from '@/components/organisms/home/HeroSection'
+import OurServicesSection from '@/components/organisms/home/ourServicesSection'
+import PartnersSection from '@/components/organisms/home/PartnersSection'
 import { PageComponent } from 'rasengan'
 
 const Home: PageComponent = () => {
@@ -8,8 +10,14 @@ const Home: PageComponent = () => {
 			{/* === Hero Section === */}
 			<HeroSection />
 
+			{/* === Partners === */}
+			<PartnersSection />
+
 			{/* === Featured Products === */}
-			<FeaturedProducts />
+			<FeaturedProductsSection />
+
+			{/* === Our Services === */}
+			<OurServicesSection />
 		</main>
 	)
 }

@@ -262,3 +262,11 @@ html {
 .box_shadow_product_card {
 	box-shadow: 0.5px 0.5px 6px 0px #0000001a, -0.5px -0.5px 4px 2px #0000001a;
 }
+
+.box_shadow {
+	box-shadow: 0.25px 0.25px 3px 0px #0000001a, -0.25px -0.25px 3px 1px #0000001a;
+}
+
+.box_shadow_timeline_card {
+	box-shadow: 0.5px 0.5px 6px 0px #0000001a, -0.5px -0.5px 6px 2px #0000001a;
+}

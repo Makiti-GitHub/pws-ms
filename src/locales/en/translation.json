@@ -2,6 +2,10 @@
     "hello": "Hallo",
     "moreProducts": "More Products",
     "moreDetails": "More Details",
+    "addToCart": "Add to Cart",
+    "inStock": "In Stock",
+    "new": "New",
+    "topRated": "Top Rated",
     "language": {
         "en": "English",
         "fr": "French",
@@ -19,10 +23,51 @@
     "pages": {
         "home": {
             "sections": {
+                "partners": {
+                    "title": "Strong partnerships with :",
+                    "tabs": {
+                        "serverSecurity": "Server Security",
+                        "internetConfiguration": "Internet Configuration",
+                        "streamingServices": "Streaming Services"
+                    }
+                },
                 "featuredProducts": {
                     "title": "Featured Products",
                     "subtitle": "Discover some of our most popular and highly rated products that customers love for their reliability, performance, and great value.",
                     "cta": "View all Products"
+                },
+                "ourServices": {
+                    "title": "Our Services",
+                    "subtitle": "For businesses and individuals alike, we provide tailored technology services with expert support and reliable, long-term solutions."
+                }
+            }
+        },
+        "shop": {
+            "title": "Shop",
+            "subtitle": "Browse our complete collection of technology products",
+            "filters": {
+                "electronics": "Electronics",
+                "license": "License",
+                "fashion": "Fashion",
+                "beauty": "Beauty",
+                "home": "Home",
+                "baby&children": "Baby & Children",
+                "health": "Health",
+                "food": "Food",
+                "all": "All"
+            }
+        },
+        "contactUs": {
+            "title": "Contact Us",
+            "subtitle": "Get in touch with our team of experts"
+        },
+        "about": {
+            "title": "About Makiti SARL",
+            "subtitle": "Leading the future of technology solutions with innovative products, expert services, and a commitment to secure, connected experiences.",
+            "sections": {
+                "ourJourney": {
+                    "title": "Our Journey",
+                    "subtitle": "From bold ideas to transformative digital innovation, we empower the future by turning vision into reality through technology."
                 }
             }
         }
@@ -45,7 +90,8 @@
                     }
                 },
                 "contactUs": {
-                    "title": "Contact Us"
+                    "title": "Contact Us",
+                    "getDirections": "Get Directions"
                 }
             }
         },

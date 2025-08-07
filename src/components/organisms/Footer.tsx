@@ -1,14 +1,16 @@
-import {
-	AtSignIcon,
-	GlobeIcon,
-	HouseIcon,
-	MapPinIcon,
-	MessageSquareIcon,
-	SignpostIcon,
-	SmartphoneIcon,
-} from 'lucide-react'
-import { Separator } from '../ui/separator'
+/* Images */
 import makitiLogoWhite from '@/assets/Makiti_logo_secondary.svg'
+/* Icons */
+import AtSignIcon from '@/assets/footer/entypo_email.svg'
+import GlobeIcon from '@/assets/footer/streamline-plump_web.svg'
+import HouseIcon from '@/assets/footer/famicons_home-outline.svg'
+import MapIcon from '@/assets/footer/prime_map.svg'
+import MapPinIcon from '@/assets/footer/ion_location-outline.svg'
+import MessageSquareIcon from '@/assets/footer/famicons_logo-whatsapp.svg'
+import SignpostIcon from '@/assets/footer/bi_mailbox.svg'
+import SmartphoneIcon from '@/assets/footer/bi_phone.svg'
+
+import { Separator } from '../ui/separator'
 import { locationMock, socialsMock } from '@/data/mock'
 import { Link } from 'rasengan'
 import Image from '@rasenganjs/image'
@@ -21,9 +23,9 @@ const Footer = () => {
 	const { navlinks } = useMenuContext()
 
 	return (
-		<footer className="px-4 sm:px-8 md:px-[120px] pt-10 pb-5 w-full flex flex-col gap-10 bg-primary mt-[60px]">
-			<div className="w-full flex flex-col lg:flex-row justify-between gap-12">
-				<div className="space-y-12 md:space-y-5 xl:w-2/5">
+		<footer className="px-4 sm:px-8 xl:px-[120px] pt-10 pb-5 w-full flex flex-col gap-10 bg-primary">
+			<div className="w-full flex flex-col lg:flex-row justify-between gap-5 sm:gap-8 xl:gap-12">
+				<div className="space-y-12 md:space-y-5 lg:w-2/6 xl:2/6">
 					{/* == Makiti logo ==  */}
 					<div className="w-[120px]">
 						<Image
@@ -54,7 +56,7 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="flex flex-col sm:flex-row justify-between gap-10 xl:w-3/5">
+				<div className="flex flex-col sm:flex-row justify-between gap-10 lg:w-3/6 xl:w-4/6">
 					<div className="text-base space-y-5 text-secondary">
 						<p className="font-seravek_medium">
 							{t('footer.upperSection.rightSection.services.title')}
@@ -104,75 +106,136 @@ const Footer = () => {
 						<p className="font-seravek_medium text-base text-secondary">
 							{t('footer.upperSection.rightSection.contactUs.title')}
 						</p>
-						<div className="flex flex-col xl:flex-row justify-between gap-4 text-secondary">
-							<div className="xl:w-1/2 space-y-2">
-								{locationMock.place ? (
-									<div className="flex gap-4 items-center">
-										<HouseIcon className="size-6" />
-										<span className="flex-1">{locationMock.place}</span>
+						<div className="gap-2 text-secondary grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+							{locationMock.place ? (
+								<div className="flex gap-4 items-start">
+									<div className="size-6">
+										<Image
+											src={HouseIcon}
+											alt="house icon"
+											width={'100%'}
+											height={'100%'}
+											className="size-full object-contain aspect-auto"
+										/>
 									</div>
-								) : null}
+									<span className="flex-1">{locationMock.place}</span>
+								</div>
+							) : null}
 
-								{locationMock.phone ? (
-									<div className="flex gap-4 items-center">
-										<SmartphoneIcon className="size-6" />
-										<span className="flex-1">{locationMock.phone}</span>
+							{locationMock.arrondissement ? (
+								<div className="flex gap-4 items-start">
+									<div className="size-6">
+										<Image
+											src={SignpostIcon}
+											alt="house icon"
+											width={'100%'}
+											height={'100%'}
+											className="size-full object-contain aspect-auto"
+										/>
 									</div>
-								) : null}
+									<span className="flex-1">{locationMock.arrondissement}</span>
+								</div>
+							) : null}
 
-								{locationMock.whatsapp ? (
-									<div className="flex gap-4 items-center">
-										<MessageSquareIcon className="size-6" />
-										<span className="flex-1">{locationMock.whatsapp}</span>
+							{locationMock.phone ? (
+								<div className="flex gap-4 items-start">
+									<div className="size-6">
+										<Image
+											src={SmartphoneIcon}
+											alt="house icon"
+											width={'100%'}
+											height={'100%'}
+											className="size-full object-contain aspect-auto"
+										/>
 									</div>
-								) : null}
+									<span className="flex-1">{locationMock.phone}</span>
+								</div>
+							) : null}
 
-								{locationMock.address ? (
-									<div className="flex gap-4 items-center">
-										<MapPinIcon className="size-6" />
-										<span className="flex-1">{locationMock.address}</span>
+							{locationMock.mail ? (
+								<div className="flex gap-4 items-start">
+									<div className="size-6">
+										<Image
+											src={AtSignIcon}
+											alt="house icon"
+											width={'100%'}
+											height={'100%'}
+											className="size-full object-contain aspect-auto"
+										/>
 									</div>
-								) : null}
-							</div>
-							<div className="space-y-2 xl:w-1/2">
-								{locationMock.arrondissement ? (
-									<div className="flex gap-4 items-center">
-										<SignpostIcon className="size-6" />
-										<span className="flex-1">
-											{locationMock.arrondissement}
-										</span>
-									</div>
-								) : null}
+									<span className="flex-1">{locationMock.mail}</span>
+								</div>
+							) : null}
 
-								{locationMock.mail ? (
-									<div className="flex gap-4 items-center">
-										<AtSignIcon className="size-6" />
-										<span className="flex-1">{locationMock.mail}</span>
+							{locationMock.whatsapp ? (
+								<div className="flex gap-4 items-start">
+									<div className="size-6">
+										<Image
+											src={MessageSquareIcon}
+											alt="house icon"
+											width={'100%'}
+											height={'100%'}
+											className="size-full object-contain aspect-auto"
+										/>
 									</div>
-								) : null}
+									<span className="flex-1">{locationMock.whatsapp}</span>
+								</div>
+							) : null}
 
-								{locationMock.website ? (
-									<div className="flex gap-4 items-center">
-										<GlobeIcon className="size-6" />
-										<span className="flex-1">{locationMock.website}</span>
+							{locationMock.website ? (
+								<div className="flex gap-4 items-start">
+									<div className="size-6">
+										<Image
+											src={GlobeIcon}
+											alt="house icon"
+											width={'100%'}
+											height={'100%'}
+											className="size-full object-contain aspect-auto"
+										/>
 									</div>
-								) : null}
+									<span className="flex-1">{locationMock.website}</span>
+								</div>
+							) : null}
 
-								{/* {locationMock.address ? (
-										<div className="flex gap-4 items-center">
-											<MapIcon className="size-6" />
-											<span className="flex-1">
-												{t('footer.upperSection.leftSection.getDirections')}
-											</span>
-										</div>
-									) : null} */}
-							</div>
+							{locationMock.address ? (
+								<div className="flex gap-4 items-start">
+									<div className="size-6">
+										<Image
+											src={MapPinIcon}
+											alt="house icon"
+											width={'100%'}
+											height={'100%'}
+											className="size-full object-contain aspect-auto"
+										/>
+									</div>
+									<span className="flex-1">{locationMock.address}</span>
+								</div>
+							) : null}
+
+							{locationMock.address ? (
+								<div className="flex gap-4 items-start">
+									<div className="size-6">
+										<Image
+											src={MapIcon}
+											alt="house icon"
+											width={'100%'}
+											height={'100%'}
+											className="size-full object-contain aspect-auto"
+										/>
+									</div>
+									<span className="flex-1">
+										{t(
+											'footer.upperSection.rightSection.contactUs.getDirections',
+										)}
+									</span>
+								</div>
+							) : null}
 						</div>
 					</div>
 				</div>
 			</div>
 			<Separator className="w-full bg-outline" />
-			<div className="w-full text-secondary text-base flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-2">
+			<div className="w-full text-secondary text-base flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-2">
 				<p>{t('footer.lowerSection.copyright', { year: '2025' })}</p>
 				<div className="flex items-center justify-between gap-5">
 					<Link to="/privacy-policy" className="hover:text-white">
