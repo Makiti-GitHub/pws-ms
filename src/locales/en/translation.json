@@ -5,7 +5,11 @@
     "addToCart": "Add to Cart",
     "inStock": "In Stock",
     "new": "New",
+    "free": "Free",
+    "shipping": "Shipping",
+    "total": "Total",
     "topRated": "Top Rated",
+    "remove": "Remove",
     "language": {
         "en": "English",
         "fr": "French",
@@ -55,6 +59,49 @@
                 "health": "Health",
                 "food": "Food",
                 "all": "All"
+            }
+        },
+        "shoppingCart": {
+            "title": "Shopping Cart",
+            "subtitle": "Review your items and complete your order",
+            "sections": {
+                "cartItems": {
+                    "title": "Cart Items"
+                },
+                "orderSummary": {
+                    "title": "Order Summary",
+                    "subtotal": "Subtotal",
+                    "shipping": "Shipping",
+                    "total": "Total"
+                },
+                "customerInformation": {
+                    "title": "Customer Information",
+                    "cta": "Place Order",
+                    "form": {
+                        "fields": {
+                            "name": {
+                                "label": "Name",
+                                "placeholder": "Enter your name"
+                            },
+                            "email": {
+                                "label": "Email",
+                                "placeholder": "Enter your email address"
+                            },
+                            "companyName": {
+                                "label": "Company",
+                                "placeholder": "Optional"
+                            },
+                            "phoneNumber": {
+                                "label": "Phone",
+                                "placeholder": "Enter your phone number"
+                            },
+                            "address": {
+                                "label": "Address",
+                                "placeholder": "Enter your address"
+                            }
+                        }
+                    }
+                }
             }
         },
         "contactUs": {
