@@ -23,7 +23,7 @@ const navlinks: {
 	},
 	{
 		label: 'contacts',
-		href: '/contacts',
+		href: '/contact-us',
 	},
 ]
 

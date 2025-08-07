@@ -4,11 +4,12 @@ import AppLayout from '@/app/app.layout'
 import Shop from './shop/shop.page'
 import About from './about/about.page'
 import ShoppingCart from './shop/shop_cart.page'
+import ContactUs from './contact_us/contact_us.page'
 
 class AppRouter extends RouterComponent {}
 
 export default defineRouter({
 	imports: [],
 	layout: AppLayout,
-	pages: [Home, Shop, About, ShoppingCart],
+	pages: [Home, Shop, About, ShoppingCart, ContactUs],
 })(AppRouter)

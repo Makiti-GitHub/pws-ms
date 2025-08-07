@@ -1,5 +1,4 @@
 import SectionHeader from '@/components/molecules/SectionHeader'
-import { formSchema, FullFormData } from '@/components/organisms/shopCart/FormSchema'
 import { Button } from '@/components/ui/button'
 import Image from '@rasenganjs/image'
 import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
@@ -18,6 +17,19 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import z from 'zod'
+
+// Define schemas for each step
+const formSchema = z.object({
+	name: z.string().min(2, {
+		message: 'Name must be at least 2 characters.',
+	}),
+	email: z.email(),
+	companyName: z.string(),
+	phoneNumber: z.string(),
+	address: z.string(),
+})
+type FullFormData = z.infer<typeof formSchema>
 
 const ShoppingCart: PageComponent = () => {
 	const { t } = useTranslation()
@@ -26,7 +38,13 @@ const ShoppingCart: PageComponent = () => {
 
 	const form = useForm<FullFormData>({
 		resolver: zodResolver(formSchema),
-		mode: 'onChange',
+		defaultValues: {
+			name: '',
+			email: '',
+			companyName: '',
+			phoneNumber: '',
+			address: '',
+		},
 	})
 
 	const onSubmit = (data: FullFormData) => {
@@ -323,21 +341,15 @@ const ShoppingCart: PageComponent = () => {
 									/>
 								</div>
 
-								{/* <div className="space-y-2">
-					<h3 className="font-seravek_medium text-on-surface-variant text-xl">
-						{t('pages.home.sections.startYourProjectToday.form.title')}
-					</h3>
-					<p className="text-base text-outline">
-						{t('pages.home.sections.startYourProjectToday.form.indication')}
-					</p>
-				</div> */}
-
 								<Button
+									type="submit"
 									variant="primary"
 									className="w-full !py-3 !px-4 !rounded-xl gap-3 hover:cursor-pointer"
 								>
 									<span className="font-seravek_medium text-base text-secondary">
-										{t('pages.shoppingCart.sections.customerInformation.cta')}
+										{t(
+											'pages.shoppingCart.sections.customerInformation.form.cta',
+										)}
 									</span>
 								</Button>
 							</form>

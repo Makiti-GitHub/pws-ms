@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { useMenuContext } from '@/hooks/guard/ContextGuard'
 import { MenuIcon, ShoppingCartIcon } from 'lucide-react'
 import { Button } from '../ui/button'
+import { Input } from '../ui/input'
 
 const NavBar = () => {
 	const { t } = useTranslation()
@@ -14,11 +15,10 @@ const NavBar = () => {
 	return (
 		<header className="fixed left-0 right-0 w-full z-50">
 			<nav
-				className={`relative px-3 sm:px-8 md:px-[80px] bg-white xl:px-[120px] py-5 w-full flex items-center justify-between`}
+				className={`relative px-3 sm:px-8 md:px-[80px] bg-white xl:px-[120px] py-5 w-full flex items-center justify-between shadow-[0_0_0_2px_rgba(255,255,255,0.6),0_4px_4px_rgba(0,0,0,0.12)]`}
 			>
 				{/* === Logo === */}
-				<div className="w-20 sm:w-[120px]">
-					{/* === Background Images === */}
+				<div className="w-24 sm:w-[120px]">
 					{/* <Image */}
 					<Link to={'/'}>
 						<Image
@@ -46,12 +46,20 @@ const NavBar = () => {
 					))}
 				</ul>
 
-				<div className="flex items-center gap-4 sm:gap-8">
-					<div className="w-24 sm:w-[250px] h-8 sm:h-12 bg-surface-container rounded-4xl" />
+				<div className="flex items-center gap-4 md:gap-8">
+					<div className="w-40 sm:w-[250px] h-10 sm:h-12 rounded-4xl">
+						<Input
+							type="search"
+							placeholder={t('...')}
+							className="size-full bg-surface-container rounded-4xl"
+						/>
+					</div>
 
 					<ShoppingCartIcon className="size-6 text-on-surface-variant" />
 
-					<LanguageButton />
+					<span className="hidden sm:inline-block">
+						<LanguageButton />
+					</span>
 
 					<Button
 						variant={'ghost'}

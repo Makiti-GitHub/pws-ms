@@ -76,8 +76,8 @@
                 },
                 "customerInformation": {
                     "title": "Customer Information",
-                    "cta": "Place Order",
                     "form": {
+                        "cta": "Place Order",
                         "fields": {
                             "name": {
                                 "label": "Name",
@@ -106,7 +106,43 @@
         },
         "contactUs": {
             "title": "Contact Us",
-            "subtitle": "Get in touch with our team of experts"
+            "subtitle": "Get in touch with our team of experts",
+            "sections": {
+                "leftSection": {
+                    "title": "Send Us a Message",
+                    "subtitle": "Fill out the form below and we'll get back to you shortly",
+                    "form": {
+                        "cta": "Send Message",
+                        "fields": {
+                            "name": {
+                                "label": "Name",
+                                "placeholder": "Enter your name"
+                            },
+                            "email": {
+                                "label": "Email",
+                                "placeholder": "Enter your email address"
+                            },
+                            "companyName": {
+                                "label": "Company",
+                                "placeholder": "Optional"
+                            },
+                            "subject": {
+                                "label": "Subject",
+                                "placeholder": "Enter the subject"
+                            },
+                            "message": {
+                                "label": "Message",
+                                "placeholder": "Enter your Message"
+                            }
+                        }
+                    }
+                },
+                "rightSection": {
+                    "phone": "Phone",
+                    "email": "Email",
+                    "businessHours": "Business Hours"
+                }
+            }
         },
         "about": {
             "title": "About Makiti SARL",
