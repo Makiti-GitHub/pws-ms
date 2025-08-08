@@ -43,6 +43,38 @@ import serverSecurityImg from '@/assets/ourServices/server_security.png'
 import starlinkKitImg from '@/assets/ourServices/starlink_kit.png'
 import streamingServicesImg from '@/assets/ourServices/streaming_services.png'
 
+/* == Services - Server Security ==  */
+// icons
+import serverSecurtyIcon1 from '@/assets/ourServices/serverSecurity/icon1.svg'
+import serverSecurtyIcon2 from '@/assets/ourServices/serverSecurity/icon2.svg'
+import serverSecurtyIcon3 from '@/assets/ourServices/serverSecurity/icon3.svg'
+import serverSecurtyIcon4 from '@/assets/ourServices/serverSecurity/icon4.svg'
+import serverSecurtyIcon5 from '@/assets/ourServices/serverSecurity/icon5.svg'
+import serverSecurtyIcon6 from '@/assets/ourServices/serverSecurity/icon6.svg'
+//Images
+import serverSecurtyImage1 from '@/assets/ourServices/serverSecurity/image1.png'
+import serverSecurtyImage2 from '@/assets/ourServices/serverSecurity/image2.png'
+import serverSecurtyImage3 from '@/assets/ourServices/serverSecurity/image3.png'
+import serverSecurtyImage4 from '@/assets/ourServices/serverSecurity/image4.png'
+import serverSecurtyImage5 from '@/assets/ourServices/serverSecurity/image5.png'
+import serverSecurtyImage6 from '@/assets/ourServices/serverSecurity/image6.png'
+
+/* == Services - Streaming services ==  */
+// icons
+import streamingServicesIcon1 from '@/assets/ourServices/streamingServices/icon1.svg'
+import streamingServicesIcon2 from '@/assets/ourServices/streamingServices/icon2.svg'
+import streamingServicesIcon3 from '@/assets/ourServices/streamingServices/icon3.svg'
+import streamingServicesIcon4 from '@/assets/ourServices/streamingServices/icon4.svg'
+import streamingServicesIcon5 from '@/assets/ourServices/streamingServices/icon5.svg'
+import streamingServicesIcon6 from '@/assets/ourServices/streamingServices/icon6.svg'
+//Images
+import streamingServicesImage1 from '@/assets/ourServices/streamingServices/image1.png'
+import streamingServicesImage2 from '@/assets/ourServices/streamingServices/image2.png'
+import streamingServicesImage3 from '@/assets/ourServices/streamingServices/image3.png'
+import streamingServicesImage4 from '@/assets/ourServices/streamingServices/image4.png'
+import streamingServicesImage5 from '@/assets/ourServices/streamingServices/image5.png'
+import streamingServicesImage6 from '@/assets/ourServices/streamingServices/image6.png'
+
 export const expertisesMock: {
 	title: string
 	content: {
@@ -624,6 +656,7 @@ export const ourServicesMock: {
 	image: string
 	price: string
 	cta: string
+	link?: string
 }[] = [
 	{
 		title: 'Server Security',
@@ -638,6 +671,7 @@ export const ourServicesMock: {
 		icon: service1Number,
 		cta: 'Stay secure',
 		image: serverSecurityImg,
+		link: 'server-security',
 	},
 	{
 		title: 'Internet Kit Configuration',
@@ -648,6 +682,7 @@ export const ourServicesMock: {
 		icon: service2Number,
 		cta: 'Get connected',
 		image: starlinkKitImg,
+		link: 'internet-kit-configuration',
 	},
 	{
 		title: 'Streaming Services',
@@ -662,5 +697,203 @@ export const ourServicesMock: {
 		icon: service3Number,
 		cta: 'Stream without limits',
 		image: streamingServicesImg,
+		link: 'streaming-services',
+	},
+]
+
+export const serverSecurityOffersMock: {
+	id: string
+	images: string[]
+	name: string
+	description: string
+	promises: string[]
+	price: number
+	quantity: number
+	creationDate: string
+	color: string
+	icon: string
+}[] = [
+	{
+		id: '1',
+		name: 'Technical Analysis',
+		description: 'Comprehensive security assessment and vulnerability analysis',
+		images: [serverSecurtyImage1],
+		icon: serverSecurtyIcon1,
+		promises: [
+			'Security audit',
+			'Vulnerability scanning',
+			'Risk assessment',
+			'Detailed reporting',
+		],
+		price: 50000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		color: '#DCEBFE',
+	},
+	{
+		id: '2',
+		name: 'Solution Support',
+		description: '24/7 technical support and maintenance services',
+		images: [serverSecurtyImage2],
+		icon: serverSecurtyIcon2,
+		price: 75000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		promises: ['24/7 monitoring', 'Incident response', 'Regular updates', 'Technical guidance'],
+		color: '#DDFCE7',
+	},
+	{
+		id: '3',
+		name: 'License Installation',
+		description: 'Professional software licensing and installation services',
+		images: [serverSecurtyImage3],
+		icon: serverSecurtyIcon3,
+		price: 30000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		promises: ['Software licensing', 'Installation setup', 'Configuration', 'Compliance check'],
+		color: '#F3E8FF',
+	},
+	{
+		id: '4',
+		name: 'Antivirus Solutions',
+		description: 'Enterprise-grade antivirus and malware protection',
+		images: [serverSecurtyImage4],
+		icon: serverSecurtyIcon4,
+		price: 50000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		color: '#FAE3E3',
+		promises: [
+			'Real-time protection',
+			'Malware scanning',
+			'Firewall management',
+			'Regular updates',
+		],
+	},
+	{
+		id: '5',
+		name: 'Backup Server',
+		description: 'Automated backup solutions and disaster recovery',
+		images: [serverSecurtyImage5],
+		icon: serverSecurtyIcon5,
+		price: 75000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		color: '#FDEDD7',
+		promises: ['Automated backups', 'Cloud storage', 'Disaster recovery', 'Data encryption'],
+	},
+	{
+		id: '6',
+		name: 'Mail Gateway',
+		description: 'Secure email gateway and spam protection',
+		images: [serverSecurtyImage6],
+		icon: serverSecurtyIcon6,
+		price: 30000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		color: '#D5FAF2',
+		promises: ['Spam filtering', 'Email encryption', 'Virus scanning', 'Policy management'],
+	},
+]
+
+export const streamingServicesOffersMock: {
+	id: string
+	images: string[]
+	name: string
+	description: string
+	promises: string[]
+	price: number
+	quantity: number
+	creationDate: string
+	color: string
+	icon: string
+}[] = [
+	{
+		id: '1',
+		name: 'Live TV',
+		description: 'Access thousands of live TV channels from around the world',
+		images: [streamingServicesImage1],
+		icon: streamingServicesIcon1,
+		promises: ['5000+ Live channels', 'International content', 'HD/4K quality', 'EPG support'],
+		price: 50000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		color: '#DCEBFE',
+	},
+	{
+		id: '2',
+		name: 'Sports',
+		description: 'Premium sports channel and live events',
+		images: [streamingServicesImage2],
+		icon: streamingServicesIcon2,
+		price: 75000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		promises: [
+			'All major sports leagues',
+			'Live match coverage',
+			'Sports highlights',
+			'Multi-camera angles',
+		],
+		color: '#DDFCE7',
+	},
+	{
+		id: '3',
+		name: 'Kids',
+		description: 'Safe and educational content for children',
+		images: [streamingServicesImage3],
+		icon: streamingServicesIcon3,
+		price: 30000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		promises: [
+			'Age-appropriate content',
+			'Educational programs',
+			'Parental controls',
+			'Cartoon channels',
+		],
+		color: '#F3E8FF',
+	},
+	{
+		id: '4',
+		name: 'Music & Videos',
+		description: 'Music streaming and music video channels',
+		images: [streamingServicesImage4],
+		icon: streamingServicesIcon4,
+		price: 40000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		color: '#FCE7F3',
+		promises: [
+			'Music streaming',
+			'Music video channels',
+			'Concert broadcasts',
+			'Offline playlists',
+		],
+	},
+	{
+		id: '5',
+		name: 'Movies & Series',
+		description: 'Premium movies and series streaming',
+		images: [streamingServicesImage5],
+		icon: streamingServicesIcon5,
+		price: 60000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		color: '#FEE2E2',
+		promises: ['Latest movies', 'TV series on demand', 'Documentaries', '4k Ultra HD'],
+	},
+	{
+		id: '6',
+		name: 'Complete Package',
+		description: 'All streaming services in one package',
+		images: [streamingServicesImage6],
+		icon: streamingServicesIcon6,
+		price: 199000,
+		quantity: 5,
+		creationDate: '2025-02-06',
+		color: '#FEF7EB',
+		promises: ['All categories included', 'Premium support', 'Multiple devices', 'Best value'],
 	},
 ]

@@ -112,7 +112,7 @@ const ContactUs: PageComponent = () => {
 	}
 
 	return (
-		<main className="flex flex-col gap-8 px-4 sm:px-8 md:px-10 lg:px-[60px] xl:px-[120px] py-[150px] relative">
+		<main className="flex flex-col gap-8 px-4 sm:px-8 md:px-[80px] xl:px-[120px] py-[150px] relative">
 			<div className="space-y-8 relative">
 				<SectionHeader
 					title={t('pages.contactUs.title')}

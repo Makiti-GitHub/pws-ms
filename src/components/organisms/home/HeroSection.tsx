@@ -1,10 +1,8 @@
-import { Separator } from '@/components/ui/separator'
 import { heroCarousel } from '@/data/mock'
 import MotionIconButton from '@/components/atoms/buttons/MotionIconButton'
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useInView } from 'framer-motion'
-import { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon, PauseIcon, PlayIcon } from 'lucide-react'
-// import Image from '@rasenganjs/image'
+import { ArrowLeftIcon, ArrowRightIcon, PauseIcon, PlayIcon } from 'lucide-react'
 import { Link } from 'rasengan'
 import { useTranslation } from 'react-i18next'
 
@@ -147,7 +145,7 @@ const HeroSection = () => {
 										)} */}
 									{t(heroCarousel[currentIndex].desc)}
 								</motion.p>
-								<Link to="#talent">
+								<Link to="#">
 									<MotionIconButton
 										// label={t(`pages.home.sections.hero.cta`)}
 										label={t(heroCarousel[currentIndex].cta)}

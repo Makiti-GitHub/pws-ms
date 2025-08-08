@@ -66,7 +66,7 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 						variant={'primary'}
 						className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-4 gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"
 					>
-						<span className="sr-only">Explore Products</span>{' '}
+						<span className="sr-only">Add to cart</span>{' '}
 						<span className="text-base font-seravek_medium">{t('addToCart')}</span>{' '}
 						<ShoppingCartIcon className="size-5 sm:size-6" />
 					</Button>

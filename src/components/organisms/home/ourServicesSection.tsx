@@ -1,14 +1,14 @@
-// import ProductCard from '@/components/molecules/cards/ProductCard'
 import SectionHeader from '@/components/molecules/SectionHeader'
 import { Button } from '@/components/ui/button'
 import { ourServicesMock } from '@/data/mock'
 import Image from '@rasenganjs/image'
 import { CheckIcon, MoveRightIcon } from 'lucide-react'
-// import { productsMock } from '@/data/mock'
+import { useNavigate } from 'rasengan'
 import { useTranslation } from 'react-i18next'
 
 const OurServicesSection = () => {
 	const { t } = useTranslation()
+	const navigate = useNavigate()
 	return (
 		<section
 			id="ourServices"
@@ -76,6 +76,7 @@ const OurServicesSection = () => {
 								<p className="font-seravek_bold text-2xl text-center text-secondary">{`Starting from ${ourService.price}`}</p>
 
 								<Button
+									onClick={() => navigate(`/services/${ourService.link}`)}
 									variant="primary"
 									className="w-full !py-3 !px-4 !rounded-xl gap-3 hover:cursor-pointer"
 								>

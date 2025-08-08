@@ -10,6 +10,7 @@
     "total": "Total",
     "topRated": "Top Rated",
     "remove": "Remove",
+    "month": "month",
     "language": {
         "en": "English",
         "fr": "French",
@@ -22,6 +23,9 @@
             "shop": "Shop",
             "about": "About",
             "contacts": "Contacts"
+        },
+        "searchBar": {
+            "placeholder": "Search Products"
         }
     },
     "pages": {
@@ -100,6 +104,42 @@
                                 "placeholder": "Enter your address"
                             }
                         }
+                    }
+                }
+            }
+        },
+        "services": {
+            "serverSecurity": {
+                "title": "Server Security",
+                "subtitle": "From sourcing to secure installation, we build robust IT infrastructures that power your operations with confidence.",
+                "sections": {
+                    "completeSecurityPackage": {
+                        "title": "Complete Security Package",
+                        "subtitle": "Get all our security services in one comprehensive package with significant savings",
+                        "promises": {
+                            "promise1": "All services included",
+                            "promise2": "Priority support",
+                            "promise3": "30% cost savings"
+                        },
+                        "cta": "Add to Cart"
+                    },
+                    "callToAction": {
+                        "title": "Need a custom streaming solution or have questions?",
+                        "cta": "Contact Us Now"
+                    }
+                }
+            },
+            "internetKitConfiguration": {
+                "title": "Internet Kit Configuration",
+                "subtitle": "Enjoy fast, reliable internet anywhere — even in remote areas. We sell, install, and maintain satellite kits to keep you connected."
+            },
+            "streamingServices": {
+                "title": "Streaming Services",
+                "subtitle": "Dive into endless entertainment with our curated IPTV, music & video streaming packages — including Netflix, live TV, and more.",
+                "sections": {
+                    "callToAction": {
+                        "title": "Need a custom streaming solution or have questions?",
+                        "cta": "Contact Us Now"
                     }
                 }
             }

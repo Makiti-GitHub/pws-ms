@@ -11,7 +11,7 @@ const navlinks: {
 	},
 	{
 		label: 'services',
-		href: '/#talent',
+		href: '/services',
 	},
 	{
 		label: 'shop',

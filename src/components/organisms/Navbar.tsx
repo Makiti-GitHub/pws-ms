@@ -4,7 +4,7 @@ import LanguageButton from '../atoms/buttons/LanguageButton'
 import Image from '@rasenganjs/image'
 import { useTranslation } from 'react-i18next'
 import { useMenuContext } from '@/hooks/guard/ContextGuard'
-import { MenuIcon, ShoppingCartIcon } from 'lucide-react'
+import { MenuIcon, SearchIcon, ShoppingCartIcon } from 'lucide-react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 
@@ -15,7 +15,7 @@ const NavBar = () => {
 	return (
 		<header className="fixed left-0 right-0 w-full z-50">
 			<nav
-				className={`relative px-3 sm:px-8 md:px-[80px] bg-white xl:px-[120px] py-5 w-full flex items-center justify-between shadow-[0_0_0_2px_rgba(255,255,255,0.6),0_4px_4px_rgba(0,0,0,0.12)]`}
+				className={`relative px-3 sm:px-8 md:px-[80px] bg-white xl:px-[120px] py-5 w-full flex items-end sm:items-center justify-between shadow-[0_0_0_2px_rgba(255,255,255,0.6),0_4px_4px_rgba(0,0,0,0.12)]`}
 			>
 				{/* === Logo === */}
 				<div className="w-24 sm:w-[120px]">
@@ -47,12 +47,13 @@ const NavBar = () => {
 				</ul>
 
 				<div className="flex items-center gap-4 md:gap-8">
-					<div className="w-40 sm:w-[250px] h-10 sm:h-12 rounded-4xl">
+					<div className="relative w-40 sm:w-[250px] h-10 rounded-4xl">
 						<Input
 							type="search"
-							placeholder={t('...')}
-							className="size-full bg-surface-container rounded-4xl"
+							placeholder={t('nav.searchBar.placeholder')}
+							className="size-full bg-surface-container placeholder:text-lg placeholder:text-outline rounded-4xl pr-10"
 						/>
+						<SearchIcon className="size-5 absolute top-1/2 -translate-y-1/2 right-3 text-on-surface-variant" />
 					</div>
 
 					<ShoppingCartIcon className="size-6 text-on-surface-variant" />
