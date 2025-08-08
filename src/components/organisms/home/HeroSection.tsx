@@ -39,7 +39,6 @@ const HeroSection = () => {
 	const isInView = useInView(sectionRef, { margin: '-50%' })
 
 	const [currentIndex, setCurrentIndex] = useState(0)
-	const [direction, setDirection] = useState('left')
 
 	useEffect(() => {
 		const video = videoRef.current
@@ -75,27 +74,23 @@ const HeroSection = () => {
 	}, [])
 
 	const handleNext = () => {
-		setDirection('right')
 		setCurrentIndex((prevIndex) => (prevIndex + 1 === heroCarousel.length ? 0 : prevIndex + 1))
 	}
 
 	const handlePrevious = () => {
-		setDirection('left')
-
 		setCurrentIndex((prevIndex) =>
 			prevIndex - 1 < 0 ? heroCarousel.length - 1 : prevIndex - 1,
 		)
 	}
 
 	const handleDotClick = (index: number) => {
-		setDirection(index > currentIndex ? 'right' : 'left')
 		setCurrentIndex(index)
 	}
 
 	return (
 		<section
 			ref={sectionRef}
-			className={`space-y-12 sm:space-y-24 relative bg-secondary h-screen w-screen overflow-hidden pt-[150px] pb-16`}
+			className={`space-y-12 sm:space-y-24 relative bg-secondary h-screen w-screen overflow-hidden pb-16`}
 		>
 			{/* Fallback Background */}
 			<div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 -z-30" />
@@ -127,28 +122,29 @@ const HeroSection = () => {
 								exit={{ y: -50, opacity: 0 }}
 								transition={{ duration: 0.8, delay: 0.4 }}
 								key={heroCarousel[currentIndex].title}
-								className="flex flex-col gap-6 items-center w-screen px-10 sm:px-[300px]"
+								className="flex flex-col gap-6 items-center w-screen px-10 md:px-32 lg:px-64 2xl:px-[300px]"
 							>
 								<motion.h1 className="font-seravek_bold text-center text-4xl lg:text-7xl xl:text-[80px] leading-10 xl:leading-20">
-									{/* {t(
-											`pages.home.sections.hero.item${
-												currentIndex + 1
-											}.title`,
-										)} */}
-									{t(heroCarousel[currentIndex].title)}
+									{t(
+										`pages.home.sections.hero.items.item${
+											currentIndex + 1
+										}.title`,
+									)}
 								</motion.h1>
 								<motion.p className="font-seravek_bold text-center text-lg sm:text-xl lg:text-[26px] leading-normal">
-									{/* {t(
-											`pages.home.sections.hero.item${
-												currentIndex + 1
-											}.content`,
-										)} */}
-									{t(heroCarousel[currentIndex].desc)}
+									{t(
+										`pages.home.sections.hero.items.item${
+											currentIndex + 1
+										}.desc`,
+									)}
 								</motion.p>
 								<Link to="#">
 									<MotionIconButton
-										// label={t(`pages.home.sections.hero.cta`)}
-										label={t(heroCarousel[currentIndex].cta)}
+										label={t(
+											`pages.home.sections.hero.items.item${
+												currentIndex + 1
+											}.cta`,
+										)}
 										className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-4 h-max sm:text-xl lg:text-2xl"
 									/>
 								</Link>

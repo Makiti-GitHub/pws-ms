@@ -279,3 +279,8 @@ html {
 	box-shadow: 0px 0px 1px 0px #0000002b, 0px 0px 1px 0px #0000001a, 0px 0px 1px 0px #00000008,
 		0px 0px 1px 0px #00000000;
 }
+
+.drop_show_pricing_plan_card {
+	box-shadow: 0px 7px 15px 0px #b8b8b81a, 0px 27px 27px 0px #b8b8b817, 0px 61px 37px 0px #b8b8b80d,
+		0px 109px 43px 0px #b8b8b803, 0px 170px 47px 0px #b8b8b800;
+}

@@ -6,7 +6,7 @@ import { PageComponent } from 'rasengan'
 
 const Home: PageComponent = () => {
 	return (
-		<main className="size-full bg-white flex flex-col items-center font-seravek_regular tracking-normal relative">
+		<main className="size-full bg-white flex flex-col items-center font-seravek_regular tracking-normal pt-[100px] relative">
 			{/* === Hero Section === */}
 			<HeroSection />
 

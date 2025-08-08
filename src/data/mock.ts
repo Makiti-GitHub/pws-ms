@@ -75,6 +75,13 @@ import streamingServicesImage4 from '@/assets/ourServices/streamingServices/imag
 import streamingServicesImage5 from '@/assets/ourServices/streamingServices/image5.png'
 import streamingServicesImage6 from '@/assets/ourServices/streamingServices/image6.png'
 
+/* == Services - InternetKitConfig ==  */
+// icons
+import iKCIcon1 from '@/assets/ourServices/internetKitConfiguration/installationProcess/wpf_survey.svg'
+import iKCIcon2 from '@/assets/ourServices/internetKitConfiguration/installationProcess/solar_settings-linear.svg'
+import iKCIcon3 from '@/assets/ourServices/internetKitConfiguration/installationProcess/mdi_network-favorite.svg'
+import iKCIcon4 from '@/assets/ourServices/internetKitConfiguration/installationProcess/streamline-cyber_window-speedtest.svg'
+
 export const expertisesMock: {
 	title: string
 	content: {
@@ -895,5 +902,115 @@ export const streamingServicesOffersMock: {
 		creationDate: '2025-02-06',
 		color: '#FEF7EB',
 		promises: ['All categories included', 'Premium support', 'Multiple devices', 'Best value'],
+	},
+]
+
+// Internet kit configuration mocks
+export const internetKitConfigurationStatsMock: {
+	transkey: string
+	count: number
+	suffix: string
+}[] = [
+	{
+		transkey: 'sattelites',
+		count: 5000,
+		suffix: '+',
+	},
+	{
+		transkey: 'sattelites',
+		count: 550,
+		suffix: 'km',
+	},
+	{
+		transkey: 'lowLatency',
+		count: 25,
+		suffix: 'ms',
+	},
+	{
+		transkey: 'uptime',
+		count: 99,
+		suffix: '%',
+	},
+]
+
+export const internetKitConfigurationPlansMock: {
+	title: string
+	description: string
+	promises: string[]
+	price: number
+	isBest: boolean
+	transkey: string
+}[] = [
+	{
+		title: 'Starter',
+		price: 420000,
+		description: '+',
+		isBest: false,
+		promises: ['Order your equipment with ease.', 'Fast delivery straight to your door.'],
+		transkey: 'starter',
+	},
+	{
+		title: 'Premium',
+		price: 1108000,
+		description: 'km',
+		isBest: true,
+		promises: [
+			'Easily order your premium equipment.',
+			'Fast and secure delivery to your door.',
+			'Pre-installation visit at your location.',
+			'Technician deployment for optimal setup.',
+			'24/7 personalized support to answer all your questions.',
+			'1 month of free subscription.',
+			'Custom solutions  for unmatched connectivity.',
+			'One free VIP bus ticket from an agency of your choice.',
+		],
+		transkey: 'premium',
+	},
+	{
+		title: 'Standard',
+		price: 983000,
+		description: 'ms',
+		isBest: false,
+		promises: [
+			'Order your equipment in just a few clicks.',
+			'Express delivery to your location.',
+			'Pre-installation visit at your premises.',
+			'Optimized setup by our expert team for maximum performance.',
+			'Personalized follow-up to ensure total satisfaction.',
+			'One free PREMIUM bus ticket from an agency of your choice.',
+		],
+		transkey: 'standard',
+	},
+]
+
+export const iKcInstallationProcessMock: {
+	icon: string
+	title: string
+	description: string
+	color: string
+}[] = [
+	{
+		icon: iKCIcon1,
+		title: 'Site Survey',
+		description: 'We assess your location for optimal satellite signal reception',
+		color: '#DEEAFD',
+	},
+	{
+		icon: iKCIcon2,
+		title: 'Equipment Setup',
+		description: 'Professional installation of dish and router with optimal positioning',
+		color: '#E2FBE8',
+	},
+	{
+		icon: iKCIcon3,
+		title: 'Network Configuration',
+		description: 'Complete network setup including Wi-Fi and device connections',
+		color: '#FDEDD7',
+	},
+	{
+		icon: iKCIcon4,
+		title: 'Testing & Training',
+		description: 'Speed testing and user training on system operation',
+		color: '#F1E9FD',
 	},
 ]

@@ -46,7 +46,7 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 					className="size-full object-contain aspect-auto rounded-t-[20px]"
 				/>
 			</div>
-			<div className={`flex flex-col justify-between gap-3 p-4 flex-1`}>
+			<div className={`flex flex-col justify-between gap-3 p-4 flex-1 w-full`}>
 				<div className="space-y-1 font-seravek_medium">
 					<p className="text-xl text-on-surface">{product.name}</p>
 				</div>
@@ -56,15 +56,15 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 					<span className="text-2xl font-seravek_bold text-secondary">{`${product.price} CFA`}</span>
 					<span>{`${product.rating} (${product.reviews} reviews)`}</span>
 				</div>
-				<div className="w-full flex flex-col lg:flex-row gap-2 sm:gap-4 items-center">
-					<Button className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-4 gap-5 hover:cursor-pointer border border-secondary text-secondary bg-transparent hover:bg-accent/5">
+				<div className="w-full flex md:flex-row gap-2 lg:gap-4 items-center">
+					<Button className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-0 gap-5 lg:gap-3 2xl:gap-5 hover:cursor-pointer border border-secondary text-secondary bg-transparent hover:bg-accent/5">
 						<span className="sr-only">More details</span>{' '}
 						<span className="text-base font-seravek_medium">{t('moreDetails')}</span>{' '}
 						<MoveRightIcon className="size-5 sm:size-6" />
 					</Button>
 					<Button
 						variant={'primary'}
-						className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-4 gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"
+						className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-0 gap-5 lg:gap-3 2xl:gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"
 					>
 						<span className="sr-only">Add to cart</span>{' '}
 						<span className="text-base font-seravek_medium">{t('addToCart')}</span>{' '}
