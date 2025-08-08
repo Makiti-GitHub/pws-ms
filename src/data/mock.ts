@@ -314,7 +314,7 @@ export const heroCarousel: {
 		desc: 'At the crossroads of performance, security, and entertainment, we deliver the digital infrastructure your world needs.',
 		video: heroVideo1,
 		cta: 'Contact Us Now',
-		href: '#contact',
+		href: '/contact-us',
 	},
 	{
 		title: 'Entertainment without limits',
@@ -328,7 +328,7 @@ export const heroCarousel: {
 		desc: 'Enjoy fast, reliable internet anywhere — even in remote areas. We sell, install, configure, and maintain satellite internet kits to keep you connected, wherever you are.',
 		video: heroVideo3,
 		cta: 'Contact Us Now',
-		href: '#contact',
+		href: 'contact-us',
 	},
 ]
 

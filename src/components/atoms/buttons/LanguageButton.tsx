@@ -20,8 +20,6 @@ const LanguageButton: FC<LanguageButtonProps> = ({ isScrolled }) => {
 	const intl = useIntlContext()
 	const { i18n, t } = useTranslation()
 
-	console.log(i18n.resolvedLanguage)
-
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger className="cursor-pointer rounded-lg outline-none hover:bg-slate-300/50 hover:text-accent-foreground focus-visible:bg-slate-300/50">
@@ -52,7 +50,7 @@ const LanguageButton: FC<LanguageButtonProps> = ({ isScrolled }) => {
 			<DropdownMenuContent
 				side="bottom"
 				align="end"
-				className="bg-surface box_shadow_language_container"
+				className="bg-surface box_shadow_language_container z-[60]"
 			>
 				<DropdownMenuLabel className="text-secondary">{t('languages')}</DropdownMenuLabel>
 				<DropdownMenuSeparator />

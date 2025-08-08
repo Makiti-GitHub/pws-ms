@@ -6,6 +6,7 @@ import makitiLogoWhite from '@/assets/Makiti_logo_primary.svg'
 import Image from '@rasenganjs/image'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import LanguageButton from '@/components/atoms/buttons/LanguageButton'
 
 // Menu animations
 const menuVariants = {
@@ -51,11 +52,11 @@ const MobileNavigation = () => {
 							stiffness: 100,
 							damping: 15,
 						}}
-						className="fixed inset-0 z-[60] flex flex-col gap-24 px-4 sm:px-12 py-8 bg-secondary text-white"
+						className="fixed inset-0 z-[60] flex flex-col h-[100dvh] overflow-y-scroll"
 					>
 						{/* Navigation Links */}
 
-						<div className="flex justify-between">
+						<div className="flex justify-between p-4 sm:px-12  bg-surface">
 							<div className="w-[120px]">
 								<Image
 									src={makitiLogoWhite}
@@ -65,69 +66,80 @@ const MobileNavigation = () => {
 									className="size-full aspect-auto object-contain pointer-events-none select-none"
 								/>
 							</div>
-							<Button
-								variant={'ghost'}
-								type="button"
-								onClick={() => setIsOpened(!isOpened)}
-								className="!p-0 !m-0 h-max hover:bg-outline-variant/30 hover:cursor-pointer"
-							>
-								<span className="sr-only">close Menu</span>
-								<XCircleIcon className="size-12 text-primary" />
-							</Button>
-						</div>
-						<nav className="flex-1">
-							<ul className="space-y-6">
-								{navlinks.map((link, index) => (
-									<motion.li
-										key={link.href + index}
-										variants={{
-											hidden: { opacity: 0, y: 50 },
-											visible: {
-												opacity: 1,
-												y: 0,
-												transition: { duration: 0.4, delay: index * 0.3 },
-											},
-										}}
-										onClick={() => setIsOpened(false)} // Close menu on click
-										whileHover={'hover'}
-										className="font-plusJakartaSans font-bold"
-									>
-										<div className="relative overflow-hidden capitalize text-5xl sm:text-6xl md:text-7xl">
-											<motion.a
-												href={link.href}
-												variants={firstTextVariant}
-												className="text-white block"
-											>
-												{link.label}
-											</motion.a>
-											<motion.a
-												href={link.href}
-												variants={secondTextVariant}
-												aria-hidden
-												className="absolute bottom-0 -left-0 text-primary"
-											>
-												{link.label}
-											</motion.a>
-										</div>
-									</motion.li>
-								))}
-							</ul>
-						</nav>
 
-						<div>
-							<Separator className="w-full bg-outline" />
-							<div className="w-full text-outline-variant text-sm  sm:text-base flex flex-col gap-6 sm:gap-2">
-								<p>© 2025 Makiti Group. All rights reserved.</p>
-								<div className="flex items-center gap-5">
-									<a href="#" className="hover:text-white">
-										Privacy Policy
-									</a>
-									<a href="#" className="hover:text-white">
-										Terms of Service
-									</a>
-									<a href="#" className="hover:text-white">
-										Legal Notice
-									</a>
+							<div className="flex items-center gap-4">
+								<span className="inline-block sm:hidden">
+									<LanguageButton />
+								</span>
+								<Button
+									variant={'ghost'}
+									type="button"
+									onClick={() => setIsOpened(!isOpened)}
+									className="!p-0 !m-0 h-max hover:bg-outline-variant/30 hover:cursor-pointer"
+								>
+									<span className="sr-only">close Menu</span>
+									<XCircleIcon className="size-12 text-primary" />
+								</Button>
+							</div>
+						</div>
+						<div className="flex-1 flex flex-col gap-16 justify-between px-4 sm:px-12 py-8 bg-secondary">
+							<nav className="w-full flex flex-col justify-between flex-1">
+								<ul className="space-y-6 h-full flex flex-col justify-center">
+									{navlinks.map((link, index) => (
+										<motion.li
+											key={link.href + index}
+											variants={{
+												hidden: { opacity: 0, y: 50 },
+												visible: {
+													opacity: 1,
+													y: 0,
+													transition: {
+														duration: 0.4,
+														delay: index * 0.3,
+													},
+												},
+											}}
+											onClick={() => setIsOpened(false)} // Close menu on click
+											whileHover={'hover'}
+											className="font-plusJakartaSans font-bold"
+										>
+											<div className="relative overflow-hidden capitalize text-5xl sm:text-6xl md:text-7xl">
+												<motion.a
+													href={link.href}
+													variants={firstTextVariant}
+													className="text-white block"
+												>
+													{link.label}
+												</motion.a>
+												<motion.a
+													href={link.href}
+													variants={secondTextVariant}
+													aria-hidden
+													className="absolute bottom-0 -left-0 text-primary"
+												>
+													{link.label}
+												</motion.a>
+											</div>
+										</motion.li>
+									))}
+								</ul>
+							</nav>
+
+							<div>
+								<Separator className="w-full bg-outline" />
+								<div className="w-full text-outline-variant text-sm  sm:text-base flex flex-col gap-6 sm:gap-2">
+									<p>© 2025 Makiti Group. All rights reserved.</p>
+									<div className="flex items-center gap-5">
+										<a href="#" className="hover:text-white">
+											Privacy Policy
+										</a>
+										<a href="#" className="hover:text-white">
+											Terms of Service
+										</a>
+										<a href="#" className="hover:text-white">
+											Legal Notice
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>

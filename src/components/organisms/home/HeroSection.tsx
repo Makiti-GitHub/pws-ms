@@ -124,7 +124,7 @@ const HeroSection = () => {
 								key={heroCarousel[currentIndex].title}
 								className="flex flex-col gap-6 items-center w-screen px-10 md:px-32 lg:px-64 2xl:px-[300px]"
 							>
-								<motion.h1 className="font-seravek_bold text-center text-4xl lg:text-7xl xl:text-[80px] leading-10 xl:leading-20">
+								<motion.h1 className="font-seravek_bold text-center text-5xl lg:text-7xl xl:text-[80px] leading-10 lg:leading-16 xl:leading-20">
 									{t(
 										`pages.home.sections.hero.items.item${
 											currentIndex + 1
@@ -138,7 +138,7 @@ const HeroSection = () => {
 										}.desc`,
 									)}
 								</motion.p>
-								<Link to="#">
+								<Link to={heroCarousel[currentIndex].href}>
 									<MotionIconButton
 										label={t(
 											`pages.home.sections.hero.items.item${
