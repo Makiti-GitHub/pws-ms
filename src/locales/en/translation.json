@@ -12,6 +12,7 @@
     "remove": "Remove",
     "month": "month",
     "bestOffer": "Best Offer",
+    "items": "Items",
     "language": {
         "en": "English",
         "fr": "French",
@@ -122,7 +123,8 @@
             "subtitle": "Review your items and complete your order",
             "sections": {
                 "cartItems": {
-                    "title": "Cart Items"
+                    "title": "Cart Items",
+                    "emptyCart": "Your cart is empty"
                 },
                 "orderSummary": {
                     "title": "Order Summary",

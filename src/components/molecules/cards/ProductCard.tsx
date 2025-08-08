@@ -1,14 +1,16 @@
 import ProductTag from '@/components/atoms/tag/ProductTag'
 import { Button } from '@/components/ui/button'
-import { productsMock } from '@/data/mock'
+import Product from '@/entities/product.entity'
 import { cn } from '@/lib/utils'
+import { useCartStore } from '@/stores/cartStore'
 import Image from '@rasenganjs/image'
 import { MoveRightIcon, ShoppingCartIcon } from 'lucide-react'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import { toast } from 'sonner'
 
 interface ProductCardProps {
-	product: (typeof productsMock)[number]
+	product: Product
 }
 
 const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
@@ -18,6 +20,7 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 	...props
 }) => {
 	const { t } = useTranslation()
+	const addToCart = useCartStore((state) => state.addToCart)
 	return (
 		<article
 			className={cn(
@@ -63,6 +66,11 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 						<MoveRightIcon className="size-5 sm:size-6" />
 					</Button>
 					<Button
+						type="button"
+						onClick={() => {
+							addToCart(product)
+							toast.success('Product added to cart')
+						}}
 						variant={'primary'}
 						className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-0 gap-5 lg:gap-3 2xl:gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"
 					>

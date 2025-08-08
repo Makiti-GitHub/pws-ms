@@ -81,6 +81,7 @@ import iKCIcon1 from '@/assets/ourServices/internetKitConfiguration/installation
 import iKCIcon2 from '@/assets/ourServices/internetKitConfiguration/installationProcess/solar_settings-linear.svg'
 import iKCIcon3 from '@/assets/ourServices/internetKitConfiguration/installationProcess/mdi_network-favorite.svg'
 import iKCIcon4 from '@/assets/ourServices/internetKitConfiguration/installationProcess/streamline-cyber_window-speedtest.svg'
+import Product from '@/entities/product.entity'
 
 export const expertisesMock: {
 	title: string
@@ -530,19 +531,7 @@ export const formProjectTimelines = [
 /* Products mock */
 export type ProductTagType = 'new' | 'topRated' | 'inStock'
 
-export const productsMock: {
-	images: string[]
-	name: string
-	description: string
-	rating: number
-	reviews: number
-	id: string
-	tags?: ProductTagType[]
-	price: string
-	quantity: number
-	creationDate: string
-	category: ProductCategoryType
-}[] = [
+export const productsMock: Product[] = [
 	{
 		id: '1',
 		name: 'Dell PowerEdge R740XD',
@@ -551,7 +540,7 @@ export const productsMock: {
 		rating: 4.7,
 		reviews: 162,
 		images: [DellPowerEdgeR740XD],
-		price: '50,000',
+		price: 50000,
 		quantity: 5,
 		creationDate: '2025-02-06',
 		category: 'electronics',
@@ -565,7 +554,7 @@ export const productsMock: {
 		rating: 4.7,
 		reviews: 162,
 		images: [proxmoxLicences],
-		price: '50,000',
+		price: 50000,
 		quantity: 5,
 		creationDate: '2025-02-06',
 		category: 'license',
@@ -579,7 +568,7 @@ export const productsMock: {
 		rating: 4.7,
 		reviews: 162,
 		images: [SanDiskExtremePortable],
-		price: '75,000',
+		price: 30000,
 		quantity: 5,
 		creationDate: '2025-02-06',
 		category: 'electronics',
@@ -593,7 +582,7 @@ export const productsMock: {
 		rating: 4.7,
 		reviews: 162,
 		images: [FRITZBox],
-		price: '50,000',
+		price: 50000,
 		quantity: 5,
 		creationDate: '2025-02-06',
 		category: 'electronics',
@@ -607,7 +596,7 @@ export const productsMock: {
 		rating: 4.7,
 		reviews: 162,
 		images: [SanDiskExtremePortableUSB],
-		price: '8,700',
+		price: 8700,
 		quantity: 5,
 		creationDate: '2025-02-06',
 		category: 'electronics',
@@ -621,7 +610,7 @@ export const productsMock: {
 		rating: 4.7,
 		reviews: 162,
 		images: [FolishineCat7],
-		price: '4,500',
+		price: 4500,
 		quantity: 5,
 		creationDate: '2025-02-06',
 		category: 'electronics',

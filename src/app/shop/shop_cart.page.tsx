@@ -1,9 +1,6 @@
 import SectionHeader from '@/components/molecules/SectionHeader'
 import { Button } from '@/components/ui/button'
-import Image from '@rasenganjs/image'
-import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
 import { PageComponent } from 'rasengan'
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -18,6 +15,8 @@ import {
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import z from 'zod'
+import { useCartStore } from '@/stores/cartStore'
+import ShopCartCard from '@/components/molecules/cards/ShopCartCard'
 
 // Define schemas for each step
 const formSchema = z.object({
@@ -33,8 +32,7 @@ type FullFormData = z.infer<typeof formSchema>
 
 const ShoppingCart: PageComponent = () => {
 	const { t } = useTranslation()
-
-	const [count, setCount] = useState(1)
+	const { items, getTotalPrice } = useCartStore()
 
 	const form = useForm<FullFormData>({
 		resolver: zodResolver(formSchema),
@@ -51,62 +49,48 @@ const ShoppingCart: PageComponent = () => {
 		console.log('Form submitted:', data)
 		// alert('Form submitted successfully!')
 
-		// const project = '+49 162 7265788'
+		const project = '+237 680 09 54 53'
 
-		// let text = `Demande de projet :\n\n`
+		let text = `Demande de livraison :\n\n`
 
-		// text += `${t('pages.home.sections.startYourProjectToday.form.fields.fullName.label')} : ${
-		// 	data.fullName
-		// }\n\n`
+		text += `${t('pages.shoppingCart.sections.customerInformation.form.fields.name.label')} : ${
+			data.name
+		}\n\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.emailAddress.label',
-		// )} : ${data.email}\n\n`
+		text += `${t(
+			'pages.shoppingCart.sections.customerInformation.form.fields.email.label',
+		)} : ${data.email}\n\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.companyName.label',
-		// )} : ${data.companyName}\n\n`
+		text += `${t(
+			'pages.shoppingCart.sections.customerInformation.form.fields.companyName.label',
+		)} : ${data.companyName}\n\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
-		// )} : ${data.phoneNumber}\n\n`
+		text += `${t(
+			'pages.shoppingCart.sections.customerInformation.form.fields.phoneNumber.label',
+		)} : ${data.phoneNumber}\n\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
-		// )} : ${data.phoneNumber}\n\n`
+		text += `${t(
+			'pages.shoppingCart.sections.customerInformation.form.fields.address.label',
+		)} : ${data.address}\n\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.projectType.label',
-		// )} : ${data.projectType}\n\n`
+		text += `Je souhaite commander :\n\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.budgetRange.label',
-		// )} : ${data.budgetRange}\n\n`
+		items.forEach((item) => {
+			text += `${item.quantity} x ${item.name} : ${item.price} FCFA\n`
+		})
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.projectTimeline.label',
-		// )} : ${data.projectTimeline}\n\n`
+		text += `\n`
 
-		// data.technicalRequirements.forEach((requirement) => {
-		// 	text += `\t• ${requirement}\n`
-		// })
+		// Create WhatsApp URL with phone number and optional message
+		// Format phone number - remove any non-digit characters
+		const formattedNumber = project?.replace(/\D/g, '')
+		const encodedMessage = encodeURIComponent(text)
+		const whatsappUrl = `https://wa.me/${formattedNumber}?text=${encodedMessage}`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.projectDescription.label',
-		// )} : ${data.projectDescription}\n`
-
-		// text += `\n`
-
-		// // Create WhatsApp URL with phone number and optional message
-		// // Format phone number - remove any non-digit characters
-		// const formattedNumber = project?.replace(/\D/g, '')
-		// const encodedMessage = encodeURIComponent(text)
-		// const whatsappUrl = `https://wa.me/${formattedNumber}?text=${encodedMessage}`
-
-		// console.log(whatsappUrl)
+		console.log(whatsappUrl)
 
 		// Open WhatsApp in a new tab
-		// window.open(whatsappUrl, '_blank')
+		window.open(whatsappUrl, '_blank')
 	}
 
 	return (
@@ -122,65 +106,13 @@ const ShoppingCart: PageComponent = () => {
 						<p className="font-seravek_medium text-xl text-on-surface-variant">
 							{t('pages.shoppingCart.sections.cartItems.title')}
 						</p>
-						<div className="border-[0.5px] p-4 border-outline-variant flex flex-col gap-8 lg:flex-row justify-between rounded-xl">
-							<div className="space-x-4 flex ">
-								<div className="size-[90px] rounded-sm drop_shadow_cart_item_image">
-									<Image
-										src={''}
-										width={90}
-										height={90}
-										alt="cart item image"
-										className="size-full aspect-auto object-cover rounded-sm"
-									/>
-								</div>
-								<div className="space-y-2 flex-1 sm:truncate">
-									<p className="font-seravek_medium text-2xl text-on-surface">
-										{t('STARLINK Standard Kit')}
-									</p>
 
-									<p>$999.99</p>
-								</div>
-							</div>
-							<div className="flex flex-col sm:flex-row justify-between gap-3 lg:gap-6">
-								<div className="flex items-center gap-8 w-full">
-									<Button
-										variant={'ghost'}
-										disabled={count < 1}
-										onClick={() => setCount(count - 1)}
-										className="!p-2.5 size-[44px] hover:cursor-pointer rounded-sm border-[0.5px] border-outline-variant"
-									>
-										<MinusIcon className="size-6" />
-									</Button>
-
-									<span className="text-lg font-seravek_medium text-on-surface">
-										{count}
-									</span>
-
-									<Button
-										variant={'ghost'}
-										onClick={() => setCount(count + 1)}
-										className="!p-2.5 size-[44px] hover:cursor-pointer rounded-sm border-[0.5px] border-outline-variant"
-									>
-										<PlusIcon className="size-6" />
-									</Button>
-								</div>
-								<div className="flex sm:flex-col gap-2 items-center sm:items-start justify-between">
-									<p className="text-lg lg:text-2xl text-center lg:text-left font-seravek_medium text-on-surface whitespace-nowrap">
-										{'600.000 CFA'}
-									</p>
-
-									<Button
-										variant={'ghost'}
-										onClick={() => setCount(count + 1)}
-										className="!p-2.5 sm:w-full hover:cursor-pointer rounded-sm border-[0.5px] border-red-500 hover:bg-red-500 group"
-									>
-										<Trash2Icon className="size-4 text-red-500 group-hover:text-white" />
-										<span className="text-red-500 group-hover:text-white">
-											{t('remove')}
-										</span>
-									</Button>
-								</div>
-							</div>
+						<div className="flex flex-col gap-2">
+							{items.length > 0 ? (
+								items.map((item) => <ShopCartCard key={item.id} cartItem={item} />)
+							) : (
+								<p>{t('pages.shoppingCart.sections.cartItems.emptyCart')}</p>
+							)}
 						</div>
 					</section>
 					<section className="p-5 rounded-xl border-[0.5px] border-outline-variant space-y-6">
@@ -194,7 +126,7 @@ const ShoppingCart: PageComponent = () => {
 									<span>
 										{t('pages.shoppingCart.sections.orderSummary.subtotal')}:
 									</span>
-									<span>{'600.000 CFA'}</span>
+									<span>{`${getTotalPrice()} CFA`}</span>
 								</p>
 								<p className="flex font-seravek_medium text-lg text-on-surface items-center justify-between gap-6 w-full">
 									<span>
@@ -206,7 +138,7 @@ const ShoppingCart: PageComponent = () => {
 						</div>
 						<p className="flex font-seravek_medium text-on-surface items-center justify-between gap-6 w-full">
 							<span className="text-xl">{t('total')}</span>
-							<span className="text-2xl">{'600.000 CFA'}</span>
+							<span className="text-2xl">{`${getTotalPrice()} CFA`}</span>
 						</p>
 					</section>
 					<section className="p-5 rounded-xl border-[0.5px] border-outline-variant space-y-6">

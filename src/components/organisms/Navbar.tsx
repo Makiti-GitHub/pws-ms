@@ -4,16 +4,14 @@ import LanguageButton from '../atoms/buttons/LanguageButton'
 import Image from '@rasenganjs/image'
 import { useTranslation } from 'react-i18next'
 import { useMenuContext } from '@/hooks/guard/ContextGuard'
-import { MenuIcon, SearchIcon, ShoppingCartIcon } from 'lucide-react'
+import { MenuIcon, SearchIcon } from 'lucide-react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
-import { useState } from 'react'
+import CartPlug from './navigation/CartPlug'
 
 const NavBar = () => {
 	const { t } = useTranslation()
 	const { isOpened, setIsOpened, navlinks } = useMenuContext()
-
-	const [cartCount, _] = useState(100)
 
 	return (
 		<header className="fixed left-0 right-0 w-full z-50">
@@ -49,7 +47,7 @@ const NavBar = () => {
 					))}
 				</ul>
 
-				<div className="flex items-center gap-4 md:gap-8">
+				<div className="flex items-center gap-4 xl:gap-8">
 					<div className="relative w-40 sm:w-[250px] h-10 rounded-4xl">
 						<Input
 							type="search"
@@ -59,21 +57,7 @@ const NavBar = () => {
 						<SearchIcon className="size-5 absolute top-1/2 -translate-y-1/2 right-3 text-on-surface-variant" />
 					</div>
 
-					<div className="relative flex cursor-pointer items-center justify-center">
-						<div role="button" tabIndex={0} className="size-min p-0">
-							{/* {messages.length > 0 ? ( */}
-							<div className="absolute -right-1 -top-1">
-								<div className="relative">
-									{/* <span className="absolute -right-1 -top-1 size-6 animate-ping rounded-full bg-primary opacity-75" /> */}
-									<span className="absolute -right-1 -top-1 flex size-5 text-white items-center justify-center rounded-full bg-primary font-seravek_bold text-[10px]">
-										{cartCount > 99 ? '99+' : cartCount}
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<ShoppingCartIcon className="size-6 text-on-surface-variant" />
-					</div>
+					<CartPlug />
 
 					<span className="hidden sm:inline-block">
 						<LanguageButton />

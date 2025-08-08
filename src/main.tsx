@@ -6,6 +6,7 @@ import AppRouter from '@/app/app.router'
 import { I18nextProvider } from 'react-i18next'
 import { LanguageProvider } from './providers/LanguageProvider'
 import MenuProvider from './providers/MenuProvider'
+import { Toaster } from './components/ui/sonner'
 
 export default function App({ Component, children }: AppProps) {
 	return (
@@ -13,6 +14,7 @@ export default function App({ Component, children }: AppProps) {
 			<LanguageProvider>
 				<MenuProvider>
 					<Component router={AppRouter}>{children}</Component>
+					<Toaster />
 				</MenuProvider>
 			</LanguageProvider>
 		</I18nextProvider>

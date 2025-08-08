@@ -51,64 +51,41 @@ const ContactUs: PageComponent = () => {
 
 	const onSubmit = (data: FullFormData) => {
 		console.log('Form submitted:', data)
-		// alert('Form submitted successfully!')
 
-		// const project = '+49 162 7265788'
+		const project = '+237 680 09 54 53'
 
-		// let text = `Demande de projet :\n\n`
+		let text = `${t('pages.contactUs.sections.leftSection.form.fields.name.label')} : ${
+			data.name
+		}\n`
 
-		// text += `${t('pages.home.sections.startYourProjectToday.form.fields.fullName.label')} : ${
-		// 	data.fullName
-		// }\n\n`
+		text += `${t('pages.contactUs.sections.leftSection.form.fields.email.label')} : ${
+			data.email
+		}\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.emailAddress.label',
-		// )} : ${data.email}\n\n`
+		text += `${t('pages.contactUs.sections.leftSection.form.fields.companyName.label')} : ${
+			data.companyName
+		}\n\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.companyName.label',
-		// )} : ${data.companyName}\n\n`
+		text += `Subject: ${t(
+			'pages.contactUs.sections.leftSection.form.fields.subject.label',
+		)} : ${data.subject}\n\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
-		// )} : ${data.phoneNumber}\n\n`
+		text += `${t('pages.contactUs.sections.leftSection.form.fields.message.label')} : ${
+			data.message
+		}\n\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
-		// )} : ${data.phoneNumber}\n\n`
+		text += `\n`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.projectType.label',
-		// )} : ${data.projectType}\n\n`
+		// Create WhatsApp URL with phone number and optional message
+		// Format phone number - remove any non-digit characters
+		const formattedNumber = project?.replace(/\D/g, '')
+		const encodedMessage = encodeURIComponent(text)
+		const whatsappUrl = `https://wa.me/${formattedNumber}?text=${encodedMessage}`
 
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.budgetRange.label',
-		// )} : ${data.budgetRange}\n\n`
-
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.projectTimeline.label',
-		// )} : ${data.projectTimeline}\n\n`
-
-		// data.technicalRequirements.forEach((requirement) => {
-		// 	text += `\t• ${requirement}\n`
-		// })
-
-		// text += `${t(
-		// 	'pages.home.sections.startYourProjectToday.form.fields.projectDescription.label',
-		// )} : ${data.projectDescription}\n`
-
-		// text += `\n`
-
-		// // Create WhatsApp URL with phone number and optional message
-		// // Format phone number - remove any non-digit characters
-		// const formattedNumber = project?.replace(/\D/g, '')
-		// const encodedMessage = encodeURIComponent(text)
-		// const whatsappUrl = `https://wa.me/${formattedNumber}?text=${encodedMessage}`
-
-		// console.log(whatsappUrl)
+		console.log(whatsappUrl)
 
 		// Open WhatsApp in a new tab
-		// window.open(whatsappUrl, '_blank')
+		window.open(whatsappUrl, '_blank')
 	}
 
 	return (
