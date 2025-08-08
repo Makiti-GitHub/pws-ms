@@ -12,8 +12,8 @@ import {
 	PaginationPrevious,
 } from '@/components/ui/pagination'
 import { ProductCategoryType, productsMock } from '@/data/mock'
-import { PageComponent } from 'rasengan'
-import { useMemo, useState } from 'react'
+import { PageComponent, useLocation, useNavigate, useSearchParams } from 'rasengan'
+import { useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const filterOptions: { label: string; value: ProductCategoryType }[] = [
@@ -33,15 +33,57 @@ const Shop: PageComponent = () => {
 
 	const [selectedFilter, setSelectedFilter] = useState<ProductCategoryType>('all')
 
-	const filteredStories = useMemo(() => {
-		if (selectedFilter === 'all') {
-			return productsMock
+	const { pathname } = useLocation()
+	const navigate = useNavigate()
+
+	const [urlParams] = useSearchParams()
+
+	const searchQuery = urlParams.get('search')
+
+	const filteredProducts = useMemo(() => {
+		let products = productsMock
+
+		if (searchQuery) {
+			products = productsMock.filter((product) =>
+				product.name.toLowerCase().includes(searchQuery.toLowerCase()),
+			)
 		}
-		return productsMock.filter((product) => product.category === selectedFilter)
+
+		if (selectedFilter === 'all') {
+			return products
+		}
+		return products.filter((product) => product.category === selectedFilter)
 	}, [selectedFilter])
+
+	/**
+	 * Function to set desired the url param, and navigate to it for component re-rendering
+	 * @param param
+	 * @param value
+	 */
+	const handleNavigate = useCallback(
+		(param: string, value: string) => {
+			urlParams.set(param, value)
+			navigate(`${pathname}?${urlParams.toString()}`, { replace: true })
+		},
+		[urlParams, pathname, navigate],
+	)
+
+	/**
+	 * Function to set desired the url param, and navigate to it for component re-rendering
+	 * @param param
+	 * @param value
+	 */
+	const handlePopNavigate = useCallback(
+		(param: string, value?: string) => {
+			urlParams.delete(param, value)
+			navigate(`${pathname}?${urlParams.toString()}`, { replace: true })
+		},
+		[urlParams, pathname, navigate],
+	)
 
 	const handleSelectFilter = (value: ProductCategoryType) => {
 		setSelectedFilter(value)
+		handleNavigate('c', value)
 	}
 
 	return (
@@ -55,7 +97,14 @@ const Shop: PageComponent = () => {
 							<span
 								tabIndex={0}
 								role="button"
-								onClick={() => handleSelectFilter(item.value)}
+								onClick={() => {
+									if (selectedFilter === item.value) {
+										setSelectedFilter('all')
+										handlePopNavigate('c')
+									} else {
+										handleSelectFilter(item.value)
+									}
+								}}
 								key={`story-${index}-industry-${item.value}`}
 								className={`${
 									selectedFilter === item.value
@@ -68,11 +117,15 @@ const Shop: PageComponent = () => {
 						))}
 					</div>
 
-					<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-						{filteredStories.map((product, index) => (
-							<ProductCard key={`product-${index}`} product={product} />
-						))}
-					</div>
+					{filteredProducts.length > 0 ? (
+						<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+							{filteredProducts.map((product, index) => (
+								<ProductCard key={`product-${index}`} product={product} />
+							))}
+						</div>
+					) : (
+						<p className="text-center text-on-surface-variant">No products found</p>
+					)}
 				</div>
 
 				<Pagination className="py-3">

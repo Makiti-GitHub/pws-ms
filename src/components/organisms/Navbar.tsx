@@ -4,10 +4,10 @@ import LanguageButton from '../atoms/buttons/LanguageButton'
 import Image from '@rasenganjs/image'
 import { useTranslation } from 'react-i18next'
 import { useMenuContext } from '@/hooks/guard/ContextGuard'
-import { MenuIcon, SearchIcon } from 'lucide-react'
+import { MenuIcon } from 'lucide-react'
 import { Button } from '../ui/button'
-import { Input } from '../ui/input'
 import CartPlug from './navigation/CartPlug'
+import SearchBar from './navigation/SearchBar'
 
 const NavBar = () => {
 	const { t } = useTranslation()
@@ -48,14 +48,7 @@ const NavBar = () => {
 				</ul>
 
 				<div className="flex items-center gap-4 xl:gap-8">
-					<div className="relative w-40 sm:w-[250px] h-10 rounded-4xl">
-						<Input
-							type="search"
-							placeholder={t('nav.searchBar.placeholder')}
-							className="size-full bg-surface-container placeholder:text-lg placeholder:text-outline rounded-4xl pr-10"
-						/>
-						<SearchIcon className="size-5 absolute top-1/2 -translate-y-1/2 right-3 text-on-surface-variant" />
-					</div>
+					<SearchBar />
 
 					<CartPlug />
 

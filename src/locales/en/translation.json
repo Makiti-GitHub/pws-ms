@@ -116,7 +116,8 @@
                 "health": "Health",
                 "food": "Food",
                 "all": "All"
-            }
+            },
+            "noProductsFound": "No products found"
         },
         "shoppingCart": {
             "title": "Shopping Cart",
