@@ -555,6 +555,83 @@
                     "p5": "Website : <link1>www.makiti-group.com</link1>"
                 }
             }
+        },
+        "legalNotice": {
+            "title": "Legal notices – Makiti SARL",
+            "sections": {
+                "websitePublisher": {
+                    "title": "Website publisher",
+                    "p1": "This website is published by Makiti SARL, a limited liability company with capital of  <bold>995.000 XAF</bold> FCFA, registered in the Yaoundé Trade and Personal Property Credit Register under number RCCM  <bold>RC/YAO/2023/B/1069 du 25 Avril 2023</bold>, and identified with the tax authorities under taxpayer number <bold>M052318275229B</bold>"
+                },
+                "headOffice": {
+                    "title": "Head office",
+                    "p1": "Yaounde, Santa Barbara - opposite Sonel",
+                    "p2": "Telephone : <phone>+237 680 095 453</phone>",
+                    "p3": "Email address : <email>contact@makiti-group.com</email>",
+                    "p4": "Represented by : M. Aboubakar Ousmanou, in his capacity as Manager"
+                },
+                "hosting": {
+                    "title": "Hosting",
+                    "p1": "The website is hosted by: <bold>(Name of host)</bold>",
+                    "p2": "Address : <bold>(Host address)</bold>",
+                    "p3": "Telephone : <phone>(Number)</phone>",
+                    "p4": "Email : <email>(Email)</email>"
+                },
+                "websitePurpose": {
+                    "title": "Objet du site",
+                    "p1": "<link1>www.makiti-group.com</link1> is to present the services and products of Makiti SARL, particularly in the fields of digital technology, logistics, e-commerce and digital services via the Matoa platform."
+                },
+                "intellectualProperty": {
+                    "title": "Intellectual property",
+                    "p1": "All content on this website (text, images, videos, logos, graphic charter, interfaces, source codes, etc.) is the <bold>exclusive property of Makiti SARL</bold>, unless otherwise stated, and is protected by Cameroonian and international intellectual property laws.",
+                    "p2": "Any reproduction, representation, modification, publication or adaptation of all or part of the elements of the site, regardless of the means or process used, is prohibited without the prior written authorisation of Makiti SARL."
+                },
+                "dataProtection": {
+                    "title": "Personal data protection",
+                    "p1": "Makiti SARL undertakes to respect the privacy of users and to ensure the protection of personal data in accordance with Cameroonian Law No. 2010/012 of 21 December 2010 on cybersecurity and cybercrime, and, to the extent applicable, Regulation (EU) 2016/679 (GDPR)."
+                },
+                "collectedData": {
+                    "title": "Data collected",
+                    "p1": "The data that may be collected includes, in particular: surname, first name, email address, telephone number, IP address, browsing data, and any other information voluntarily provided by the user via the website forms or the use of the services."
+                },
+                "processingPurposes": {
+                    "title": "Purpose of processing",
+                    "p1": "The data is processed for the following purposes: managing contact requests, improving services, managing user accounts, statistical analysis, commercial communication subject to the user's consent, and website security."
+                },
+                "retentionPeriod": {
+                    "title": "Retention period",
+                    "p1": "The data is retained for a period not exceeding that necessary for the purposes for which it was collected, unless otherwise required by law."
+                },
+                "userRights": {
+                    "title": "User rights",
+                    "p1": "In accordance with applicable regulations, you have the right to access, rectify, delete, limit the processing of, object to, on legitimate grounds, and transfer your data.",
+                    "p2": "To exercise your rights, please contact us by post at our head office address."
+                },
+                "dataTransfer": {
+                    "title": "Transfer outside CEMAC or the EU",
+                    "p1": "No transfer of personal data outside Cameroon or the EU is carried out without appropriate safeguards."
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "p1": "Cookies may be placed on the user's device to improve the browsing experience, compile statistics, or ensure the functioning of the site.",
+                    "p2": "Users can configure their browser to refuse cookies at any time."
+                },
+                "liability": {
+                    "title": "Liability",
+                    "p1": "Makiti SARL endeavours to ensure that the information published on the site is accurate and regularly updated. However, it cannot be held liable for any errors, omissions or unavailability of information or services. Users use the site under their sole responsibility."
+                },
+                "applicableLawAndJuridiction": {
+                    "title": "Applicable law and jurisdiction",
+                    "p1": "These legal notices are governed by Cameroonian law. In the event of a dispute, jurisdiction is assigned to the competent courts of Cameroon."
+                },
+                "contact": {
+                    "title": "Contact",
+                    "p1": "For any questions regarding these legal notices, the use of the website or your personal data:",
+                    "p2": "<email>contact@makiti.de</email>",
+                    "p3": "Headquarters : Yaounde, Santa Barbara",
+                    "p4": "Telephone : <phone>+237 680 09 54 53</phone>"
+                }
+            }
         }
     },
     "footer": {

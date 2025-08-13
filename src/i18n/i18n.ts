@@ -1,4 +1,3 @@
-// src/i18n.ts
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
@@ -6,7 +5,6 @@ import Backend from 'i18next-http-backend'
 import en from '../locales/en/translation.json'
 import de from '../locales/de/translation.json'
 import fr from '../locales/fr/translation.json'
-// import fr from '../locales/de/translation.json';
 
 const resources = {
 	en: {

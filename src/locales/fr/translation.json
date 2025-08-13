@@ -555,6 +555,83 @@
                     "p5": "Site web : <link1>www.makiti-group.com</link1>"
                 }
             }
+        },
+        "legalNotice": {
+            "title": "Mentions légales – Makiti SARL",
+            "sections": {
+                "websitePublisher": {
+                    "title": "Éditeur du site",
+                    "p1": "Ce site est édité par Makiti SARL, société à responsabilité limitée au capital de <bold>995.000 XAF</bold> FCFA, immatriculée au Registre du Commerce et du Crédit Mobilier de Yaoundé sous le numéro RCCM <bold>RC/YAO/2023/B/1069 du 25 Avril 2023</bold>, et identifiée auprès des services fiscaux sous le numéro de contribuable <bold>M052318275229B</bold>"
+                },
+                "headOffice": {
+                    "title": "Siège social",
+                    "p1": "Yaounde, Santa Barbara - face Sonel",
+                    "p2": "Téléphone : <phone>+237 680 095 453</phone>",
+                    "p3": "Adresse e-mail : <email>contact@makiti-group.com</email>",
+                    "p4": "Représentée par : M. Aboubakar Ousmanou, en sa qualité de Gérant"
+                },
+                "hosting": {
+                    "title": "Hébergement",
+                    "p1": "Le site est hébergé par: <bold>(Nom de l’hébergeur)</bold>",
+                    "p2": "Adresse : <bold>(Adresse de l’hébergeur)</bold>",
+                    "p3": "Téléphone : <phone>(Numéro)</phone>",
+                    "p4": "E-mail : <email>(Email)</email>"
+                },
+                "websitePurpose": {
+                    "title": "Objet du site",
+                    "p1": "Le site <link1>www.makiti-group.com</link1> a pour objet la présentation des services et produits de Makiti SARL, notamment dans les domaines du numérique, de la logistique, de l'e-commerce et des services digitaux via la plateforme Matoa."
+                },
+                "intellectualProperty": {
+                    "title": "Propriété intellectuelle",
+                    "p1": "L’ensemble des contenus présents sur ce site (textes, images, vidéos, logos, charte graphique, interfaces, codes sources, etc.) est la <bold>propriété exclusive de Makiti SARL</bold> sauf mention contraire, et est protégé par les lois camerounaises et internationales relatives à la propriété intellectuelle.",
+                    "p2": "Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l’autorisation écrite préalable de Makiti SARL."
+                },
+                "dataProtection": {
+                    "title": "Protection des données personnelles",
+                    "p1": "Makiti SARL s'engage à respecter la vie privée des utilisateurs et à assurer la protection des données à caractère personnel conformément à la Loi camerounaise n°2010/012 du 21 décembre 2010 relative à la cybersécurité et à la cybercriminalité, et, dans la mesure applicable, au Règlement (UE) 2016/679 (RGPD)."
+                },
+                "collectedData": {
+                    "title": "Données collectées",
+                    "p1": "Les données susceptibles d’être collectées incluent notamment : nom, prénom, adresse e-mail, numéro de téléphone, adresse IP, données de navigation, et toute autre information fournie volontairement par l’utilisateur via les formulaires du site ou l’utilisation des services."
+                },
+                "processingPurposes": {
+                    "title": "Finalité du traitement",
+                    "p1": "Les données sont traitées pour les finalités suivantes : gestion des demandes de contact, amélioration des services, gestion des comptes utilisateurs, analyse statistique, communication commerciale sous réserve du consentement de l’utilisateur, sécurité du site."
+                },
+                "retentionPeriod": {
+                    "title": "Durée de conservation",
+                    "p1": "Les données sont conservées pour une durée n’excédant pas celle nécessaire aux finalités pour lesquelles elles ont été collectées, sauf obligation légale contraire."
+                },
+                "userRights": {
+                    "title": "Droits des utilisateurs",
+                    "p1": "Conformément à la réglementation applicable, vous disposez d’un droit d’accès, de rectification, de suppression, de limitation du traitement, d’opposition pour motif légitime, et de portabilité de vos données.",
+                    "p2": "Pour exercer vos droits, contactez nous par courrier à l’adresse du siège."
+                },
+                "dataTransfer": {
+                    "title": "Transfert hors CEMAC ou UE",
+                    "p1": "Aucun transfert de données personnelles hors du Cameroun ou hors de l’UE n’est effectué sans garanties appropriées."
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "p1": "Des cookies peuvent être déposés sur le terminal de l’utilisateur pour améliorer l’expérience de navigation, réaliser des statistiques, ou assurer le fonctionnement du site.",
+                    "p2": "L’utilisateur peut à tout moment configurer son navigateur pour refuser les cookies."
+                },
+                "liability": {
+                    "title": "Responsabilité",
+                    "p1": "Makiti SARL s’efforce d’assurer l’exactitude et la mise à jour régulière des informations diffusées sur le site. Toutefois, elle ne saurait être tenue pour responsable des erreurs, omissions ou indisponibilités des informations ou du service. L’utilisateur utilise le site sous sa seule responsabilité."
+                },
+                "applicableLawAndJuridiction": {
+                    "title": "Loi applicable et juridiction compétente",
+                    "p1": "Les présentes mentions légales sont régies par la législation camerounaise. En cas de litige, compétence est attribuée aux juridictions compétentes du Cameroun."
+                },
+                "contact": {
+                    "title": "Contact",
+                    "p1": "Pour toute question relative aux présentes mentions légales, à l'utilisation du site ou à vos données personnelles :",
+                    "p2": "<email>contact@makiti.de</email>",
+                    "p3": "Siège social : Yaounde, Santa Barbara",
+                    "p4": "Téléphone : <phone>+237 680 095 453</phone>"
+                }
+            }
         }
     },
     "footer": {
