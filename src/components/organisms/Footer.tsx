@@ -80,21 +80,21 @@ const Footer = () => {
 						</p>
 						<ul className="space-y-2.5">
 							<li>
-								<Link to="#">
+								<Link to="/services/server-security">
 									{t(
 										'footer.upperSection.rightSection.services.options.serverSecurity',
 									)}
 								</Link>
 							</li>
 							<li className="text-nowrap">
-								<Link to="#">
+								<Link to="/services/internet-kit-configuration">
 									{t(
 										'footer.upperSection.rightSection.services.options.internetKitConfiguration',
 									)}
 								</Link>
 							</li>
 							<li>
-								<Link to="#">
+								<Link to="/services/streaming-services">
 									{t(
 										'footer.upperSection.rightSection.services.options.streamingServices',
 									)}
@@ -148,7 +148,14 @@ const Footer = () => {
 											className="size-full object-contain aspect-auto"
 										/>
 									</div>
-									<span className="flex-1">{locationMock.phone}</span>
+									<a
+										href={`tel:${locationMock.phone}`}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="flex-1"
+									>
+										{locationMock.phone}
+									</a>
 								</div>
 							) : null}
 
@@ -163,7 +170,15 @@ const Footer = () => {
 											className="size-full object-contain aspect-auto"
 										/>
 									</div>
-									<span className="flex-1">{locationMock.mail}</span>
+
+									<a
+										href={`mailto:${locationMock.mail}`}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="flex-1"
+									>
+										{locationMock.mail}
+									</a>
 								</div>
 							) : null}
 
@@ -178,7 +193,17 @@ const Footer = () => {
 											className="size-full object-contain aspect-auto"
 										/>
 									</div>
-									<span className="flex-1">{locationMock.whatsapp}</span>
+									<a
+										href={`https://wa.me/${locationMock.whatsapp.replace(
+											/\D/g,
+											'',
+										)}?text=${encodeURIComponent('Hello!')}`}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="flex-1"
+									>
+										{locationMock.phone}
+									</a>
 								</div>
 							) : null}
 
@@ -193,7 +218,14 @@ const Footer = () => {
 											className="size-full object-contain aspect-auto"
 										/>
 									</div>
-									<span className="flex-1">{locationMock.website}</span>
+									<a
+										href={`https://${locationMock.website}`}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="flex-1"
+									>
+										{locationMock.website}
+									</a>
 								</div>
 							) : null}
 

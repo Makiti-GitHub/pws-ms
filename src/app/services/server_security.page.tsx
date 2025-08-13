@@ -7,10 +7,14 @@ import { ArrowUpRightIcon, ShoppingCartIcon } from 'lucide-react'
 import ServiceCard from '@/components/molecules/cards/ServiceCard'
 import Image from '@rasenganjs/image'
 import checkIcon from '@/assets/icons/check.svg'
+import { useCartStore } from '@/stores/cartStore'
+import serverSecurityImg from '@/assets/ourServices/server_security.png'
+import { toast } from 'sonner'
 
 const ServerSecurity: PageComponent = () => {
 	const { t } = useTranslation()
 	const navigate = useNavigate()
+	const addToCart = useCartStore((state) => state.addToCart)
 
 	return (
 		<main className="flex flex-col w-screen gap-8 px-4 sm:px-8 md:px-11 lg:px-[60px] xl:px-[120px] pt-8 relative">
@@ -72,6 +76,26 @@ const ServerSecurity: PageComponent = () => {
 							</p>
 
 							<Button
+								onClick={() => {
+									addToCart({
+										creationDate: '2025-08-08',
+										id: `complete-security-package`,
+										// category: service.category,
+										quantity: 1,
+										price: 665000,
+										name: t(
+											'pages.services.serverSecurity.sections.completeSecurityPackage.title',
+										),
+										rating: 5,
+										reviews: 0,
+										images: [serverSecurityImg],
+										description: t(
+											'pages.services.serverSecurity.sections.completeSecurityPackage.subtitle',
+										),
+									})
+
+									toast.success('Service added to cart')
+								}}
 								variant={'primary'}
 								className="rounded-[8px] w-full flex-1 h-max !py-2 sm:!py-3 !px-4 gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"
 							>

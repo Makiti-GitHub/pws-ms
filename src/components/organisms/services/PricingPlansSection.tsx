@@ -5,9 +5,14 @@ import Image from '@rasenganjs/image'
 import { CheckIcon, ShoppingCartIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import starlinkLogo from '@/assets/partners/starlink.svg'
+import { useCartStore } from '@/stores/cartStore'
+import serverSecurityImg from '@/assets/ourServices/server_security.png'
+import { toast } from 'sonner'
 
 const PricingPlansSection = () => {
 	const { t } = useTranslation()
+
+	const addToCart = useCartStore((state) => state.addToCart)
 	return (
 		<section className="py-8 flex flex-col items-center gap-5">
 			<div className="flex items-center gap-2">
@@ -78,6 +83,26 @@ const PricingPlansSection = () => {
 							</p>
 
 							<Button
+								onClick={() => {
+									addToCart({
+										creationDate: '2025-08-08',
+										id: `Plan ${index}`,
+										// category: service.category,
+										quantity: 1,
+										price: plan.price,
+										name: `${t(
+											'pages.services.internetKitConfiguration.title',
+										)} - ${t(
+											`pages.services.internetKitConfiguration.sections.ourStarlinkPlans.${plan.transkey}.title`,
+										)}`,
+										rating: 5,
+										reviews: 0,
+										images: [serverSecurityImg],
+										description: plan.description,
+									})
+
+									toast.success('Plan added to cart')
+								}}
 								variant={'primary'}
 								className="rounded-lg w-full flex-1 h-max !py-2 sm:!py-3 !px-4 gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"
 							>

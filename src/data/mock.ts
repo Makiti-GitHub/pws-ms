@@ -650,7 +650,8 @@ export const ourServicesMock: {
 	attributes: string[]
 	icon: string
 	image: string
-	price: string
+	price: number
+	priceUnit: string
 	cta: string
 	link?: string
 }[] = [
@@ -663,7 +664,8 @@ export const ourServicesMock: {
 			'Advanced firewall configuration',
 			'Vulnerability assessments',
 		],
-		price: '250.000 CFA/month',
+		price: 250000,
+		priceUnit: 'month',
 		icon: service1Number,
 		cta: 'Stay secure',
 		image: serverSecurityImg,
@@ -674,7 +676,8 @@ export const ourServicesMock: {
 		description:
 			'Enjoy fast, reliable internet anywhere — even in remote areas. We sell, install, and maintain satellite kits to keep you connected.',
 		attributes: ['Global Shipping', '24/7 Remote Support', 'Coverage area mapping'],
-		price: '600.000 CFA/device',
+		price: 600000,
+		priceUnit: 'device',
 		icon: service2Number,
 		cta: 'Get connected',
 		image: starlinkKitImg,
@@ -689,7 +692,8 @@ export const ourServicesMock: {
 			'Channel lineup optimization',
 			'Streaming quality enhancement',
 		],
-		price: '50.000 CFA/device',
+		price: 50000,
+		priceUnit: 'device',
 		icon: service3Number,
 		cta: 'Stream without limits',
 		image: streamingServicesImg,
@@ -710,7 +714,7 @@ export const serverSecurityOffersMock: {
 	icon: string
 }[] = [
 	{
-		id: '1',
+		id: '1-serverSecurity',
 		name: 'Technical Analysis',
 		description: 'Comprehensive security assessment and vulnerability analysis',
 		images: [serverSecurtyImage1],
@@ -727,7 +731,7 @@ export const serverSecurityOffersMock: {
 		color: '#DCEBFE',
 	},
 	{
-		id: '2',
+		id: '2-serverSecurity',
 		name: 'Solution Support',
 		description: '24/7 technical support and maintenance services',
 		images: [serverSecurtyImage2],
@@ -739,7 +743,7 @@ export const serverSecurityOffersMock: {
 		color: '#DDFCE7',
 	},
 	{
-		id: '3',
+		id: '3-serverSecurity',
 		name: 'License Installation',
 		description: 'Professional software licensing and installation services',
 		images: [serverSecurtyImage3],
@@ -751,7 +755,7 @@ export const serverSecurityOffersMock: {
 		color: '#F3E8FF',
 	},
 	{
-		id: '4',
+		id: '4-serverSecurity',
 		name: 'Antivirus Solutions',
 		description: 'Enterprise-grade antivirus and malware protection',
 		images: [serverSecurtyImage4],
@@ -768,7 +772,7 @@ export const serverSecurityOffersMock: {
 		],
 	},
 	{
-		id: '5',
+		id: '5-serverSecurity',
 		name: 'Backup Server',
 		description: 'Automated backup solutions and disaster recovery',
 		images: [serverSecurtyImage5],
@@ -780,7 +784,7 @@ export const serverSecurityOffersMock: {
 		promises: ['Automated backups', 'Cloud storage', 'Disaster recovery', 'Data encryption'],
 	},
 	{
-		id: '6',
+		id: '6-serverSecurity',
 		name: 'Mail Gateway',
 		description: 'Secure email gateway and spam protection',
 		images: [serverSecurtyImage6],

@@ -11,7 +11,7 @@ interface IProduct {
 	price: number
 	quantity: number
 	creationDate: string
-	category: ProductCategoryType
+	category?: ProductCategoryType
 }
 
 export default class Product implements IProduct {
@@ -25,7 +25,7 @@ export default class Product implements IProduct {
 	readonly price: number
 	readonly quantity: number
 	readonly creationDate: string
-	readonly category: ProductCategoryType
+	readonly category?: ProductCategoryType
 
 	constructor(product: IProduct) {
 		this.images = product.images

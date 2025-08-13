@@ -2,7 +2,7 @@
 import { ReactNode } from 'react'
 import enIcon from '../assets/icons/flag_en.png'
 import frIcon from '../assets/icons/flag_fr.png'
-import deIcon from '../assets/icons/flag_de.png'
+// import deIcon from '../assets/icons/flag_de.png'
 import { useTranslation } from 'react-i18next'
 import { LanguageContext } from '@/contexts/LanguageContext'
 
@@ -16,7 +16,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 	const languages = {
 		en: { nativeName: translator('language.en') },
 		fr: { nativeName: translator('language.fr') },
-		de: { nativeName: translator('language.de') },
+		// de: { nativeName: translator('language.de') },
 	}
 
 	/**
@@ -30,8 +30,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 				return enIcon
 			case 'fr':
 				return frIcon
-			case 'de':
-				return deIcon
+			// case 'de':
+			// 	return deIcon
 			default:
 				return enIcon
 		}

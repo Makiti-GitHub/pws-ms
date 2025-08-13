@@ -49,7 +49,7 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 					<div className="flex items-center gap-8 w-full">
 						<Button
 							variant={'ghost'}
-							disabled={cartItem.quantity < 1}
+							disabled={cartItem.quantity < 1 || cartItem.productQty === 1}
 							onClick={() => updateQuantity(cartItem.id, cartItem.quantity - 1)}
 							className="!p-2.5 size-[44px] hover:cursor-pointer rounded-sm border-[0.5px] border-outline-variant"
 						>
@@ -61,6 +61,10 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 						</span>
 
 						<Button
+							disabled={
+								cartItem.quantity === cartItem.productQty ||
+								cartItem.productQty === 1
+							}
 							variant={'ghost'}
 							onClick={() => updateQuantity(cartItem.id, cartItem.quantity + 1)}
 							className="!p-2.5 size-[44px] hover:cursor-pointer rounded-sm border-[0.5px] border-outline-variant"

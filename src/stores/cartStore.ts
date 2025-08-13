@@ -4,6 +4,7 @@ import { persist, createJSONStorage } from 'zustand/middleware'
 
 export interface CartItem extends Product {
 	quantity: number
+	productQty: number
 }
 
 interface CartStore {
@@ -30,7 +31,14 @@ export const useCartStore = create<CartStore>()(
 						return {
 							items: state.items.map((item) =>
 								item.id === product.id
-									? { ...item, quantity: item.quantity + 1 }
+									? {
+											...item,
+											productQty: product.quantity,
+											quantity:
+												product.quantity > 1
+													? item.quantity + 1
+													: item.quantity,
+									  }
 									: item,
 							),
 						}

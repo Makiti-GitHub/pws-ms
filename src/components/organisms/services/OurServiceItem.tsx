@@ -69,7 +69,9 @@ const OurServiceItem = ({ ourService, index }: OurServiceItemProps) => {
 					</ul>
 				</div>
 
-				<p className="font-seravek_bold text-2xl text-center text-secondary">{`Starting from ${ourService.price}`}</p>
+				<p className="font-seravek_bold text-2xl text-center text-secondary">{`${t(
+					'startingFrom',
+				)} ${ourService.price} CFA/${t(ourService.priceUnit)}`}</p>
 
 				<Button
 					onClick={() => navigate(`/services/${ourService.link}`)}

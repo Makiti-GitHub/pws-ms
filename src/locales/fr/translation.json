@@ -1,3 +1,495 @@
 {
-    "hello": "Hallo"
+    "hello": "Bonjour",
+    "moreProducts": "Plus de Produits",
+    "moreDetails": "Plus de Détails",
+    "addToCart": "Ajouter au Panier",
+    "inStock": "En Stock",
+    "new": "Nouveau",
+    "free": "Gratuit",
+    "shipping": "Livraison",
+    "total": "Total",
+    "topRated": "Mieux Noté",
+    "remove": "Supprimer",
+    "month": "mois",
+    "device": "dispositif",
+    "bestOffer": "Meilleure Offre",
+    "items": "Articles",
+    "startingFrom": "A partir de",
+    "language": {
+        "en": "Anglais",
+        "fr": "Français",
+        "de": "Allemand"
+    },
+    "nav": {
+        "links": {
+            "home": "Accueil",
+            "services": "Services",
+            "shop": "Boutique",
+            "about": "À Propos",
+            "contacts": "Contacts"
+        },
+        "searchBar": {
+            "placeholder": "Rechercher des Produits"
+        }
+    },
+    "pages": {
+        "home": {
+            "sections": {
+                "hero": {
+                    "items": {
+                        "item1": {
+                            "title": "Boostez Votre Connectivité et Divertissement avec Nos Solutions Expertes",
+                            "desc": "Au carrefour de la performance, de la sécurité et du divertissement, nous fournissons l'infrastructure numérique dont votre monde a besoin.",
+                            "cta": "Contactez-nous Maintenant"
+                        },
+                        "item2": {
+                            "title": "Divertissement sans limites",
+                            "desc": "Profitez de l'IPTV premium, Netflix, musique et streaming vidéo — nous livrons le contenu que vous aimez, sans tracas.",
+                            "cta": "Parcourir Notre Boutique en Ligne"
+                        },
+                        "item3": {
+                            "title": "Restez Connecté Partout",
+                            "desc": "Profitez d'un internet rapide et fiable partout — même dans les zones reculées. Nous vendons, installons, configurons et maintenons les kits internet par satellite pour vous garder connecté, où que vous soyez.",
+                            "cta": "Contactez-nous Maintenant"
+                        }
+                    }
+                },
+                "partners": {
+                    "title": "Partenariats solides avec :",
+                    "tabs": {
+                        "serverSecurity": "Sécurité des Serveurs",
+                        "internetConfiguration": "Configuration Internet",
+                        "streamingServices": "Services de Streaming"
+                    }
+                },
+                "featuredProducts": {
+                    "title": "Produits Vedettes",
+                    "subtitle": "Découvrez quelques-uns de nos produits les plus populaires et les mieux notés que les clients adorent pour leur fiabilité, leurs performances et leur excellent rapport qualité-prix.",
+                    "cta": "Voir tous les Produits"
+                },
+                "ourServices": {
+                    "title": "Nos Services",
+                    "subtitle": "Pour les entreprises comme pour les particuliers, nous fournissons des services technologiques sur mesure avec un support expert et des solutions fiables à long terme.",
+                    "services": {
+                        "service1": {
+                            "title": "Sécurité des Serveurs",
+                            "description": "De l'approvisionnement à l'installation sécurisée, nous construisons des infrastructures informatiques robustes qui alimentent vos opérations en toute confiance.",
+                            "attributes": {
+                                "attribute1": "Surveillance et détection des menaces 24h/24 et 7j/7",
+                                "attribute2": "Configuration de pare-feu avancée",
+                                "attribute3": "Évaluations de vulnérabilité"
+                            },
+                            "cta": "Restez en sécurité"
+                        },
+                        "service2": {
+                            "title": "Configuration de Kit Internet",
+                            "description": "Profitez d'un internet rapide et fiable partout — même dans les zones reculées. Nous vendons, installons et maintenons les kits satellites pour vous garder connecté.",
+                            "attributes": {
+                                "attribute1": "Expédition Mondiale",
+                                "attribute2": "Support à Distance 24h/24 et 7j/7",
+                                "attribute3": "Cartographie de la zone de couverture"
+                            },
+                            "cta": "Restez connecté"
+                        },
+                        "service3": {
+                            "title": "Services de Streaming",
+                            "description": "Plongez dans un divertissement sans fin avec nos packages IPTV, musique et streaming vidéo soigneusement sélectionnés — incluant Netflix, télé en direct, et plus encore.",
+                            "attributes": {
+                                "attribute1": "Configuration multi-appareils",
+                                "attribute2": "Optimisation de la programmation des chaînes",
+                                "attribute3": "Amélioration de la qualité de streaming"
+                            },
+                            "cta": "Streamez sans limites"
+                        }
+                    }
+                }
+            }
+        },
+        "shop": {
+            "title": "Boutique",
+            "subtitle": "Parcourez notre collection complète de produits technologiques",
+            "filters": {
+                "electronics": "Électronique",
+                "license": "Licence",
+                "fashion": "Mode",
+                "beauty": "Beauté",
+                "home": "Maison",
+                "baby&children": "Bébé et Enfants",
+                "health": "Santé",
+                "food": "Alimentation",
+                "all": "Tout"
+            },
+            "noProductsFound": "Aucun produit trouvé"
+        },
+        "shoppingCart": {
+            "title": "Panier d'Achat",
+            "subtitle": "Passez en revue vos articles et finalisez votre commande",
+            "sections": {
+                "cartItems": {
+                    "title": "Articles du Panier",
+                    "emptyCart": "Votre panier est vide"
+                },
+                "orderSummary": {
+                    "title": "Résumé de Commande",
+                    "subtotal": "Sous-total",
+                    "shipping": "Livraison",
+                    "total": "Total"
+                },
+                "customerInformation": {
+                    "title": "Informations Client",
+                    "form": {
+                        "cta": "Passer Commande",
+                        "fields": {
+                            "name": {
+                                "label": "Nom",
+                                "placeholder": "Entrez votre nom"
+                            },
+                            "email": {
+                                "label": "Email",
+                                "placeholder": "Entrez votre adresse email"
+                            },
+                            "companyName": {
+                                "label": "Entreprise",
+                                "placeholder": "Optionnel"
+                            },
+                            "phoneNumber": {
+                                "label": "Téléphone",
+                                "placeholder": "Entrez votre numéro de téléphone"
+                            },
+                            "address": {
+                                "label": "Adresse",
+                                "placeholder": "Entrez votre adresse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "services": {
+            "serverSecurity": {
+                "title": "Sécurité des Serveurs",
+                "subtitle": "De l'approvisionnement à l'installation sécurisée, nous construisons des infrastructures informatiques robustes qui alimentent vos opérations en toute confiance.",
+                "sections": {
+                    "completeSecurityPackage": {
+                        "title": "Package de Sécurité Complet",
+                        "subtitle": "Obtenez tous nos services de sécurité dans un package complet avec des économies significatives",
+                        "promises": {
+                            "promise1": "Tous les services inclus",
+                            "promise2": "Support prioritaire",
+                            "promise3": "30% d'économies de coût"
+                        },
+                        "cta": "Ajouter au Panier"
+                    },
+                    "callToAction": {
+                        "title": "Besoin d'une solution de streaming personnalisée ou avez-vous des questions ?",
+                        "cta": "Contactez-nous Maintenant"
+                    }
+                }
+            },
+            "internetKitConfiguration": {
+                "title": "Configuration de Kit Internet",
+                "subtitle": "Profitez d'un internet rapide et fiable partout — même dans les zones reculées. Nous vendons, installons et maintenons les kits satellites pour vous garder connecté.",
+                "sections": {
+                    "whyChooseStarlink": {
+                        "title": "Pourquoi Choisir Starlink ?",
+                        "description": "Starlink est une constellation révolutionnaire de satellites internet qui fournit un accès internet haut débit à travers le globe. Contrairement aux services internet traditionnels, Starlink utilise un réseau de satellites en orbite terrestre basse pour fournir une connectivité rapide et fiable n'importe où sur la planète.",
+                        "stats": {
+                            "sattelites": "Satellites",
+                            "lowLatency": "Faible Latence",
+                            "uptime": "Temps de Fonctionnement"
+                        }
+                    },
+                    "ourStarlinkPlans": {
+                        "title": "Nos Plans Starlink",
+                        "starter": {
+                            "title": "Débutant",
+                            "description": "Commandez facilement votre kit !",
+                            "promises": {
+                                "promise1": "Commandez votre équipement en toute simplicité.",
+                                "promise2": "Livraison rapide directement à votre porte."
+                            }
+                        },
+                        "premium": {
+                            "title": "Premium",
+                            "description": "La solution tout-en-un pour les utilisateurs exigeants !",
+                            "promises": {
+                                "promise1": "Commandez facilement votre équipement premium.",
+                                "promise2": "Livraison rapide et sécurisée à votre porte.",
+                                "promise3": "Visite de pré-installation à votre emplacement.",
+                                "promise4": "Déploiement de technicien pour une configuration optimale.",
+                                "promise5": "Support personnalisé 24h/24 et 7j/7 pour répondre à toutes vos questions.",
+                                "promise6": "1 mois d'abonnement gratuit.",
+                                "promise7": "Solutions personnalisées pour une connectivité inégalée.",
+                                "promise8": "Un billet de bus VIP gratuit depuis une agence de votre choix."
+                            }
+                        },
+                        "standard": {
+                            "title": "Standard",
+                            "description": "L'expérience Starlink sans compromis !",
+                            "promises": {
+                                "promise1": "Commandez votre équipement en quelques clics seulement.",
+                                "promise2": "Livraison express à votre emplacement.",
+                                "promise3": "Visite de pré-installation dans vos locaux.",
+                                "promise4": "Configuration optimisée par notre équipe d'experts pour des performances maximales.",
+                                "promise5": "Suivi personnalisé pour assurer une satisfaction totale.",
+                                "promise6": "Un billet de bus PREMIUM gratuit depuis une agence de votre choix."
+                            }
+                        }
+                    },
+                    "faq": {
+                        "title": "Questions Fréquemment Posées",
+                        "questions": {
+                            "question1": {
+                                "question": "Quelle est la vitesse d'internet de Starlink ?",
+                                "answer": "Starlink fournit des vitesses de téléchargement entre 25-220 Mbps et des vitesses de téléversement de 5-25 Mbps. Les vitesses varient selon l'emplacement, l'heure de la journée et la congestion du réseau. La plupart des utilisateurs expérimentent des vitesses suffisantes pour le streaming, les jeux et les appels vidéo."
+                            },
+                            "question2": {
+                                "question": "Combien de temps prend l'installation ?",
+                                "answer": "L'auto-installation prend généralement 15-30 minutes. Notre service d'installation professionnel inclut une étude du site et prend 2-4 heures pour une configuration et des tests complets. Nous fournissons aussi une formation sur le fonctionnement du système."
+                            },
+                            "question3": {
+                                "question": "Starlink est-il affecté par la météo ?",
+                                "answer": "Starlink est conçu pour fonctionner dans diverses conditions météorologiques. La neige épaisse ou la glace peuvent temporairement affecter le signal, mais le système est conçu pour gérer la plupart des scénarios météorologiques. L'antenne inclut des éléments chauffants pour faire fondre la neige et la glace."
+                            },
+                            "question4": {
+                                "question": "Quel est le coût mensuel après l'installation ?",
+                                "answer": "Les frais de service mensuels varient selon le plan et l'emplacement. Les plans résidentiels commencent généralement à 120$/mois, tandis que les plans d'entreprise varient de 250-500$/mois. Contactez-nous pour les prix actuels dans votre région."
+                            },
+                            "question5": {
+                                "question": "Puis-je déplacer mon Starlink vers un autre emplacement ?",
+                                "answer": "Oui ! Starlink offre des options de portabilité. Les kits Mini et Roam sont conçus pour une relocalisation facile. Les kits Standard peuvent être déplacés mais peuvent nécessiter des mises à jour d'adresse de service et des changements de plan potentiels."
+                            },
+                            "question6": {
+                                "question": "Combien de temps faut-il pour démarrer un projet et livrer des résultats ?",
+                                "answer": "Le lancement du projet prend généralement 2-3 semaines, couvrant la configuration de l'équipe et l'analyse des exigences. Les délais de livraison dépendent de la portée du projet : sites web simples (4-8 semaines), applications complexes (3-12 mois), solutions d'entreprise (6-18 mois). Vous obtiendrez une feuille de route détaillée dès le départ, avec des mises à jour de progression constantes à chaque étape."
+                            },
+                            "question7": {
+                                "question": "Dans quelles technologies et compétences vos équipes se spécialisent-elles ?",
+                                "answer": "Nos équipes sont expertes dans les stacks technologiques modernes : Frontend (React, Vue.js, Angular), Backend (Node.js, Python, Java), Mobile (React Native, Flutter), Cloud (AWS, Azure, GCP), DevOps (Docker, Kubernetes), IA/ML (TensorFlow, PyTorch), et bases de données (PostgreSQL, MongoDB). Nous restons à la pointe en évoluant constamment avec les derniers outils et meilleures pratiques."
+                            }
+                        }
+                    },
+                    "installationProcess": {
+                        "title": "Processus d'Installation",
+                        "steps": {
+                            "step1": {
+                                "title": "Étude du Site",
+                                "description": "Nous évaluons votre emplacement pour une réception optimale du signal satellite"
+                            },
+                            "step2": {
+                                "title": "Configuration de l'Équipement",
+                                "description": "Installation professionnelle de l'antenne et du routeur avec positionnement optimal"
+                            },
+                            "step3": {
+                                "title": "Configuration Réseau",
+                                "description": "Configuration réseau complète incluant le Wi-Fi et les connexions d'appareils"
+                            },
+                            "step4": {
+                                "title": "Tests et Formation",
+                                "description": "Tests de vitesse et formation des utilisateurs sur le fonctionnement du système"
+                            }
+                        }
+                    },
+                    "callToAction": {
+                        "title": "Avez-vous encore des questions ?",
+                        "cta": "Contactez-nous Maintenant"
+                    }
+                }
+            },
+            "streamingServices": {
+                "title": "Services de Streaming",
+                "subtitle": "Plongez dans un divertissement sans fin avec nos packages IPTV, musique et streaming vidéo soigneusement sélectionnés — incluant Netflix, télé en direct, et plus encore.",
+                "sections": {
+                    "callToAction": {
+                        "title": "Besoin d'une solution de streaming personnalisée ou avez-vous des questions ?",
+                        "cta": "Contactez-nous Maintenant"
+                    }
+                }
+            }
+        },
+        "contactUs": {
+            "title": "Contactez-nous",
+            "subtitle": "Entrez en contact avec notre équipe d'experts",
+            "sections": {
+                "leftSection": {
+                    "title": "Envoyez-nous un Message",
+                    "subtitle": "Remplissez le formulaire ci-dessous et nous vous répondrons rapidement",
+                    "form": {
+                        "cta": "Envoyer le Message",
+                        "fields": {
+                            "name": {
+                                "label": "Nom",
+                                "placeholder": "Entrez votre nom"
+                            },
+                            "email": {
+                                "label": "Email",
+                                "placeholder": "Entrez votre adresse email"
+                            },
+                            "companyName": {
+                                "label": "Entreprise",
+                                "placeholder": "Optionnel"
+                            },
+                            "subject": {
+                                "label": "Sujet",
+                                "placeholder": "Entrez le sujet"
+                            },
+                            "message": {
+                                "label": "Message",
+                                "placeholder": "Entrez votre message"
+                            }
+                        }
+                    }
+                },
+                "rightSection": {
+                    "phone": "Téléphone",
+                    "email": "Email",
+                    "businessHours": "Heures d'Ouverture"
+                }
+            }
+        },
+        "about": {
+            "title": "À Propos de Makiti SARL",
+            "subtitle": "Leader de l'avenir des solutions technologiques avec des produits innovants, des services experts, et un engagement envers des expériences sécurisées et connectées.",
+            "sections": {
+                "ourJourney": {
+                    "title": "Notre Parcours",
+                    "subtitle": "Des idées audacieuses à l'innovation numérique transformatrice, nous donnons du pouvoir à l'avenir en transformant la vision en réalité grâce à la technologie."
+                }
+            }
+        },
+        "privacyPolicy": {
+            "title": "Politique de Confidentialité de Makiti SARL",
+            "sections": {
+                "introduction": {
+                    "title": "Introduction",
+                    "p1": "Chez <bold>Makiti SARL</bold>, la protection des données personnelles constitue une priorité. La présente politique de confidentialité décrit les modalités selon lesquelles nous collectons, traitons, conservons et protégeons les données personnelles des utilisateurs, partenaires, clients et collaborateurs, dans le cadre de l’utilisation de nos services numériques, notamment ceux proposés via la plateforme <bold>Matoa</bold> et ses applications associées (y compris l’application chauffeur).",
+                    "p2": "Cette politique est conforme à la <bold>Loi n°2010/012 du 21 décembre 2010 relative à la cybersécurité et à la cybercriminalité au Cameroun</bold>, ainsi qu’aux <bold>principes du Règlement Général sur la Protection des Données (RGPD)</bold> à titre de bonne pratique internationale."
+                },
+                "personalDataCollected": {
+                    "title": "Données personnelles collectées",
+                    "p1": "Les catégories de données susceptibles d’être collectées sont les suivantes :",
+                    "ul": [
+                        "<bold>Données d’identification :</bold> nom, prénom, numéro de téléphone, adresse électronique, adresse postale.",
+                        "<bold>Données professionnelles :</bold> nom de l’entreprise, fonction, secteur d’activité.",
+                        "<bold>Données techniques :</bold> adresse IP, identifiants de connexion, type d’appareil, système d’exploitation, journaux de navigation.",
+                        "<bold>Données d’usage :</bold> historique de navigation, préférences utilisateur, commentaires, feedbacks, fréquence d’utilisation.",
+                        "<bold>Données financières :</bold> informations relatives aux transactions commerciales et aux paiements (hors données bancaires sensibles, sauf si nécessaire et sécurisé)."
+                    ]
+                },
+                "collectionMethod": {
+                    "title": "Méthodes de collecte",
+                    "p1": "Les données peuvent être collectées :",
+                    "ul": [
+                        "Lors de la création d’un compte sur nos plateformes (web ou mobile).",
+                        "Par le biais de formulaires en ligne ou papier.",
+                        "Lors de communications avec nos services (support client, service commercial, etc.).",
+                        "Par l’utilisation de cookies ou d’autres technologies de suivi lors de la navigation sur nos sites ou applications."
+                    ]
+                },
+                "processingPurposes": {
+                    "title": "Finalités du traitement",
+                    "p1": "Les données personnelles sont traitées de manière légale, loyale et transparente, pour les finalités suivantes :",
+                    "ul": [
+                        "Permettre l'accès sécurisé et personnalisé à nos services numériques.",
+                        "Optimiser le fonctionnement de la plateforme et améliorer l’expérience utilisateur.",
+                        "Fournir un support technique, envoyer des notifications pertinentes ou proposer des offres ciblées.",
+                        "Gérer les relations contractuelles et les obligations administratives.",
+                        "Assurer la conformité aux obligations légales, réglementaires ou judiciaires."
+                    ]
+                },
+                "dataDisclosure": {
+                    "title": "Communication des données",
+                    "p1": "<bold>Makiti SARL</bold> s’engage à ne jamais vendre ni louer les données personnelles collectées. Toutefois, certaines données peuvent être communiquées à des tiers dans les cas suivants :",
+                    "ul": [
+                        "À nos <bold>prestataires de services techniques</bold> (hébergement, infogérance, maintenance) contractuellement liés à des obligations de confidentialité.",
+                        "À des <bold>partenaires commerciaux</bold> agissant dans le cadre strict de l’exécution des services.",
+                        "Aux <bold>autorités compétentes</bold> (administratives, fiscales ou judiciaires), sur réquisition légale et motivée."
+                    ]
+                },
+                "retentionPeriod": {
+                    "title": "Durée de conservation",
+                    "p1": "Les données sont conservées pendant une durée strictement nécessaire aux finalités pour lesquelles elles ont été collectées, sauf obligation légale imposant une durée plus longue (ex. : conservation à des fins de preuve, lutte contre la fraude, ou obligations fiscales).",
+                    "p2": "À l’expiration de ces durées, les données sont supprimées ou anonymisées de manière sécurisée."
+                },
+                "dataSecurity": {
+                    "title": "Sécurité des données",
+                    "p1": "<bold>Makiti SARL</bold> applique des mesures de sécurité physiques, logiques et organisationnelles conformes aux standards internationaux pour garantir la confidentialité, l’intégrité et la disponibilité des données, incluant notamment :",
+                    "ul": [
+                        "Contrôle d’accès et authentification.",
+                        "Chiffrement des données sensibles.",
+                        "Journalisation des accès et alertes de sécurité.",
+                        "Audits réguliers de conformité et tests de vulnérabilité."
+                    ]
+                },
+                "yourRights": {
+                    "title": "Vos droits",
+                    "p1": "Conformément à la <bold>Loi camerounaise n°2010/012</bold> précitée et aux bonnes pratiques du RGPD, vous disposez des droits suivants :",
+                    "ul": [
+                        "<bold>Droit d’accès</bold> à vos données personnelles.",
+                        "<bold>Droit de rectification</bold>, de mise à jour ou de suppression de vos données inexactes ou obsolètes.",
+                        "<bold>Droit d’opposition</bold> au traitement de vos données pour des motifs légitimes.",
+                        "<bold>Droit au retrait du consentement</bold>, à tout moment pour les traitements fondés sur celui-ci.",
+                        "<bold>Droit à la portabilité</bold>, le cas échéant, dans les limites prévues par la loi."
+                    ],
+                    "p2": "Pour exercer vos droits, contactez-nous à l’adresse suivante : <bold><email>contact@makiti-group.cm</email></bold>"
+                },
+                "cookiesAndTrackers": {
+                    "title": "Cookies et traceurs",
+                    "p1": "Nos plateformes peuvent utiliser des cookies ou technologies similaires à des fins de :",
+                    "ul": [
+                        "Facilitation de la navigation.",
+                        "Mesure d’audience.",
+                        "Amélioration des performances et de l’ergonomie.",
+                        "Affichage de contenus personnalisés."
+                    ],
+                    "p2": "Vous pouvez configurer votre navigateur pour restreindre ou refuser les cookies. Toutefois, certaines fonctionnalités pourraient ne pas fonctionner correctement sans cookies."
+                },
+                "policyChanges": {
+                    "title": "Modification de la politique",
+                    "p1": "<bold>Makiti SARL</bold> se réserve le droit de modifier la présente politique à tout moment pour tenir compte des évolutions légales, techniques ou fonctionnelles de ses services.",
+                    "p2": "Les modifications entreront en vigueur dès leur publication sur notre site. La date de la dernière mise à jour sera indiquée en haut du document."
+                },
+                "contact": {
+                    "title": "Contact",
+                    "p1": "Pour toute demande relative à cette politique de confidentialité ou à vos données personnelles, vous pouvez nous contacter via les coordonnées suivantes :",
+                    "p2": "<bold>Makiti SARL</bold>",
+                    "p3": "Site web : <link1>www.makiti-group.com</link1>",
+                    "p4": "Adresse e-mail : <email>contact@makiti.de</email>",
+                    "p5": "Téléphone : <phone>+237 680 095 453</phone>"
+                }
+            }
+        }
+    },
+    "footer": {
+        "upperSection": {
+            "leftSection": {
+                "makitiActivityDescription": "Votre partenaire de confiance pour des solutions technologiques sécurisées et un approvisionnement intelligent de produits — simplifiant la connectivité, l'infrastructure et l'innovation pour chaque entreprise."
+            },
+            "rightSection": {
+                "quickLinks": {
+                    "title": "Liens Rapides"
+                },
+                "services": {
+                    "title": "Services",
+                    "options": {
+                        "serverSecurity": "Sécurité des Serveurs",
+                        "internetKitConfiguration": "Configuration de Kit Internet",
+                        "streamingServices": "Services de Streaming"
+                    }
+                },
+                "contactUs": {
+                    "title": "Contactez-nous",
+                    "getDirections": "Obtenir les Directions"
+                }
+            }
+        },
+        "lowerSection": {
+            "copyright": "© {{year}} Makiti SARL. Tous droits réservés.",
+            "nav": {
+                "privacyPolicy": "Politique de Confidentialité",
+                "termsOfService": "Conditions de Service",
+                "legalNotice": "Mention Légale"
+            }
+        }
+    }
 }

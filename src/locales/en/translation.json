@@ -11,8 +11,10 @@
     "topRated": "Top Rated",
     "remove": "Remove",
     "month": "month",
+    "device": "device",
     "bestOffer": "Best Offer",
     "items": "Items",
+    "startingFrom": "Starting From",
     "language": {
         "en": "English",
         "fr": "French",
@@ -352,6 +354,108 @@
                 "ourJourney": {
                     "title": "Our Journey",
                     "subtitle": "From bold ideas to transformative digital innovation, we empower the future by turning vision into reality through technology."
+                }
+            }
+        },
+        "privacyPolicy": {
+            "title": "Makiti SARL Privacy Policy",
+            "sections": {
+                "introduction": {
+                    "title": "Introduction",
+                    "p1": "At <bold>Makiti SARL</bold>, the protection of personal data is a priority. This privacy policy describes how we collect, process, store and protect the personal data of users, partners, customers and employees when they use our digital services, particularly those offered via the Matoa platform and its associated ",
+                    "p2": "This policy complies with <bold>Law No. 2010/012 of 21 December 2010 on cybersecurity and cybercrime in Cameroon</bold>, as well as the <bold>principles of the General Data Protection Regulation (GDPR)</bold> as international best practice."
+                },
+                "personalDataCollected": {
+                    "title": "Personal data collected",
+                    "p1": "The categories of data that may be collected are as follows :",
+                    "ul": [
+                        "<bold>Identification data :</bold>  surname, first name, telephone number, email address, postal address.",
+                        "<bold>Professional data :</bold> company name, position, sector of activity.",
+                        "<bold>Technical data :</bold> IP address, login details, device type, operating system, browsing logs.",
+                        "<bold>Usage data :</bold> browsing history, user preferences, comments, feedback, frequency of use.",
+                        "<bold>Financial data :</bold> information relating to commercial transactions and payments (excluding sensitive banking data, unless necessary and secure)."
+                    ]
+                },
+                "collectionMethod": {
+                    "title": "Methods of collection",
+                    "p1": "Data may be collected :",
+                    "ul": [
+                        "When creating an account on our platforms (web or mobile).",
+                        "Through online or paper forms.",
+                        "When communicating with our services (customer support, sales department, etc.).",
+                        "Through the use of cookies or other tracking technologies when browsing our websites or applications."
+                    ]
+                },
+                "processingPurposes": {
+                    "title": "Purposes of processing",
+                    "p1": "Personal data is processed in a lawful, fair and transparent manner for the following purposes :",
+                    "ul": [
+                        "To enable secure and personalised access to our digital services.",
+                        "To optimise the functioning of the platform and improve the user experience.",
+                        "To provide technical support, send relevant notifications or offer targeted offers.",
+                        "To manage contractual relationships and administrative obligations.",
+                        "To ensure compliance with legal, regulatory or judicial obligations."
+                    ]
+                },
+                "dataDisclosure": {
+                    "title": "Data disclosure",
+                    "p1": "<bold>Makiti SARL</bold> undertakes never to sell or rent the personal data it collects. However, certain data may be disclosed to third parties in the following cases :",
+                    "ul": [
+                        "To our <bold>technical service providers</bold> (hosting, IT management, maintenance) who are contractually bound by confidentiality obligations.",
+                        "To <bold>commercial partners</bold> acting strictly within the scope of service provision.",
+                        "To the <bold>competent authorities</bold> (administrative, tax or judicial), upon legal and reasoned request."
+                    ]
+                },
+                "retentionPeriod": {
+                    "title": "Retention period",
+                    "p1": "Data is retained for the period strictly necessary for the purposes for which it was collected, unless a legal obligation imposes a longer period (e.g. retention for evidence purposes, fraud prevention or tax obligations).",
+                    "p2": "At the end of these periods, the data is securely deleted or anonymised."
+                },
+                "dataSecurity": {
+                    "title": "Data security",
+                    "p1": "<bold>Makiti SARL</bold> applies physical, logical and organisational security measures in accordance with international standards to ensure the confidentiality, integrity and availability of data, including in particular :",
+                    "ul": [
+                        "Access control and authentication.",
+                        "Encryption of sensitive data.",
+                        "Access logging and security alerts.",
+                        "Regular compliance audits and vulnerability tests."
+                    ]
+                },
+                "yourRights": {
+                    "title": "Your rights",
+                    "p1": "In accordance with the <bold>aforementioned Cameroonian Law No. 2010/012</bold> and GDPR best practices, you have the following rights :",
+                    "ul": [
+                        "<bold>Right of access</bold> to your personal data",
+                        "<bold>Right to rectify</bold>, update or delete your inaccurate or obsolete data.",
+                        "<bold>Right to object</bold> to the processing of your data for legitimate reasons.",
+                        "<bold>Right to withdraw consent</bold>, at any time for processing based on consent.",
+                        "<bold>Right to portability</bold>, where applicable, within the limits provided for by law."
+                    ],
+                    "p2": "To exercise your rights, please contact us at the following address : <bold><email>contact@makiti-group.cm</email></bold>"
+                },
+                "cookiesAndTrackers": {
+                    "title": "Cookies and trackers",
+                    "p1": "Our platforms may use cookies or similar technologies for the following purposes :",
+                    "ul": [
+                        "To facilitate navigation.",
+                        "To measure audience size.",
+                        "To improve performance and usability.",
+                        "To display personalised content."
+                    ],
+                    "p2": "You can configure your browser to restrict or refuse cookies. However, some features may not function properly without cookies."
+                },
+                "policyChanges": {
+                    "title": "Policy changes",
+                    "p1": "<bold>Makiti SARL</bold> reserves the right to modify this policy at any time to reflect legal, technical or functional changes to its services.",
+                    "p2": "Changes will take effect as soon as they are published on our website. The date of the last update will be indicated at the top of the document."
+                },
+                "contact": {
+                    "title": "Contact",
+                    "p1": "For any questions regarding this privacy policy or your personal data, you can contact us using the following contact details :",
+                    "p2": "<bold>Makiti SARL</bold>",
+                    "p3": "Website : <link1>www.makiti-group.com</link1>",
+                    "p4": "Email address : <email>contact@makiti.de</email>",
+                    "p5": "Telephone : <phone>+237 680 095 453</phone>"
                 }
             }
         }

@@ -6,6 +6,8 @@ import { ShoppingCartIcon } from 'lucide-react'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import checkIcon from '@/assets/icons/check.svg'
+import { useCartStore } from '@/stores/cartStore'
+import { toast } from 'sonner'
 
 interface ServiceCardProps {
 	service: (typeof serverSecurityOffersMock)[number]
@@ -18,6 +20,7 @@ const ServiceCard: FC<React.ComponentProps<'article'> & ServiceCardProps> = ({
 	...props
 }) => {
 	const { t } = useTranslation()
+	const addToCart = useCartStore((state) => state.addToCart)
 	return (
 		<article
 			className={cn(
@@ -89,6 +92,22 @@ const ServiceCard: FC<React.ComponentProps<'article'> & ServiceCardProps> = ({
 					} CFA/${t('month')}`}</p>
 					<div className="w-full flex flex-col lg:flex-row gap-2 sm:gap-4 items-center">
 						<Button
+							onClick={() => {
+								addToCart({
+									creationDate: service.creationDate,
+									id: service.id,
+									// category: service.category,
+									quantity: 1,
+									price: service.price,
+									name: service.name,
+									rating: 5,
+									reviews: 0,
+									images: service.images,
+									description: service.description,
+								})
+
+								toast.success('Service added to cart')
+							}}
 							variant={'primary'}
 							className="rounded-[8px] w-full flex-1 h-max !py-2 sm:!py-3 !px-4 gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"
 						>
