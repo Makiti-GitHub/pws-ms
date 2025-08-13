@@ -458,6 +458,103 @@
                     "p5": "Téléphone : <phone>+237 680 095 453</phone>"
                 }
             }
+        },
+        "termsAndConditions": {
+            "title": "Conditions Générales d’Utilisation (CGU) – Makiti SARL",
+            "p1": "<bold>Dernière mise à jour : (Date à insérer)<bold>",
+            "p2": "Bienvenue sur la plateforme de Makiti SARL. En accédant à nos services numériques, applications ou sites web, vous acceptez, sans réserve, les présentes Conditions Générales d’Utilisation (CGU). Veuillez les lire attentivement avant toute utilisation.",
+            "sections": {
+                "presentation": {
+                    "title": "Présentation de Makiti SARL",
+                    "p1": "Makiti SARL est une société de droit camerounais, immatriculée au Registre du Commerce et du Crédit Mobilier (RCCM) sous le numéro <bold><italic>M052318275229B</italic></bold>, dont le siège social est situé à Yaoundé- Santa Barbara, face Sonel . Elle développe et met à disposition des solutions digitales pour faciliter l’accès aux produits et services, notamment via sa plateforme <bold>Matoa</bold> et ses applications associées."
+                },
+                "definitions": {
+                    "title": "Définitions",
+                    "p1": "Dans les présentes CGU, les termes ci-dessous ont la signification suivante :",
+                    "ul": [
+                        "<bold>« Utilisateur »</bold> : toute personne physique ou morale utilisant les services numériques proposés par Makiti SARL.",
+                        "<bold>« Services »</bold> : ensemble des fonctionnalités accessibles via les sites, applications ou interfaces mises à disposition par Makiti.",
+                        "<bold>« Contenu »</bold> : toute donnée, information, texte, image, son, vidéo ou élément mis à disposition via les services.",
+                        "<bold>« Compte utilisateur »</bold> : espace personnel et sécurisé, créé par un utilisateur pour accéder à certains services."
+                    ]
+                },
+                "purposes": {
+                    "title": "Objet des CGU",
+                    "p1": "Les présentes CGU ont pour objet de définir les conditions et modalités d’accès, d’utilisation et de fonctionnement des services numériques fournis par Makiti SARL."
+                },
+                "servicesAccess": {
+                    "title": "Accès aux services",
+                    "p1": "L’accès aux services est ouvert à toute personne disposant d’une connexion Internet. Certaines fonctionnalités peuvent nécessiter la création préalable d’un <bold>compte utilisateur</bold> ou une <bold>authentification sécurisée</bold>",
+                    "p2": "L'utilisateur s'engage à :",
+                    "ul": [
+                        "Fournir des informations exactes, complètes et à jour lors de l’inscription.",
+                        "Garder confidentiels ses identifiants de connexion.",
+                        "Informer immédiatement Makiti SARL en cas d’utilisation frauduleuse de son compte."
+                    ]
+                },
+                "responsibleServicesUsage": {
+                    "title": "Utilisation responsable des services",
+                    "p1": "L’utilisateur s’engage à :",
+                    "ul": [
+                        "Utiliser les services conformément aux lois et règlements en vigueur au <bold>Cameroun</bold>, notamment la <bold>Loi n°2010/012 du 21 décembre 2010</bold> relative à la cybersécurité et à la cybercriminalité, ainsi qu’aux principes du <bold>RGPD</bold> pour les utilisateurs situés dans l’Union européenne.",
+                        "Ne pas publier de contenus illicites, nuisibles, violents, injurieux, diffamatoires ou portant atteinte aux droits des tiers.",
+                        "S’abstenir de toute tentative d’intrusion ou d’atteinte à l’intégrité de la plateforme (hacking, exploitation de failles, etc.).",
+                        "Ne pas détourner les services à des fins commerciales non autorisées par Makiti SARL."
+                    ]
+                },
+                "intellectualProperty": {
+                    "title": "Propriété intellectuelle",
+                    "p1": "Tous les éléments constituant les plateformes, services et contenus diffusés par Makiti SARL (textes, graphismes, logos, logiciels, interfaces, codes, etc.) sont protégés par les lois relatives à la <bold>propriété intellectuelle</bold>.",
+                    "p2": "Toute reproduction, représentation, distribution ou utilisation non autorisée est strictement interdite, sauf autorisation écrite préalable de Makiti SARL."
+                },
+                "personalDataProtection": {
+                    "title": "Protection des données personnelles",
+                    "p1": "Makiti SARL s’engage à respecter la vie privée de ses utilisateurs. Les données personnelles collectées sont traitées dans le respect de la <bold>législation camerounaise</bold> (Loi n°2010/012) et, le cas échéant, du <bold>RGPD</bold> pour les utilisateurs européens.",
+                    "p2": "Vous pouvez consulter notre Politique de Confidentialité pour en savoir plus sur la collecte, l’utilisation, la conservation et les droits associés à vos données personnelles."
+                },
+                "availabilityAndMaintenance": {
+                    "title": "Disponibilité et maintenance",
+                    "p1": "Makiti SARL s’efforce d’assurer une disponibilité continue des services. Toutefois, elle ne saurait être tenue responsable des interruptions dues à :",
+                    "ul": [
+                        "Des opérations de maintenance programmée.",
+                        "Une défaillance technique indépendante de sa volonté.",
+                        "Un cas de force majeure (coupure réseau, catastrophe naturelle, etc.)."
+                    ]
+                },
+                "limitationOfLiability": {
+                    "title": "Limitation de responsabilité",
+                    "p1": "Makiti SARL ne peut être tenue responsable des dommages directs ou indirects résultant de l’utilisation ou de l’impossibilité d’utiliser les services, y compris mais sans s’y limiter :",
+                    "ul": [
+                        "Perte de données.",
+                        "Dysfonctionnements techniques.",
+                        "Contenu publié par des utilisateurs tiers."
+                    ],
+                    "p2": "L'utilisateur demeure seul responsable de ses propos, publications et activités sur la plateforme."
+                },
+                "suspensionAndTermination": {
+                    "title": "Suspension et résiliation",
+                    "p1": "Makiti SARL se réserve le droit de <bold>suspendre temporairement ou définitivement</bold> l’accès aux services d’un utilisateur, <bold>sans préavis</bold>, en cas de violation des présentes CGU ou de comportement nuisible à la plateforme ou aux autres utilisateurs.",
+                    "p2": "L'utilisateur peut également demander la suppression de son compte à tout moment par simple demande à l’adresse : <email>contact@makiti.de</email>"
+                },
+                "termsModification": {
+                    "title": "Modifications des CGU",
+                    "p1": "Makiti SARL se réserve le droit de modifier les présentes CGU à tout moment. Toute modification fera l’objet d’une mise à jour accessible sur la plateforme.",
+                    "p2": "La poursuite de l’utilisation des services après publication vaut acceptation des nouvelles conditions."
+                },
+                "applicableLawAndJuridiction": {
+                    "title": "Droit applicable et juridiction compétente",
+                    "p1": "Les présentes CGU sont régies par le <bold>droit camerounais</bold>.",
+                    "p2": "En cas de litige, les parties s’efforceront de résoudre le différend à l’amiable. À défaut, <bold>les tribunaux compétents du ressort du siège social de Makiti SARL</bold> (Yaoundé) seront seuls compétents, sauf disposition légale contraire."
+                },
+                "contact": {
+                    "title": "Contact",
+                    "p1": "Pour toute question, réclamation ou demande d'information relative aux présentes CGU, vous pouvez nous contacter aux coordonnées suivantes :",
+                    "p2": "<bold>Makiti SARL</bold>",
+                    "p3": "Email : <email>contact@makiti.de</email>",
+                    "p4": "Téléphone : <phone>+237 680 095 453</phone>",
+                    "p5": "Site web : <link1>www.makiti-group.com</link1>"
+                }
+            }
         }
     },
     "footer": {

@@ -5,9 +5,10 @@ interface TransParagraphProps {
 	emails?: string[]
 	phones?: string[]
 	links?: string[]
+	className?: string
 }
 
-const TransParagraph = ({ transKey, links, emails, phones }: TransParagraphProps) => {
+const TransParagraph = ({ transKey, links, emails, phones, className }: TransParagraphProps) => {
 	const emailsRecord: Record<string, React.ReactElement> = {}
 	const linksRecord: Record<string, React.ReactElement> = {}
 	const phonesRecord: Record<string, React.ReactElement> = {}
@@ -41,7 +42,7 @@ const TransParagraph = ({ transKey, links, emails, phones }: TransParagraphProps
 	})
 
 	return (
-		<p>
+		<p className={className}>
 			<Trans
 				i18nKey={transKey}
 				components={{

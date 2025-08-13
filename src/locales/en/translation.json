@@ -458,6 +458,103 @@
                     "p5": "Telephone : <phone>+237 680 095 453</phone>"
                 }
             }
+        },
+        "termsAndConditions": {
+            "title": "Terms and Conditions of Use (TCU) – Makiti SARL",
+            "p1": "<bold>Last update: (Date to be inserted)<bold>",
+            "p2": "Welcome to the Makiti SARL platform. By accessing our digital services, applications or websites, you unreservedly accept these Terms and Conditions of Use (TCU). Please read them carefully before use.",
+            "sections": {
+                "presentation": {
+                    "title": "Presentation of Makiti SARL",
+                    "p1": "Makiti SARL is a company incorporated under Cameroonian law, registered in the Trade and Personal Property Credit Register (RCCM) under number <bold><italic>M052318275229B</italic></bold>, with its registered office located in Yaoundé-Santa Barbara, opposite Sonel. It develops and provides digital solutions to facilitate access to products and services, in particular via its <bold>Matoa</bold> platform and associated applications."
+                },
+                "definitions": {
+                    "title": "Definitions",
+                    "p1": "In these Terms of Use, the terms below have the following meanings :",
+                    "ul": [
+                        "<bold>“User”</bold> : any natural or legal person using the digital services offered by Makiti SARL.",
+                        "<bold>“Services”</bold> : all features accessible via the websites, applications or interfaces made available by Makiti.",
+                        "<bold>“Content”</bold> : any data, information, text, image, sound, video or element made available via the services.",
+                        "<bold>“User account”</bold> : a personal and secure space created by a user to access certain services."
+                    ]
+                },
+                "purposes": {
+                    "title": "Purpose of the T&Cs",
+                    "p1": "The purpose of these T&Cs is to define the terms and conditions of access, use and operation of the digital services provided by Makiti SARL."
+                },
+                "servicesAccess": {
+                    "title": "Access to services",
+                    "p1": "Access to the services is open to anyone with an Internet connection. Certain features may require the prior creation of a <bold>user account</bold> or <bold>secure authentication</bold>",
+                    "p2": "The user undertakes to :",
+                    "ul": [
+                        "Provide accurate, complete and up-to-date information when registering.",
+                        "Keep their login details confidential.",
+                        "Immediately inform Makiti SARL in the event of fraudulent use of their account."
+                    ]
+                },
+                "responsibleServicesUsage": {
+                    "title": "Responsible use of services",
+                    "p1": "The user agrees to :",
+                    "ul": [
+                        "Use the services in accordance with the laws and regulations in force in <bold>Cameroon</bold>, in particular <bold>Law No. 2010/012 of 21 December 2010</bold> on cybersecurity and cybercrime, as well as the principles of the <bold>GDPR</bold> for users located in the European Union.",
+                        "Not publish content that is illegal, harmful, violent, abusive, defamatory or infringes on the rights of third parties.",
+                        "Refrain from any attempt to intrude or compromise the integrity of the platform (hacking, exploitation of vulnerabilities, etc.).",
+                        "Not misuse the services for commercial purposes not authorised by Makiti SARL."
+                    ]
+                },
+                "intellectualProperty": {
+                    "title": "Intellectual Property",
+                    "p1": "All elements constituting the platforms, services and content distributed by Makiti SARL (text, graphics, logos, software, interfaces, codes, etc.) are protected by <bold>intellectual property</bold> laws.",
+                    "p2": "Any unauthorised reproduction, representation, distribution or use is strictly prohibited without the prior written consent of Makiti SARL."
+                },
+                "personalDataProtection": {
+                    "title": "Protection of personal data",
+                    "p1": "Makiti SARL is committed to respecting the privacy of its users. Personal data collected is processed in accordance with <bold>Cameroonian law</bold> (Law No. 2010/012) and, where applicable, the <bold>GDPR</bold> for European users.",
+                    "p2": "You can consult our Privacy Policy to learn more about the collection, use, storage and rights associated with your personal data."
+                },
+                "availabilityAndMaintenance": {
+                    "title": "Availability and maintenance",
+                    "p1": "Makiti SARL strives to ensure continuous availability of services. However, it cannot be held responsible for interruptions due to :",
+                    "ul": [
+                        "Scheduled maintenance operations.",
+                        "A technical failure beyond its control.",
+                        "Force majeure (network outage, natural disaster, etc.)."
+                    ]
+                },
+                "limitationOfLiability": {
+                    "title": "Limitation of liability",
+                    "p1": "Makiti SARL cannot be held liable for any direct or indirect damage resulting from the use or inability to use the services, including but not limited to",
+                    "ul": [
+                        "Loss of data.",
+                        "Technical malfunctions.",
+                        "Content published by third-party users."
+                    ],
+                    "p2": "The user remains solely responsible for their comments, publications and activities on the platform."
+                },
+                "suspensionAndTermination": {
+                    "title": "Suspension and termination",
+                    "p1": "Makiti SARL reserves the right to <bold>temporarily or permanently suspend</bold> a user's access to the services, <bold>without notice</bold>, in the event of a breach of these Terms of Use or behaviour that is harmful to the platform or other users.",
+                    "p2": "The user may also request the deletion of their account at any time by sending a simple request to : <bold><email>contact@makiti.de</email><bold>"
+                },
+                "termsModification": {
+                    "title": "Changes to the Terms of Use",
+                    "p1": "Makiti SARL reserves the right to modify these Terms of Use at any time. Any changes will be updated on the platform.",
+                    "p2": "Continued use of the services after publication constitutes acceptance of the new terms."
+                },
+                "applicableLawAndJuridiction": {
+                    "title": "Applicable law and jurisdiction",
+                    "p1": "These Terms of Use are governed by <bold>Cameroonian law</bold>.",
+                    "p2": "In the event of a dispute, the parties will endeavour to resolve the dispute amicably. Failing this, <bold>the competent courts of the jurisdiction of Makiti SARL's registered office</bold> (Yaoundé) shall have sole jurisdiction, unless otherwise provided by law."
+                },
+                "contact": {
+                    "title": "Contact",
+                    "p1": "For any questions, complaints or requests for information relating to these Terms of Use, you can contact us at the following address :",
+                    "p2": "<bold>Makiti SARL</bold>",
+                    "p3": "Email : <email>contact@makiti.de</email>",
+                    "p4": "Telephone : <phone>+237 680 095 453</phone>",
+                    "p5": "Website : <link1>www.makiti-group.com</link1>"
+                }
+            }
         }
     },
     "footer": {
