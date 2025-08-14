@@ -1,16 +1,17 @@
 import ProductCard from '@/components/molecules/cards/ProductCard'
 import SectionHeader from '@/components/molecules/SectionHeader'
-import {
-	Pagination,
-	PaginationContent,
-	PaginationEllipsis,
-	PaginationFirst,
-	PaginationItem,
-	PaginationLast,
-	PaginationLink,
-	PaginationNext,
-	PaginationPrevious,
-} from '@/components/ui/pagination'
+import ShopPagination from '@/components/organisms/shop/PaginationControls'
+// import {
+// 	Pagination,
+// 	PaginationContent,
+// 	PaginationEllipsis,
+// 	PaginationFirst,
+// 	PaginationItem,
+// 	PaginationLast,
+// 	PaginationLink,
+// 	PaginationNext,
+// 	PaginationPrevious,
+// } from '@/components/ui/pagination'
 import { ProductCategoryType, productsMock } from '@/data/mock'
 import { PageComponent, useLocation, useNavigate, useSearchParams } from 'rasengan'
 import { useCallback, useMemo, useState } from 'react'
@@ -28,32 +29,39 @@ const filterOptions: { label: string; value: ProductCategoryType }[] = [
 	{ label: 'Food', value: 'food' },
 ]
 
+const itemsPerPage = 6
+
 const Shop: PageComponent = () => {
 	const { t } = useTranslation()
-
 	const [selectedFilter, setSelectedFilter] = useState<ProductCategoryType>('all')
-
 	const { pathname } = useLocation()
 	const navigate = useNavigate()
-
 	const [urlParams] = useSearchParams()
-
 	const searchQuery = urlParams.get('search')
+	const [currentPage, setCurrentPage] = useState(1)
+	const startIndex = (currentPage - 1) * itemsPerPage
+	const endIndex = startIndex + itemsPerPage
 
 	const filteredProducts = useMemo(() => {
 		let products = productsMock
 
 		if (searchQuery) {
-			products = productsMock.filter((product) =>
-				product.name.toLowerCase().includes(searchQuery.toLowerCase()),
+			products = productsMock.filter(
+				(product) =>
+					product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+					product.categories?.some((category) => category.includes(searchQuery)),
 			)
 		}
 
 		if (selectedFilter === 'all') {
 			return products
 		}
-		return products.filter((product) => product.category === selectedFilter)
-	}, [selectedFilter])
+		return products.filter((product) => product.categories?.includes(selectedFilter))
+	}, [selectedFilter, searchQuery])
+
+	const currentProjects = useMemo(() => {
+		return filteredProducts.slice(startIndex, endIndex)
+	}, [filteredProducts, startIndex, endIndex])
 
 	/**
 	 * Function to set desired the url param, and navigate to it for component re-rendering
@@ -98,11 +106,12 @@ const Shop: PageComponent = () => {
 								tabIndex={0}
 								role="button"
 								onClick={() => {
-									if (selectedFilter === item.value) {
+									console.log(item.value, selectedFilter)
+									if (item.value !== 'all') {
+										handleSelectFilter(item.value)
+									} else {
 										setSelectedFilter('all')
 										handlePopNavigate('c')
-									} else {
-										handleSelectFilter(item.value)
 									}
 								}}
 								key={`story-${index}-industry-${item.value}`}
@@ -117,59 +126,26 @@ const Shop: PageComponent = () => {
 						))}
 					</div>
 
-					{filteredProducts.length > 0 ? (
+					{currentProjects.length > 0 ? (
 						<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-							{filteredProducts.map((product, index) => (
+							{currentProjects.map((product, index) => (
 								<ProductCard key={`product-${index}`} product={product} />
 							))}
 						</div>
 					) : (
-						<p className="text-center text-on-surface-variant">No products found</p>
+						<p className="text-center text-on-surface-variant">
+							{t('pages.shop.noProductsFound')}
+						</p>
 					)}
 				</div>
-
-				<Pagination className="py-3">
-					<PaginationContent>
-						<PaginationItem>
-							<PaginationFirst
-								href="#"
-								className="border border-outline-variant rounded-sm"
-							/>
-						</PaginationItem>
-						<PaginationItem>
-							<PaginationPrevious
-								href="#"
-								className="border border-outline-variant rounded-sm"
-							/>
-						</PaginationItem>
-						<PaginationItem>
-							<PaginationLink href="#">1</PaginationLink>
-						</PaginationItem>
-						<PaginationItem>
-							<PaginationLink href="#" isActive>
-								2
-							</PaginationLink>
-						</PaginationItem>
-						<PaginationItem>
-							<PaginationLink href="#">3</PaginationLink>
-						</PaginationItem>
-						<PaginationItem>
-							<PaginationEllipsis />
-						</PaginationItem>
-						<PaginationItem>
-							<PaginationNext
-								href="#"
-								className="border border-outline-variant rounded-sm"
-							/>
-						</PaginationItem>
-						<PaginationItem>
-							<PaginationLast
-								href="#"
-								className="border border-outline-variant rounded-sm"
-							/>
-						</PaginationItem>
-					</PaginationContent>
-				</Pagination>
+				<ShopPagination
+					products={filteredProducts}
+					itemsPerPage={6}
+					currentPage={currentPage}
+					onPageChange={setCurrentPage}
+					startIndex={startIndex}
+					endIndex={endIndex}
+				/>
 			</div>
 		</main>
 	)

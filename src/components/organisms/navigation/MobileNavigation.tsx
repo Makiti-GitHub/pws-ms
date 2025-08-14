@@ -36,7 +36,7 @@ const menuVariants = {
 
 const MobileNavigation = () => {
 	const { isOpened, setIsOpened, navlinks } = useMenuContext()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	return (
 		<div className={`relative`}>
 			{/* Animated Menu */}
@@ -55,7 +55,7 @@ const MobileNavigation = () => {
 							stiffness: 100,
 							damping: 15,
 						}}
-						className="fixed inset-0 z-[60] flex flex-col h-[100dvh] overflow-y-scroll"
+						className="fixed lg:hidden inset-0 z-[60] flex flex-col h-[100dvh] overflow-y-scroll"
 					>
 						{/* Navigation Links */}
 
@@ -107,21 +107,28 @@ const MobileNavigation = () => {
 											className="font-plusJakartaSans font-bold"
 										>
 											<div className="relative overflow-hidden capitalize text-5xl sm:text-6xl md:text-7xl">
-												<motion.a
+												<motion.span
 													href={link.href}
 													variants={firstTextVariant}
 													className="text-white block"
 												>
-													{link.label}
-												</motion.a>
-												<motion.a
+													<Link to={`/${i18n.language}${link.href}`}>
+														{link.label}
+													</Link>
+													{/* {link.label} */}
+												</motion.span>
+												<motion.span
 													href={link.href}
 													variants={secondTextVariant}
 													aria-hidden
 													className="absolute bottom-0 -left-0 text-primary"
 												>
-													{link.label}
-												</motion.a>
+													<Link to={`/${i18n.language}${link.href}`}>
+														{link.label}
+													</Link>
+
+													{/* {link.label} */}
+												</motion.span>
 											</div>
 										</motion.li>
 									))}
@@ -133,16 +140,25 @@ const MobileNavigation = () => {
 								<div className="w-full text-outline-variant text-sm  sm:text-base flex flex-col gap-6 sm:gap-2">
 									<p>{t('footer.lowerSection.copyright', { year: '2025' })}</p>
 									<div className="flex items-center gap-5">
-										<Link to="/privacy-policy" className="hover:text-white">
+										<Link
+											to={`/${i18n.language}/privacy-policy`}
+											onClick={() => setIsOpened(false)}
+											className="hover:text-white"
+										>
 											{t('footer.lowerSection.nav.privacyPolicy')}
 										</Link>
 										<Link
-											to="/terms-and-conditions"
+											onClick={() => setIsOpened(false)}
+											to={`/${i18n.language}/terms-and-conditions`}
 											className="hover:text-white"
 										>
 											{t('footer.lowerSection.nav.termsOfService')}
 										</Link>
-										<Link to="/legal-notice" className="hover:text-white">
+										<Link
+											onClick={() => setIsOpened(false)}
+											to={`/${i18n.language}/legal-notice`}
+											className="hover:text-white"
+										>
 											{t('footer.lowerSection.nav.legalNotice')}
 										</Link>
 									</div>

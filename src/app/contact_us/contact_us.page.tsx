@@ -265,7 +265,13 @@ const ContactUs: PageComponent = () => {
 								</p>
 							</div>
 							<p className="text-on-surface-variant text-base">
-								<a href="tel:+237680095453">+237 6 80 09 54 53</a>
+								<a
+									href="tel:+237680095453"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									+237 6 80 09 54 53
+								</a>
 							</p>
 						</div>
 						<div className="space-y-6 border-[0.5px] border-outline-variant rounded-xl p-5">
@@ -277,7 +283,13 @@ const ContactUs: PageComponent = () => {
 								</p>
 							</div>
 							<p className="text-on-surface-variant text-base">
-								<a href="mailto:info@makiti.com">info@makiti.com</a>
+								<a
+									href="mailto:info@makiti.com"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									info@makiti.com
+								</a>
 							</p>
 						</div>
 

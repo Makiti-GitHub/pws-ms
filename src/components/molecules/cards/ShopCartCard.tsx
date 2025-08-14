@@ -31,7 +31,12 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 							{cartItem.name}
 						</p>
 
-						<p>{`${cartItem.price} CFA`}</p>
+						<div className="sapce-y-1">
+							<p>{`${cartItem.price.toString().toCommaSeperatedDigits()} CFA`}</p>
+							<p className="lowercase">{`${cartItem.productQty} ${t(
+								'available',
+							)}`}</p>
+						</div>
 						{cartItem.tags ? (
 							<div className="flex items-center gap-2">
 								{cartItem.tags.map((tag, index) => (
@@ -46,12 +51,12 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 					</div>
 				</div>
 				<div className="flex flex-row sm:items-center justify-between gap-3 lg:gap-6">
-					<div className="flex items-center gap-8 w-full">
+					<div className="flex items-center gap-4 lg:gap-6 xl:gap-8 w-full">
 						<Button
 							variant={'ghost'}
 							disabled={cartItem.quantity < 1 || cartItem.productQty === 1}
 							onClick={() => updateQuantity(cartItem.id, cartItem.quantity - 1)}
-							className="!p-2.5 size-[44px] hover:cursor-pointer rounded-sm border-[0.5px] border-outline-variant"
+							className="!py-2.5 !px-1.5 hover:cursor-pointer rounded-sm border-[0.5px] border-outline-variant"
 						>
 							<MinusIcon className="size-6" />
 						</Button>
@@ -67,7 +72,7 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 							}
 							variant={'ghost'}
 							onClick={() => updateQuantity(cartItem.id, cartItem.quantity + 1)}
-							className="!p-2.5 size-[44px] hover:cursor-pointer rounded-sm border-[0.5px] border-outline-variant"
+							className="!py-2.5 !px-1.5 hover:cursor-pointer rounded-sm border-[0.5px] border-outline-variant disabled:cursor-not-allowed"
 						>
 							<PlusIcon className="size-6" />
 						</Button>
@@ -91,12 +96,14 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 				</div>
 			</div>
 			<p className="flex font-seravek_medium text-lg text-on-surface items-center justify-end gap-1 w-full">
-				<span>
-					{t('pages.shoppingCart.sections.orderSummary.subtotal')}{' '}
-					{`(${cartItem.quantity} ${t('items')})`}:
+				<span className="space-x-0.5">
+					<span>{t('pages.shoppingCart.sections.orderSummary.subtotal')} </span>
+					<span className="lowercase">
+						{`(${cartItem.quantity} ${t(`item${cartItem.quantity > 1 ? 's' : ''}`)})`}:
+					</span>
 				</span>
 				<span className="text-lg lg:text-2xl text-center lg:text-left font-seravek_medium text-on-surface whitespace-nowrap">
-					{`${getItemTotalPrice(cartItem.id)} CFA`}
+					{`${getItemTotalPrice(cartItem.id).toString().toCommaSeperatedDigits()} CFA`}
 				</span>
 			</p>
 		</div>

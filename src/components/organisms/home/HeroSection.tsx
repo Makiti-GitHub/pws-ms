@@ -31,7 +31,7 @@ const dotsVariants = {
 }
 
 const HeroSection = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const [isPlaying, setIsPlaying] = useState(true)
 	const [videoLoaded, setVideoLoaded] = useState(false)
 	const videoRef = useRef<HTMLVideoElement>(null)
@@ -140,7 +140,7 @@ const HeroSection = () => {
 										}.desc`,
 									)}
 								</motion.p>
-								<Link to={heroCarousel[currentIndex].href}>
+								<Link to={`/${i18n.language}${heroCarousel[currentIndex].href}`}>
 									<MotionIconButton
 										label={t(
 											`pages.home.sections.hero.items.item${

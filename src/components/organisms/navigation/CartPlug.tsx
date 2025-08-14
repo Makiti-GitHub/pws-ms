@@ -2,8 +2,10 @@ import { Button } from '@/components/ui/button'
 import { useCartStore } from '@/stores/cartStore'
 import { ShoppingCartIcon } from 'lucide-react'
 import { useNavigate } from 'rasengan'
+import { useTranslation } from 'react-i18next'
 
 const CartPlug = () => {
+	const { i18n } = useTranslation()
 	const navigate = useNavigate()
 	const totalItems = useCartStore((state) => state.getTotalItems())
 
@@ -21,7 +23,7 @@ const CartPlug = () => {
 			) : null}
 			<Button
 				type="button"
-				onClick={() => navigate('/shopping-cart')}
+				onClick={() => navigate(`/${i18n.language}/shopping-cart`)}
 				variant={'ghost'}
 				className="w-max h-max p-1 rounded-xl hover:cursor-pointer"
 			>

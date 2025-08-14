@@ -1,5 +1,6 @@
 import '@rasenganjs/image/css'
 import '@/styles/index.css'
+import '@/setup'
 import i18n from './i18n/i18n'
 import { type AppProps } from 'rasengan'
 import AppRouter from '@/app/app.router'

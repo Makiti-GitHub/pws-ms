@@ -2,18 +2,44 @@ import { Trans, useTranslation } from 'react-i18next'
 
 interface TransListProps {
 	transKey: string
+	emails?: string[]
+	phones?: string[]
 	links?: string[]
 	listKey?: string
 }
 
-const TransList = ({ transKey, links, listKey = 'ul' }: TransListProps) => {
+const TransList = ({ transKey, links, emails, phones, listKey = 'ul' }: TransListProps) => {
 	const { t } = useTranslation()
 
-	const listRecord: Record<string, React.ReactElement> = {}
+	const linksRecord: Record<string, React.ReactElement> = {}
+	const phonesRecord: Record<string, React.ReactElement> = {}
+	const emailsRecord: Record<string, React.ReactElement> = {}
 
 	links?.forEach((item, index) => {
-		listRecord[`link${index + 1}`] = (
-			<a href={item} className="text-primary" rel="noopener noreferrer" />
+		linksRecord[`link${index + 1}`] = (
+			<a href={item} className="text-primary" target="_blank" rel="noopener noreferrer" />
+		)
+	})
+
+	emails?.forEach((item, index) => {
+		emailsRecord[`email${index === 0 ? '' : index + 1}`] = (
+			<a
+				href={`mailto:${item}`}
+				target="_blank"
+				className="text-primary"
+				rel="noopener noreferrer"
+			/>
+		)
+	})
+
+	phones?.forEach((item, index) => {
+		phonesRecord[`phone${index === 0 ? '' : index + 1}`] = (
+			<a
+				href={`tel:${item}`}
+				target="_blank"
+				className="text-primary"
+				rel="noopener noreferrer"
+			/>
 		)
 	})
 
@@ -34,7 +60,9 @@ const TransList = ({ transKey, links, listKey = 'ul' }: TransListProps) => {
 							components={{
 								bold: <strong className="font-seravek_bold" />,
 								italic: <span className="font-seravek_italic" />,
-								...listRecord,
+								...emailsRecord,
+								...linksRecord,
+								...phonesRecord,
 							}}
 						/>
 					</li>

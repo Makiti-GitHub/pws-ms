@@ -7,7 +7,7 @@ import { useNavigate } from 'rasengan'
 import { useTranslation } from 'react-i18next'
 
 const FeaturedProductsSection = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const navigate = useNavigate()
 	return (
 		<section
@@ -20,14 +20,14 @@ const FeaturedProductsSection = () => {
 					subTitle={t('pages.home.sections.featuredProducts.subtitle')}
 				/>
 				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-6">
-					{productsMock.map((product, index) => (
+					{productsMock.slice(0, 6).map((product, index) => (
 						<ProductCard key={`product-${index}`} product={product} />
 					))}
 				</div>
 			</div>
 
 			<Button
-				onClick={() => navigate('/shop')}
+				onClick={() => navigate(`/${i18n.language}/shop`)}
 				className="rounded-4xl w-max h-max !py-2 sm:!py-4 !px-8 hover:cursor-pointer border-[2.5px] border-secondary text-secondary bg-transparent hover:bg-accent/5"
 			>
 				<ArrowUpRightIcon className="size-5 sm:size-6" />

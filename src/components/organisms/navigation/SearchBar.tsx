@@ -1,13 +1,17 @@
+import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { SearchIcon } from 'lucide-react'
-import { useNavigate } from 'rasengan'
+import { SearchIcon, XIcon } from 'lucide-react'
+import { useLocation, useNavigate, useSearchParams } from 'rasengan'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const SearchBar = () => {
-	const { t } = useTranslation()
+	const { pathname } = useLocation()
+	const [urlParams] = useSearchParams()
+
+	const { t, i18n } = useTranslation()
 	const navigate = useNavigate()
-	const [searchQuery, setSearchQuery] = useState('')
+	const [searchQuery, setSearchQuery] = useState(() => urlParams.get('search') ?? '')
 	const [isFocused, setIsFocused] = useState(false)
 
 	const inputRef = useRef<HTMLInputElement>(null)
@@ -15,6 +19,10 @@ const SearchBar = () => {
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const query = e.target.value
 		setSearchQuery(query)
+		if (!query.trim()) {
+			urlParams.delete('search')
+			navigate(`${pathname}?${urlParams.toString()}`, { replace: true })
+		}
 		// navigate(`/shop?search=${query}`);
 	}
 
@@ -42,7 +50,7 @@ const SearchBar = () => {
 				// }
 				// const query = e.target.value;
 				if (!searchQuery.trim()) return
-				navigate(`/shop?search=${searchQuery}`)
+				navigate(`/${i18n.language}/shop?search=${searchQuery}`)
 				break
 			case 'Escape':
 				// setShowResults(false);
@@ -65,7 +73,7 @@ const SearchBar = () => {
 	}, [])
 
 	return (
-		<div className="relative w-40 sm:w-[250px] h-10 rounded-4xl">
+		<div className="relative w-40 sm:w-[250px] lg:w-[150px] xl:w-[200px] 2xl:w-[350px] h-10 rounded-4xl">
 			<Input
 				ref={inputRef}
 				role="searchbox"
@@ -76,17 +84,27 @@ const SearchBar = () => {
 				placeholder={`${t('nav.searchBar.placeholder')}... (Ctrl+K or Cmd+K)`}
 				onFocus={() => {
 					setIsFocused(true)
-
-					// if (searchQuery.trim()) {
-					//   setShowResults(true);
-					// }
 				}}
 				aria-haspopup="listbox"
 				aria-label="Search products"
 				onBlur={() => setIsFocused(false)}
-				className="size-full bg-surface-container placeholder:text-lg placeholder:text-outline rounded-4xl pr-10"
+				className="size-full bg-surface-container placeholder:text-outline rounded-4xl pr-10 placeholder:text-sm sm:placeholder:text-base"
 			/>
-			<SearchIcon className="size-5 absolute top-1/2 -translate-y-1/2 right-3 text-on-surface-variant" />
+			<Button
+				variant={'ghost'}
+				onClick={(e) => {
+					if (!searchQuery.trim()) return
+					navigate(`/${i18n.language}/shop?search=${searchQuery}`)
+					e.preventDefault()
+				}}
+				className="absolute !p-0 size-max top-1/2 -translate-y-1/2 right-3 hover:cursor-pointer hover:bg-transparent"
+			>
+				{/* {searchQuery.trim() ? (
+					<XIcon className="size-5 text-on-surface-variant" />
+				) : ( */}
+				<SearchIcon className="size-5 text-on-surface-variant" />
+				{/* )} */}
+			</Button>
 		</div>
 	)
 }

@@ -11,7 +11,7 @@ interface OurServiceItemProps {
 }
 
 const OurServiceItem = ({ ourService, index }: OurServiceItemProps) => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const navigate = useNavigate()
 	return (
 		<>
@@ -71,10 +71,12 @@ const OurServiceItem = ({ ourService, index }: OurServiceItemProps) => {
 
 				<p className="font-seravek_bold text-2xl text-center text-secondary">{`${t(
 					'startingFrom',
-				)} ${ourService.price} CFA/${t(ourService.priceUnit)}`}</p>
+				)} ${ourService.price.toString().toCommaSeperatedDigits()} CFA/${t(
+					ourService.priceUnit,
+				)}`}</p>
 
 				<Button
-					onClick={() => navigate(`/services/${ourService.link}`)}
+					onClick={() => navigate(`/${i18n.language}/services/${ourService.link}`)}
 					variant="primary"
 					className="w-full !py-3 !px-4 !rounded-xl gap-3 hover:cursor-pointer"
 				>

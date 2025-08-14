@@ -14,7 +14,10 @@
     "device": "dispositif",
     "bestOffer": "Meilleure Offre",
     "items": "Articles",
+    "item": "Article",
     "startingFrom": "A partir de",
+    "available": "Disponible",
+    "languages": "Langues",
     "language": {
         "en": "Anglais",
         "fr": "Français",
@@ -118,6 +121,18 @@
                 "health": "Santé",
                 "food": "Alimentation",
                 "all": "Tout"
+            },
+            "pagination": {
+                "showing": "Affichage {{count1}} de {{count2}} produits",
+                "page": "Page {{count1}} sur {{count2}}"
+            },
+            "success": {
+                "types": {
+                    "product": "Produit ajouté au panier",
+                    "kit": "Kit ajouté au panier",
+                    "bundle": "Paquet ajouté au panier",
+                    "service": "Service ajouté au panier"
+                }
             },
             "noProductsFound": "Aucun produit trouvé"
         },

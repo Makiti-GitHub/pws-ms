@@ -3,7 +3,7 @@ import { ProductCategoryType, ProductTagType } from '@/data/mock'
 interface IProduct {
 	images: string[]
 	name: string
-	description: string
+	description?: string
 	rating: number
 	reviews: number
 	id: string
@@ -11,13 +11,14 @@ interface IProduct {
 	price: number
 	quantity: number
 	creationDate: string
-	category?: ProductCategoryType
+	categories?: ProductCategoryType[]
+	specs?: string[]
 }
 
 export default class Product implements IProduct {
 	readonly images: string[]
 	readonly name: string
-	readonly description: string
+	readonly description?: string
 	readonly rating: number
 	readonly reviews: number
 	readonly id: string
@@ -25,7 +26,8 @@ export default class Product implements IProduct {
 	readonly price: number
 	readonly quantity: number
 	readonly creationDate: string
-	readonly category?: ProductCategoryType
+	readonly categories?: ProductCategoryType[]
+	readonly specs?: string[]
 
 	constructor(product: IProduct) {
 		this.images = product.images
@@ -38,6 +40,7 @@ export default class Product implements IProduct {
 		this.price = product.price
 		this.quantity = product.quantity
 		this.creationDate = product.creationDate
-		this.category = product.category
+		this.categories = product.categories
+		this.specs = product.specs
 	}
 }

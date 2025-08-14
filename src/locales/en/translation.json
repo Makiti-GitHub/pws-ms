@@ -14,7 +14,10 @@
     "device": "device",
     "bestOffer": "Best Offer",
     "items": "Items",
+    "item": "Item",
     "startingFrom": "Starting From",
+    "available": "Available",
+    "languages": "Languages",
     "language": {
         "en": "English",
         "fr": "French",
@@ -118,6 +121,18 @@
                 "health": "Health",
                 "food": "Food",
                 "all": "All"
+            },
+            "pagination": {
+                "showing": "Showing {{count1}} of {{count2}} products",
+                "page": "Page {{count1}} of {{count2}}"
+            },
+            "success": {
+                "types": {
+                    "product": "Product added to cart",
+                    "kit": "Kit added to cart",
+                    "bundle": "Bundle added to cart",
+                    "service": "Service added to cart"
+                }
             },
             "noProductsFound": "No products found"
         },

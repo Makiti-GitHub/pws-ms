@@ -6,7 +6,7 @@ import { CheckIcon, ShoppingCartIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import starlinkLogo from '@/assets/partners/starlink.svg'
 import { useCartStore } from '@/stores/cartStore'
-import serverSecurityImg from '@/assets/ourServices/server_security.png'
+import starlinkKitImg from '@/assets/ourServices/starlink_kit.png'
 import { toast } from 'sonner'
 
 const PricingPlansSection = () => {
@@ -79,7 +79,7 @@ const PricingPlansSection = () => {
 						</div>
 						<div className="space-y-3">
 							<p className="font-seravek_bold text-2xl text-center text-secondary">
-								{plan.price} CFA
+								{plan.price.toString().toCommaSeperatedDigits()} CFA
 							</p>
 
 							<Button
@@ -97,11 +97,11 @@ const PricingPlansSection = () => {
 										)}`,
 										rating: 5,
 										reviews: 0,
-										images: [serverSecurityImg],
+										images: [starlinkKitImg],
 										description: plan.description,
 									})
 
-									toast.success('Plan added to cart')
+									toast.success(t('pages.shop.success.types.kit'))
 								}}
 								variant={'primary'}
 								className="rounded-lg w-full flex-1 h-max !py-2 sm:!py-3 !px-4 gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"

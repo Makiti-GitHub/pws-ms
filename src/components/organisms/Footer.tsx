@@ -18,7 +18,7 @@ import { useTranslation } from 'react-i18next'
 import { useMenuContext } from '@/hooks/guard/ContextGuard'
 
 const Footer = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 
 	const { navlinks } = useMenuContext()
 
@@ -67,7 +67,10 @@ const Footer = () => {
 								.filter((item) => item.label !== 'services')
 								.map((link, index) => (
 									<li key={`nav-link-${index}`}>
-										<Link className="hover:underline capitalize" to={link.href}>
+										<Link
+											className="hover:underline capitalize"
+											to={`/${i18n.language}${link.href}`}
+										>
 											{t(`nav.links.${link.label}`)}
 										</Link>
 									</li>
@@ -80,21 +83,21 @@ const Footer = () => {
 						</p>
 						<ul className="space-y-2.5">
 							<li>
-								<Link to="/services/server-security">
+								<Link to={`/${i18n.language}/services/server-security`}>
 									{t(
 										'footer.upperSection.rightSection.services.options.serverSecurity',
 									)}
 								</Link>
 							</li>
 							<li className="text-nowrap">
-								<Link to="/services/internet-kit-configuration">
+								<Link to={`/${i18n.language}/services/internet-kit-configuration`}>
 									{t(
 										'footer.upperSection.rightSection.services.options.internetKitConfiguration',
 									)}
 								</Link>
 							</li>
 							<li>
-								<Link to="/services/streaming-services">
+								<Link to={`/${i18n.language}/services/streaming-services`}>
 									{t(
 										'footer.upperSection.rightSection.services.options.streamingServices',
 									)}
@@ -270,13 +273,16 @@ const Footer = () => {
 			<div className="w-full text-secondary text-base flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-2">
 				<p>{t('footer.lowerSection.copyright', { year: '2025' })}</p>
 				<div className="flex items-center justify-between gap-5">
-					<Link to="/privacy-policy" className="hover:text-white">
+					<Link to={`/${i18n.language}/privacy-policy`} className="hover:text-white">
 						{t('footer.lowerSection.nav.privacyPolicy')}
 					</Link>
-					<Link to="/terms-and-conditions" className="hover:text-white">
+					<Link
+						to={`/${i18n.language}/terms-and-conditions`}
+						className="hover:text-white"
+					>
 						{t('footer.lowerSection.nav.termsOfService')}
 					</Link>
-					<Link to="/legal-notice" className="hover:text-white">
+					<Link to={`/${i18n.language}/legal-notice`} className="hover:text-white">
 						{t('footer.lowerSection.nav.legalNotice')}
 					</Link>
 				</div>

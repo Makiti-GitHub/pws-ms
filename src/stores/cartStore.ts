@@ -29,23 +29,35 @@ export const useCartStore = create<CartStore>()(
 
 					if (existingItem) {
 						return {
-							items: state.items.map((item) =>
-								item.id === product.id
+							items: state.items.map((item) => {
+								// console.log(
+								// 	product.id,
+								// 	product.quantity,
+								// 	existingItem.quantity,
+								// 	item.quantity,
+								// )
+
+								return item.id === product.id
 									? {
 											...item,
 											productQty: product.quantity,
 											quantity:
 												product.quantity > 1
-													? item.quantity + 1
+													? existingItem.quantity === item.quantity
+														? item.quantity
+														: item.quantity + 1
 													: item.quantity,
 									  }
-									: item,
-							),
+									: item
+							}),
 						}
 					}
 
 					return {
-						items: [...state.items, { ...product, quantity: 1 }],
+						items: [
+							...state.items,
+							{ ...product, quantity: 1, productQty: product.quantity },
+						],
 					}
 				})
 			},

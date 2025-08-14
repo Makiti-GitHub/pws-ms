@@ -126,7 +126,9 @@ const ShoppingCart: PageComponent = () => {
 									<span>
 										{t('pages.shoppingCart.sections.orderSummary.subtotal')}:
 									</span>
-									<span>{`${getTotalPrice()} CFA`}</span>
+									<span>{`${getTotalPrice()
+										.toString()
+										.toCommaSeperatedDigits()} CFA`}</span>
 								</p>
 								<p className="flex font-seravek_medium text-lg text-on-surface items-center justify-between gap-6 w-full">
 									<span>
@@ -138,7 +140,9 @@ const ShoppingCart: PageComponent = () => {
 						</div>
 						<p className="flex font-seravek_medium text-on-surface items-center justify-between gap-6 w-full">
 							<span className="text-xl">{t('total')}</span>
-							<span className="text-2xl">{`${getTotalPrice()} CFA`}</span>
+							<span className="text-2xl">{`${getTotalPrice()
+								.toString()
+								.toCommaSeperatedDigits()} CFA`}</span>
 						</p>
 					</section>
 					<section className="p-5 rounded-xl border-[0.5px] border-outline-variant space-y-6">

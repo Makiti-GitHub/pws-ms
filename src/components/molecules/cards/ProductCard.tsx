@@ -4,7 +4,7 @@ import Product from '@/entities/product.entity'
 import { cn } from '@/lib/utils'
 import { useCartStore } from '@/stores/cartStore'
 import Image from '@rasenganjs/image'
-import { MoveRightIcon, ShoppingCartIcon } from 'lucide-react'
+import { /*MoveRightIcon,*/ ShoppingCartIcon } from 'lucide-react'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
@@ -24,7 +24,7 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 	return (
 		<article
 			className={cn(
-				'relative size-full flex flex-col hover:cursor-pointer rounded-[20px] box_shadow_product_card hover:scale-105 transition duration-300 ease-in-out bg-surface',
+				'relative size-full flex flex-col rounded-[20px] box_shadow_product_card hover:scale-105 transition duration-300 ease-in-out bg-surface',
 				className,
 			)}
 			{...props}
@@ -53,23 +53,27 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 				<div className="space-y-1 font-seravek_medium">
 					<p className="text-xl text-on-surface">{product.name}</p>
 				</div>
-				<p className="text-base text-outline">{product.description}</p>
+				{product.description ? (
+					<p className="text-base text-outline">{product.description}</p>
+				) : null}
 
 				<div className="flex items-center justify-between">
-					<span className="text-2xl font-seravek_bold text-secondary">{`${product.price} CFA`}</span>
+					<span className="text-2xl font-seravek_bold text-secondary">{`${product.price
+						.toString()
+						.toCommaSeperatedDigits()} CFA`}</span>
 					<span>{`${product.rating} (${product.reviews} reviews)`}</span>
 				</div>
 				<div className="w-full flex md:flex-row gap-2 lg:gap-4 items-center">
-					<Button className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-0 gap-5 lg:gap-3 2xl:gap-5 hover:cursor-pointer border border-secondary text-secondary bg-transparent hover:bg-accent/5">
+					{/* <Button className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-0 gap-5 lg:gap-3 2xl:gap-5 hover:cursor-pointer border border-secondary text-secondary bg-transparent hover:bg-accent/5">
 						<span className="sr-only">More details</span>{' '}
 						<span className="text-base font-seravek_medium">{t('moreDetails')}</span>{' '}
 						<MoveRightIcon className="size-5 sm:size-6" />
-					</Button>
+					</Button> */}
 					<Button
 						type="button"
 						onClick={() => {
 							addToCart(product)
-							toast.success('Product added to cart')
+							toast.success(t('pages.shop.success.types.product'))
 						}}
 						variant={'primary'}
 						className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-0 gap-5 lg:gap-3 2xl:gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"

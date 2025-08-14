@@ -7,7 +7,7 @@ import { ArrowUpRightIcon } from 'lucide-react'
 import ServiceCard from '@/components/molecules/cards/ServiceCard'
 
 const StreamingServices: PageComponent = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const navigate = useNavigate()
 
 	return (
@@ -31,7 +31,7 @@ const StreamingServices: PageComponent = () => {
 
 					<Button
 						type="button"
-						onClick={() => navigate('/contact-us')}
+						onClick={() => navigate(`/${i18n.language}/contact-us`)}
 						variant={'primary'}
 						className="rounded-[40px] h-max gap-2 !py-2 !px-4 sm:!py-4 md:!px-8 hover:cursor-pointer"
 					>

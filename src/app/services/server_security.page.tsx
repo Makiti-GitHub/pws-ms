@@ -12,7 +12,7 @@ import serverSecurityImg from '@/assets/ourServices/server_security.png'
 import { toast } from 'sonner'
 
 const ServerSecurity: PageComponent = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const navigate = useNavigate()
 	const addToCart = useCartStore((state) => state.addToCart)
 
@@ -72,7 +72,7 @@ const ServerSecurity: PageComponent = () => {
 							</div>
 
 							<p className="font-seravek_medium text-2xl text-center text-secondary">
-								665.000 CFA/{t('month')}
+								{(665000).toString().toCommaSeperatedDigits()} CFA/{t('month')}
 							</p>
 
 							<Button
@@ -94,7 +94,7 @@ const ServerSecurity: PageComponent = () => {
 										),
 									})
 
-									toast.success('Service added to cart')
+									toast.success(t('pages.shop.success.types.bundle'))
 								}}
 								variant={'primary'}
 								className="rounded-[8px] w-full flex-1 h-max !py-2 sm:!py-3 !px-4 gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"
@@ -115,7 +115,7 @@ const ServerSecurity: PageComponent = () => {
 
 					<Button
 						type="button"
-						onClick={() => navigate('/contact-us')}
+						onClick={() => navigate(`/${i18n.language}/contact-us`)}
 						variant={'primary'}
 						className="rounded-[40px] h-max gap-2 !py-2 !px-4 sm:!py-4 md:!px-8 hover:cursor-pointer"
 					>

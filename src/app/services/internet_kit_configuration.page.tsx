@@ -12,7 +12,7 @@ import PricingPlansSection from '@/components/organisms/services/PricingPlansSec
 import InstallationProcessSection from '@/components/organisms/services/InstallationProcessSection'
 
 const InternetKitConfiguration: PageComponent = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const navigate = useNavigate()
 
 	return (
@@ -84,7 +84,7 @@ const InternetKitConfiguration: PageComponent = () => {
 
 					<Button
 						type="button"
-						onClick={() => navigate('/contact-us')}
+						onClick={() => navigate(`/${i18n.language}/contact-us`)}
 						variant={'primary'}
 						className="rounded-[40px] h-max gap-2 !py-2 !px-4 sm:!py-4 md:!px-8 hover:cursor-pointer"
 					>

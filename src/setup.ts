@@ -1,4 +1,4 @@
-import './globals.d.ts'
+import '@/global.d.ts'
 
 const GroupOfThreeDigitsRegexp = /\B(?=(\d{3})+(?!\d))/g
 

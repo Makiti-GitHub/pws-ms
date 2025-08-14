@@ -20,7 +20,7 @@ import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 
 const ServicesLayout: LayoutComponent = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { pathname } = useLocation()
 
 	const currentPage = useMemo(() => {
@@ -46,7 +46,7 @@ const ServicesLayout: LayoutComponent = () => {
 						<BreadcrumbList className="text-on-surface-variant text-lg flex items-center gap-6">
 							<BreadcrumbItem className="flex items-center gap-2">
 								<BreadcrumbLink asChild>
-									<Link to="/">{t('nav.links.home')}</Link>
+									<Link to={`/${i18n.language}/`}>{t('nav.links.home')}</Link>
 								</BreadcrumbLink>
 								<BreadcrumbSeparator />
 							</BreadcrumbItem>
@@ -69,17 +69,21 @@ const ServicesLayout: LayoutComponent = () => {
 									</DropdownMenuTrigger>
 									<DropdownMenuContent align="start">
 										<DropdownMenuItem asChild className="hover:cursor-pointer">
-											<Link to="/services/server-security">
+											<Link to={`/${i18n.language}/services/server-security`}>
 												{t('pages.services.serverSecurity.title')}
 											</Link>
 										</DropdownMenuItem>
 										<DropdownMenuItem asChild className="hover:cursor-pointer">
-											<Link to="/services/internet-kit-configuration">
+											<Link
+												to={`/${i18n.language}/services/internet-kit-configuration`}
+											>
 												{t('pages.services.internetKitConfiguration.title')}
 											</Link>
 										</DropdownMenuItem>
 										<DropdownMenuItem asChild className="hover:cursor-pointer">
-											<Link to="/services/streaming-services">
+											<Link
+												to={`/${i18n.language}/services/streaming-services`}
+											>
 												{t('pages.services.streamingServices.title')}
 											</Link>
 										</DropdownMenuItem>
@@ -88,7 +92,7 @@ const ServicesLayout: LayoutComponent = () => {
 								<BreadcrumbSeparator />
 							</BreadcrumbItem>
 							<BreadcrumbItem>
-								<BreadcrumbPage className="">
+								<BreadcrumbPage>
 									{t(`pages.services.${currentPage}.title`)}
 								</BreadcrumbPage>
 							</BreadcrumbItem>
@@ -101,6 +105,6 @@ const ServicesLayout: LayoutComponent = () => {
 	)
 }
 
-ServicesLayout.path = '/services'
+ServicesLayout.path = '/:locale?/services'
 
 export default ServicesLayout

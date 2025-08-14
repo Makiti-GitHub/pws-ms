@@ -87,9 +87,9 @@ const ServiceCard: FC<React.ComponentProps<'article'> & ServiceCardProps> = ({
 				</div>
 
 				<div className="space-y-3.5">
-					<p className="text-2xl text-center font-seravek_bold text-secondary">{`${
-						service.price
-					} CFA/${t('month')}`}</p>
+					<p className="text-2xl text-center font-seravek_bold text-secondary">{`${service.price
+						.toString()
+						.toCommaSeperatedDigits()} CFA/${t('month')}`}</p>
 					<div className="w-full flex flex-col lg:flex-row gap-2 sm:gap-4 items-center">
 						<Button
 							onClick={() => {
@@ -106,7 +106,7 @@ const ServiceCard: FC<React.ComponentProps<'article'> & ServiceCardProps> = ({
 									description: service.description,
 								})
 
-								toast.success('Service added to cart')
+								toast.success(t('pages.shop.success.types.service'))
 							}}
 							variant={'primary'}
 							className="rounded-[8px] w-full flex-1 h-max !py-2 sm:!py-3 !px-4 gap-5 hover:cursor-pointer border border-secondary hover:bg-accent/5"
