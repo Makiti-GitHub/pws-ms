@@ -13,9 +13,9 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 	const { t } = useTranslation()
 	const { updateQuantity, removeFromCart, getItemTotalPrice } = useCartStore()
 	return (
-		<div className="border-[0.5px] p-4 border-outline-variant space-y-2 rounded-xl">
+		<div className="border-[0.5px] p-4 border-outline-variant space-y-4 sm:space-y-2 rounded-xl">
 			<div className="flex flex-col gap-8 lg:flex-row justify-between">
-				<div className="space-x-4 flex">
+				<div className="gap-4 flex flex-col min-[426px]:flex-row">
 					<div className="size-[90px] rounded-sm drop_shadow_cart_item_image">
 						<Image
 							src={cartItem.images[0]}
@@ -50,7 +50,7 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 						) : null}
 					</div>
 				</div>
-				<div className="flex flex-row sm:items-center justify-between gap-3 lg:gap-6">
+				<div className="flex flex-col min-[456px]:flex-row sm:items-center justify-between gap-3 lg:gap-6">
 					<div className="flex items-center gap-4 lg:gap-6 xl:gap-8 w-full">
 						<Button
 							variant={'ghost'}
@@ -77,27 +77,22 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 							<PlusIcon className="size-6" />
 						</Button>
 					</div>
-					<div className="flex sm:flex-col gap-2 items-center sm:items-start">
-						{/* <p className="text-lg lg:text-2xl text-center lg:text-left font-seravek_medium text-on-surface whitespace-nowrap">
-							{`${getItemTotalPrice(cartItem.id)} CFA`}
-						</p> */}
 
-						<Button
-							variant={'ghost'}
-							onClick={() => removeFromCart(cartItem.id)}
-							className="!p-2.5 sm:w-full hover:cursor-pointer rounded-sm border-[0.5px] border-red-500 hover:bg-red-500 group"
-						>
-							<Trash2Icon className="size-4 text-red-500 group-hover:text-white" />
-							<span className="text-red-500 group-hover:text-white">
-								{t('remove')}
-							</span>
-						</Button>
-					</div>
+					<Button
+						variant={'ghost'}
+						onClick={() => removeFromCart(cartItem.id)}
+						className="!p-2.5 hover:cursor-pointer rounded-sm border-[0.5px] border-red-500 hover:bg-red-500 group"
+					>
+						<Trash2Icon className="size-4 text-red-500 group-hover:text-white" />
+						<span className="text-red-500 group-hover:text-white">{t('remove')}</span>
+					</Button>
 				</div>
 			</div>
 			<p className="flex font-seravek_medium text-lg text-on-surface items-center justify-end gap-1 w-full">
-				<span className="space-x-0.5">
-					<span>{t('pages.shoppingCart.sections.orderSummary.subtotal')} </span>
+				<span className="gap-0.5 flex items-center flex-wrap">
+					<span className="leading-2">
+						{t('pages.shoppingCart.sections.orderSummary.subtotal')}
+					</span>
 					<span className="lowercase">
 						{`(${cartItem.quantity} ${t(`item${cartItem.quantity > 1 ? 's' : ''}`)})`}:
 					</span>

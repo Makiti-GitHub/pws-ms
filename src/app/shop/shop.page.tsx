@@ -1,17 +1,6 @@
 import ProductCard from '@/components/molecules/cards/ProductCard'
 import SectionHeader from '@/components/molecules/SectionHeader'
 import ShopPagination from '@/components/organisms/shop/PaginationControls'
-// import {
-// 	Pagination,
-// 	PaginationContent,
-// 	PaginationEllipsis,
-// 	PaginationFirst,
-// 	PaginationItem,
-// 	PaginationLast,
-// 	PaginationLink,
-// 	PaginationNext,
-// 	PaginationPrevious,
-// } from '@/components/ui/pagination'
 import { ProductCategoryType, productsMock } from '@/data/mock'
 import { PageComponent, useLocation, useNavigate, useSearchParams } from 'rasengan'
 import { useCallback, useMemo, useState } from 'react'
@@ -91,7 +80,7 @@ const Shop: PageComponent = () => {
 
 	const handleSelectFilter = (value: ProductCategoryType) => {
 		setSelectedFilter(value)
-		handleNavigate('c', value)
+		handleNavigate('category', value)
 	}
 
 	return (
@@ -106,12 +95,12 @@ const Shop: PageComponent = () => {
 								tabIndex={0}
 								role="button"
 								onClick={() => {
-									console.log(item.value, selectedFilter)
+									setCurrentPage(1)
 									if (item.value !== 'all') {
 										handleSelectFilter(item.value)
 									} else {
 										setSelectedFilter('all')
-										handlePopNavigate('c')
+										handlePopNavigate('category')
 									}
 								}}
 								key={`story-${index}-industry-${item.value}`}

@@ -32,7 +32,7 @@ type FullFormData = z.infer<typeof formSchema>
 
 const ShoppingCart: PageComponent = () => {
 	const { t } = useTranslation()
-	const { items, getTotalPrice } = useCartStore()
+	const { items, getTotalPrice, getItemTotalPrice } = useCartStore()
 
 	const form = useForm<FullFormData>({
 		resolver: zodResolver(formSchema),
@@ -51,7 +51,7 @@ const ShoppingCart: PageComponent = () => {
 
 		const project = '+237 680 09 54 53'
 
-		let text = `Demande de livraison :\n\n`
+		let text = `${t('pages.shoppingCart.sections.customerInformation.title')} :\n\n`
 
 		text += `${t('pages.shoppingCart.sections.customerInformation.form.fields.name.label')} : ${
 			data.name
@@ -75,11 +75,17 @@ const ShoppingCart: PageComponent = () => {
 
 		text += `Je souhaite commander :\n\n`
 
-		items.forEach((item) => {
-			text += `${item.quantity} x ${item.name} : ${item.price} FCFA\n`
+		items.forEach((item, index) => {
+			text += `${index + 1}. ${item.name} (${item.price
+				.toString()
+				.toCommaSeperatedDigits()} FCFA) x ${item.quantity} : ${getItemTotalPrice(item.id)
+				.toString()
+				.toCommaSeperatedDigits()} FCFA\n\n`
 		})
 
-		text += `\n`
+		text += `Prix total : ${getTotalPrice().toString().toCommaSeperatedDigits()} FCFA\n`
+
+		// text += `\n`
 
 		// Create WhatsApp URL with phone number and optional message
 		// Format phone number - remove any non-digit characters

@@ -19,7 +19,6 @@ const TermsAndConditions = () => {
 
 				<div className="space-y-2 text-lg">
 					<TransParagraph transKey="pages.termsAndConditions.sections.presentation.p1" />
-					<TransParagraph transKey="pages.termsAndConditions.sections.presentation.p2" />
 				</div>
 			</div>
 
