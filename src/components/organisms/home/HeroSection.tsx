@@ -65,13 +65,13 @@ const HeroSection = () => {
 	}
 
 	// Auto-slide every 5 seconds
-	useEffect(() => {
-		const interval = setInterval(() => {
-			handleNext()
-		}, 5000)
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		handleNext()
+	// 	}, 5000)
 
-		return () => clearInterval(interval)
-	}, [])
+	// 	return () => clearInterval(interval)
+	// }, [])
 
 	const handleNext = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1 === heroCarousel.length ? 0 : prevIndex + 1))
@@ -97,16 +97,18 @@ const HeroSection = () => {
 
 			{/* Video Background */}
 			<video
+				key={`hero-video-${currentIndex}`}
 				ref={videoRef}
 				className="absolute inset-0 w-full h-full object-cover z-20"
 				autoPlay
 				muted
-				loop
+				// loop
 				playsInline
 				onLoadedData={() => setVideoLoaded(true)}
+				onEnded={() => handleNext()}
 				onError={() => setVideoLoaded(false)}
 			>
-				<source src={heroCarousel[0].video} type="video/mp4" />
+				<source src={heroCarousel[currentIndex].video} type="video/mp4" />
 			</video>
 
 			{/* Overlay */}
