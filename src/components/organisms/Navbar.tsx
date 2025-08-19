@@ -17,7 +17,7 @@ const NavBar = () => {
 	return (
 		<header className="fixed left-0 right-0 w-full z-50">
 			<nav
-				className={`relative px-3 sm:px-8 md:px-[80px] bg-white xl:px-[120px] py-5 w-full flex items-end sm:items-center justify-between gap-4 shadow-[0_0_0_2px_rgba(255,255,255,0.6),0_4px_4px_rgba(0,0,0,0.12)]`}
+				className={`relative px-3 sm:px-8 md:px-[80px] bg-white xl:px-[120px] py-5 w-full flex items-end justify-between gap-4 sm:gap-8 lg:gap-4 shadow-[0_0_0_2px_rgba(255,255,255,0.6),0_4px_4px_rgba(0,0,0,0.12)]`}
 			>
 				{/* === Logo === */}
 				<div className="w-24 sm:w-[120px]">
@@ -45,7 +45,7 @@ const NavBar = () => {
 					})}
 				</ul>
 
-				<div className="flex items-center gap-1 min-[420px]:gap-4 xl:gap-8">
+				<div className="flex flex-1 lg:flex-0 items-center gap-1 min-[420px]:gap-2 md:gap-4 xl:gap-4 2xl:gap-8">
 					<SearchBar />
 
 					<CartPlug />

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { SearchIcon, XIcon } from 'lucide-react'
+import { SearchIcon } from 'lucide-react'
 import { useLocation, useNavigate, useSearchParams } from 'rasengan'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -73,7 +73,7 @@ const SearchBar = () => {
 	}, [])
 
 	return (
-		<div className="relative w-40 sm:w-[250px] lg:w-[150px] xl:w-[200px] 2xl:w-[350px] h-10 rounded-4xl">
+		<div className="relative flex-1 lg:flex-none w-40 sm:w-[250px] lg:w-[175px] xl:w-[300px] 2xl:w-[350px] h-10 rounded-4xl">
 			<Input
 				ref={inputRef}
 				role="searchbox"

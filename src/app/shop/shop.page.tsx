@@ -84,7 +84,7 @@ const Shop: PageComponent = () => {
 	}
 
 	return (
-		<main className="flex flex-col gap-8 px-4 sm:px-8 md:px-[80px] lg:px-[60px] xl:px-[120px] pt-[150px] relative">
+		<main className="flex flex-col gap-8 px-4 sm:px-8 lg:px-20 xl:px-[120px] pt-[150px] relative">
 			<div className="space-y-8 relative">
 				<SectionHeader title={t('pages.shop.title')} subTitle={t('pages.shop.subtitle')} />
 
@@ -116,7 +116,7 @@ const Shop: PageComponent = () => {
 					</div>
 
 					{currentProjects.length > 0 ? (
-						<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+						<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
 							{currentProjects.map((product, index) => (
 								<ProductCard key={`product-${index}`} product={product} />
 							))}

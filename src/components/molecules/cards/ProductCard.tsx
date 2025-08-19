@@ -24,7 +24,7 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 	return (
 		<article
 			className={cn(
-				'relative size-full flex flex-col rounded-[20px] box_shadow_product_card hover:scale-105 transition duration-300 ease-in-out bg-surface',
+				'relative size-full max-w-[480px] md:max-w-none xl:max-w-[480px] mx-auto flex flex-col rounded-[20px] box_shadow_product_card hover:scale-[103%] transition duration-300 ease-in-out bg-surface',
 				className,
 			)}
 			{...props}
@@ -40,13 +40,13 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 					))}
 				</div>
 			) : null}
-			<div className="w-full max-w-[480px] h-[250px] rounded-t-[20px]">
+			<div className="w-full max-w-[480px] mx-auto h-[250px] rounded-t-[20px]">
 				<Image
 					width={'100%'}
 					height={'100%'}
 					src={product.images[0]}
 					alt={product.name}
-					className="size-full object-contain aspect-auto rounded-t-[20px]"
+					className="h-full object-contain aspect-auto rounded-t-[20px]"
 				/>
 			</div>
 			<div className={`flex flex-col justify-between gap-3 p-4 flex-1 w-full`}>

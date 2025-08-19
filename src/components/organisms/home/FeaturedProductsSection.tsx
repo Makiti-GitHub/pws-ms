@@ -19,7 +19,7 @@ const FeaturedProductsSection = () => {
 					title={t('pages.home.sections.featuredProducts.title')}
 					subTitle={t('pages.home.sections.featuredProducts.subtitle')}
 				/>
-				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 					{productsMock.slice(0, 6).map((product, index) => (
 						<ProductCard key={`product-${index}`} product={product} />
 					))}

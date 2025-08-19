@@ -17,6 +17,9 @@ import { Textarea } from '@/components/ui/textarea'
 import z from 'zod'
 import { useCartStore } from '@/stores/cartStore'
 import ShopCartCard from '@/components/molecules/cards/ShopCartCard'
+import { PhoneInput } from '@/components/atoms/input/phone-input'
+import { isValidPhoneNumber } from 'react-phone-number-input'
+import { Trash2Icon } from 'lucide-react'
 
 // Define schemas for each step
 const formSchema = z.object({
@@ -25,14 +28,14 @@ const formSchema = z.object({
 	}),
 	email: z.email(),
 	companyName: z.string(),
-	phoneNumber: z.string(),
+	phoneNumber: z.string().refine(isValidPhoneNumber, { message: 'Invalid phone number' }),
 	address: z.string(),
 })
 type FullFormData = z.infer<typeof formSchema>
 
 const ShoppingCart: PageComponent = () => {
 	const { t } = useTranslation()
-	const { items, getTotalPrice, getItemTotalPrice } = useCartStore()
+	const { items, getTotalPrice, getItemTotalPrice, clearCart } = useCartStore()
 
 	const form = useForm<FullFormData>({
 		resolver: zodResolver(formSchema),
@@ -109,9 +112,23 @@ const ShoppingCart: PageComponent = () => {
 
 				<section className="space-y-8">
 					<section className="p-5 rounded-xl border-[0.5px] border-outline-variant space-y-6">
-						<p className="font-seravek_medium text-xl text-on-surface-variant">
-							{t('pages.shoppingCart.sections.cartItems.title')}
-						</p>
+						<div className="flex items-center justify-between gap-4">
+							<p className="font-seravek_medium text-xl text-on-surface-variant">
+								{t('pages.shoppingCart.sections.cartItems.title')}
+							</p>
+							{items.length > 0 ? (
+								<Button
+									variant={'ghost'}
+									onClick={() => clearCart()}
+									className="!p-2.5 hover:cursor-pointer rounded-sm border-[0.5px] border-red-500 hover:bg-red-500 group"
+								>
+									<Trash2Icon className="size-4 text-red-500 group-hover:text-white" />
+									<span className="text-red-500 group-hover:text-white">
+										{t('clear')}
+									</span>
+								</Button>
+							) : null}
+						</div>
 
 						<div className="flex flex-col gap-2">
 							{items.length > 0 ? (
@@ -234,6 +251,7 @@ const ShoppingCart: PageComponent = () => {
 											</FormItem>
 										)}
 									/>
+
 									<FormField
 										control={form.control}
 										name="phoneNumber"
@@ -244,19 +262,20 @@ const ShoppingCart: PageComponent = () => {
 														'pages.shoppingCart.sections.customerInformation.form.fields.phoneNumber.label',
 													)}
 												</FormLabel>
-												<FormControl>
-													<Input
+												<FormControl className="w-full">
+													<PhoneInput
 														placeholder={t(
 															'pages.shoppingCart.sections.customerInformation.form.fields.phoneNumber.placeholder',
 														)}
 														{...field}
-														className="bg-surface-container px-3 py-2.5"
+														className="bg-surface-container rounded-lg"
 													/>
 												</FormControl>
 												<FormMessage />
 											</FormItem>
 										)}
 									/>
+
 									<FormField
 										control={form.control}
 										name="address"
@@ -286,6 +305,7 @@ const ShoppingCart: PageComponent = () => {
 								<Button
 									type="submit"
 									variant="primary"
+									disabled={items.length === 0}
 									className="w-full !py-3 !px-4 !rounded-xl gap-3 hover:cursor-pointer"
 								>
 									<span className="font-seravek_medium text-base text-secondary">

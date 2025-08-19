@@ -17,6 +17,9 @@
     "item": "Article",
     "startingFrom": "A partir de",
     "available": "Disponible",
+    "clear": "Effacer",
+    "searchCountry": "Rechercher un Pays",
+    "noCountryFound": "Aucun Pays Trouvé",
     "languages": "Langues",
     "language": {
         "en": "Anglais",

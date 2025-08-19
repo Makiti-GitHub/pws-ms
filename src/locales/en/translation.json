@@ -17,6 +17,9 @@
     "item": "Item",
     "startingFrom": "Starting From",
     "available": "Available",
+    "clear": "Clear",
+    "searchCountry": "Search Country",
+    "noCountryFound": "No Country Found",
     "languages": "Languages",
     "language": {
         "en": "English",
