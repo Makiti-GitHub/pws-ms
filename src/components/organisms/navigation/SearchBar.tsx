@@ -88,7 +88,7 @@ const SearchBar = () => {
 				aria-haspopup="listbox"
 				aria-label="Search products"
 				onBlur={() => setIsFocused(false)}
-				className="size-full bg-surface-container placeholder:text-outline rounded-4xl pr-10 placeholder:text-sm sm:placeholder:text-base"
+				className="size-full bg-surface-container placeholder:text-outline rounded-4xl pr-10 placeholder:text-xs sm:placeholder:text-base"
 			/>
 			<Button
 				variant={'ghost'}
