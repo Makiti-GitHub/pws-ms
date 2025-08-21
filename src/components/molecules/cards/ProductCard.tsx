@@ -46,7 +46,7 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 					height={'100%'}
 					src={product.images[0]}
 					alt={product.name}
-					className="h-full object-contain aspect-auto rounded-t-[20px]"
+					className="h-full mx-auto object-contain aspect-auto rounded-t-[20px]"
 				/>
 			</div>
 			<div className={`flex flex-col justify-between gap-3 p-4 flex-1 w-full`}>
