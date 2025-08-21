@@ -150,7 +150,7 @@ const PrivacyPolicy: PageComponent = () => {
 						/>
 						<TransParagraph
 							transKey="pages.privacyPolicy.sections.contact.p4"
-							emails={['contact@makiti.de']}
+							emails={['contact@makiti-group.cm']}
 						/>
 						<TransParagraph
 							transKey="pages.privacyPolicy.sections.contact.p5"

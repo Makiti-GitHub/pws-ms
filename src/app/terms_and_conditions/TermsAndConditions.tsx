@@ -129,7 +129,7 @@ const TermsAndConditions = () => {
 					<TransParagraph transKey="pages.termsAndConditions.sections.suspensionAndTermination.p1" />
 					<TransParagraph
 						transKey="pages.termsAndConditions.sections.suspensionAndTermination.p2"
-						emails={['contact@makiti.de']}
+						emails={['ccontact@makiti-group.cm']}
 					/>
 				</div>
 			</div>
@@ -170,7 +170,7 @@ const TermsAndConditions = () => {
 					<div>
 						<TransParagraph
 							transKey="pages.termsAndConditions.sections.contact.p3"
-							emails={['contact@makiti.de']}
+							emails={['contact@makiti-group.cm']}
 						/>
 						<TransParagraph
 							transKey="pages.termsAndConditions.sections.contact.p4"
