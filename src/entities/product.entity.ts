@@ -1,4 +1,15 @@
-import { ProductCategoryType, ProductTagType } from '@/data/mock'
+export type ProductTagType = 'new' | 'topRated' | 'inStock'
+
+export type ProductCategoryType =
+	| 'electronics'
+	| 'license'
+	| 'fashion'
+	| 'beauty'
+	| 'home'
+	| 'baby&children'
+	| 'health'
+	| 'food'
+	| 'all'
 
 interface IProduct {
 	images: string[]

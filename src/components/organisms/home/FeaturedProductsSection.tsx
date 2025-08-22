@@ -1,7 +1,7 @@
 import ProductCard from '@/components/molecules/cards/ProductCard'
 import SectionHeader from '@/components/molecules/SectionHeader'
 import { Button } from '@/components/ui/button'
-import { productsMock } from '@/data/mock'
+import productsMock from '@/data/shop'
 import { ArrowUpRightIcon } from 'lucide-react'
 import { useNavigate } from 'rasengan'
 import { useTranslation } from 'react-i18next'

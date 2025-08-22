@@ -1,7 +1,7 @@
 import ProductTag from '@/components/atoms/tag/ProductTag'
 import { Button } from '@/components/ui/button'
 import { CartItem, useCartStore } from '@/stores/cartStore'
-import Image from '@rasenganjs/image'
+// import Image from '@rasenganjs/image'
 import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
@@ -17,13 +17,19 @@ const ShopCartCard = ({ cartItem }: ShopCartCardProps) => {
 			<div className="flex flex-col gap-8 lg:flex-row justify-between">
 				<div className="gap-4 flex flex-col min-[426px]:flex-row">
 					<div className="size-[90px] rounded-sm drop_shadow_cart_item_image">
-						<Image
+						<img
+							src={cartItem.images[0]}
+							alt={cartItem.name}
+							className="size-full aspect-auto object-contain rounded-sm"
+						/>
+
+						{/* <Image
 							src={cartItem.images[0]}
 							width={90}
 							height={90}
 							alt="cart item image"
 							className="size-full aspect-auto object-contain rounded-sm"
-						/>
+						/> */}
 					</div>
 
 					<div className="space-y-2 flex-1">
