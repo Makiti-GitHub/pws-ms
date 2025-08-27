@@ -278,10 +278,18 @@
                                 "answer": "Oui ! Starlink offre des options de portabilité. Les kits Mini et Roam sont conçus pour une relocalisation facile. Les kits Standard peuvent être déplacés mais peuvent nécessiter des mises à jour d'adresse de service et des changements de plan potentiels."
                             },
                             "question6": {
+                                "question": "Comment puis-je configurer mon routeur pour qu'il soit compatible avec l'Internet Makiti ?",
+                                "answer": "Pour configurer votre routeur, accédez à son interface d'administration en vous connectant à l'adresse IP par défaut (souvent 192.168.1.1 ou 192.168.0.1) via votre navigateur. Ensuite, recherchez les paramètres de connexion WAN ou Internet. Sélectionnez le mode de connexion PPPoE et entrez les identifiants qui vous ont été fournis par Makiti."
+                            },
+                            "question7": {
+                                "question": "Quelles sont les étapes que je dois suivre pour activer mon kit Internet Makiti ?",
+                                "answer": "L'activation de votre kit Internet Makiti se fait en trois étapes simples : <ul><li>1. <bold>Connexion physique</bold> : Branchez le câble Ethernet fourni au port WAN de votre routeur et à l'adaptateur secteur. Connectez l'adaptateur secteur au boîtier de réception de votre kit.</li><li>2. <bold>Configuration du routeur</bold> : Suivez les instructions ci-dessus pour configurer le mode de connexion en <bold>PPPoE</bold> sur votre routeur.</li><li>3. <bold>Activation en ligne</bold> : Une fois le routeur configuré, ouvrez votre navigateur. Vous serez automatiquement redirigé vers la page d'activation de Makiti où vous pourrez finaliser la procédure et commencer à naviguer.</li></ul>"
+                            },
+                            "question61": {
                                 "question": "Combien de temps faut-il pour démarrer un projet et livrer des résultats ?",
                                 "answer": "Le lancement du projet prend généralement 2-3 semaines, couvrant la configuration de l'équipe et l'analyse des exigences. Les délais de livraison dépendent de la portée du projet : sites web simples (4-8 semaines), applications complexes (3-12 mois), solutions d'entreprise (6-18 mois). Vous obtiendrez une feuille de route détaillée dès le départ, avec des mises à jour de progression constantes à chaque étape."
                             },
-                            "question7": {
+                            "question71": {
                                 "question": "Dans quelles technologies et compétences vos équipes se spécialisent-elles ?",
                                 "answer": "Nos équipes sont expertes dans les stacks technologiques modernes : Frontend (React, Vue.js, Angular), Backend (Node.js, Python, Java), Mobile (React Native, Flutter), Cloud (AWS, Azure, GCP), DevOps (Docker, Kubernetes), IA/ML (TensorFlow, PyTorch), et bases de données (PostgreSQL, MongoDB). Nous restons à la pointe en évoluant constamment avec les derniers outils et meilleures pratiques."
                             }
@@ -361,7 +369,12 @@
                 "rightSection": {
                     "phone": "Téléphone",
                     "email": "Email",
-                    "businessHours": "Heures d'Ouverture"
+                    "businessHours": {
+                        "title": "Heures d'Ouverture",
+                        "p1": "Lundi à Vendredi: 9hr - 18hr",
+                        "p2": "Samedi: 10hr - 16hr",
+                        "p3": "Dimanche: Fermé"
+                    }
                 }
             }
         },
@@ -369,9 +382,46 @@
             "title": "À Propos de Makiti SARL",
             "subtitle": "Leader de l'avenir des solutions technologiques avec des produits innovants, des services experts, et un engagement envers des expériences sécurisées et connectées.",
             "sections": {
+                "ourMission": {
+                    "title": "Notre Mission",
+                    "p1": "Chez Makiti SARL, nous sommes déterminés à doter les entreprises et les particuliers de solutions technologiques de pointe. De l'e-commerce et de la recherche de produits à la conception de logiciels informatiques et à la connectivité par satellite, nous fournissons les outils et l'expertise nécessaires pour réussir à l'ère numérique.",
+                    "p2": "Notre équipe de professionnels expérimentés combine l'expertise technique avec un service client exceptionnel pour proposer des solutions qui non seulement répondent mais dépassent les attentes. Nous nous appuyons sur une approche centrée sur le client, un investissement humain, la qualité et une vision audacieuse pour l'innovation numérique.",
+                    "stats": {
+                        "happyClients": "Clients Satisfaits",
+                        "activeYears": "Années d'activités",
+                        "supportAvailable": "Support Disponible"
+                    }
+                },
                 "ourJourney": {
                     "title": "Notre Parcours",
-                    "subtitle": "Des idées audacieuses à l'innovation numérique transformatrice, nous donnons du pouvoir à l'avenir en transformant la vision en réalité grâce à la technologie."
+                    "subtitle": "Des idées audacieuses à l'innovation numérique transformatrice, nous donnons du pouvoir à l'avenir en transformant la vision en réalité grâce à la technologie.",
+                    "activities": {
+                        "activity1": {
+                            "date": "2021",
+                            "title": "Création de l'entreprise",
+                            "desc": "L'aventure de Makiti SARL a commencé avec une idée visionnaire de notre fondateur, l'honorable Abdel. En exploitant un magasin à Emana, Yaoundé, proposant des recharges de téléphone portable et des abonnements Canal+, il a perçu le potentiel inexploité et a contacté MJ en Allemagne. Le 'premier valise' contenant des téléphones et des friandises allemandes comme Haribos a été un test audacieux qui s'est vendu en quelques semaines, prouvant que la qualité des produits allemands avait conquis les gens."
+                        },
+                        "activity2": {
+                            "date": "2022",
+                            "title": "Construction de la confiance et de la clientèle",
+                            "desc": "2022 a vu l'émergence d'une clientèle loyale et exigeante. Nos clients nous ont fait confiance, en passant des commandes spécifiques pour des parfums Zara ou Chanel, démontrant une confiance précieuse dans notre service. Ce succès a conduit à la décision de fonder officiellement une entreprise."
+                        },
+                        "activity3": {
+                            "date": "2023",
+                            "title": "Création officielle",
+                            "desc": "Makiti SARL a été officiellement créée avec une vocation claire pour le commerce électronique. Nous avons recruté nos premiers employés : un jeune graphiste que nous avons soutenu en finançant sa formation, et un étudiant en informatique dont le rôle d'« analyste de données » était crucial pour collecter des données et faire des prévisions. Grâce à la formation de notre analyste de données, nous avons obtenu notre premier grand client et travaillé sur un projet de Big Data pendant un an."
+                        },
+                        "activity4": {
+                            "date": "2024",
+                            "title": "Partenariat stratégique",
+                            "desc": "2024 a marqué une année clé avec un partenariat stratégique : Makiti SARL est devenue partenaire de Makiti Group. Cette alliance nous a permis d'élargir nos horizons, en ajoutant une nouvelle branche dédiée au développement de logiciels informatiques à nos offres de commerce électronique."
+                        },
+                        "activity5": {
+                            "date": "2025",
+                            "title": "Innovation continue",
+                            "desc": "Aujourd'hui, nous continuons à prospérer dans le commerce électronique, en enrichissant notre catalogue avec des produits informatiques tels que des serveurs, des clés USB, des cartes micro SD, des ordinateurs portables, et plus encore, tout en renforçant notre expertise dans les services informatiques. Le parcours de Makiti SARL est celui d'une croissance constante, basée sur la focalisation client, l'investissement humain, la qualité et une vision audacieuse pour l'innovation numérique."
+                        }
+                    }
                 }
             }
         },
@@ -449,7 +499,7 @@
                         "<bold>Droit au retrait du consentement</bold>, à tout moment pour les traitements fondés sur celui-ci.",
                         "<bold>Droit à la portabilité</bold>, le cas échéant, dans les limites prévues par la loi."
                     ],
-                    "p2": "Pour exercer vos droits, contactez-nous à l’adresse suivante : <bold><email>contact@makiti-group.cm</email></bold>"
+                    "p2": "Pour exercer vos droits, contactez-nous à l’adresse suivante : <bold><email>contact@makiti.cm</email></bold>"
                 },
                 "cookiesAndTrackers": {
                     "title": "Cookies et traceurs",
@@ -472,7 +522,7 @@
                     "p1": "Pour toute demande relative à cette politique de confidentialité ou à vos données personnelles, vous pouvez nous contacter via les coordonnées suivantes :",
                     "p2": "<bold>Makiti SARL</bold>",
                     "p3": "Site web : <link1>www.makiti-group.com</link1>",
-                    "p4": "Adresse e-mail : <email>contact@makiti-group.cm</email>",
+                    "p4": "Adresse e-mail : <email>contact@makiti.cm</email>",
                     "p5": "Téléphone : <phone>+237 680 095 453</phone>"
                 }
             }
@@ -484,7 +534,7 @@
             "sections": {
                 "presentation": {
                     "title": "Présentation de Makiti SARL",
-                    "p1": "Makiti SARL est une société de droit camerounais, immatriculée au Registre du Commerce et du Crédit Mobilier (RCCM) sous le numéro <bold><italic>M052318275229B</italic></bold>, dont le siège social est situé à Yaoundé- Santa Barbara, face Sonel . Elle développe et met à disposition des solutions digitales pour faciliter l’accès aux produits et services, notamment via sa plateforme <bold>Matoa</bold> et ses applications associées."
+                    "p1": "Makiti SARL est une société de droit camerounais, immatriculée au Registre du Commerce et du Crédit Mobilier (RCCM) sous le numéro <bold><italic>M052318275229B</italic></bold>, dont le siège social est situé à Yaoundé-Santa Barbara, face à la Sonel. L'entreprise développe et met à disposition des solutions digitales conçues pour faciliter l'accès aux produits et services."
                 },
                 "definitions": {
                     "title": "Définitions",
@@ -552,7 +602,7 @@
                 "suspensionAndTermination": {
                     "title": "Suspension et résiliation",
                     "p1": "Makiti SARL se réserve le droit de <bold>suspendre temporairement ou définitivement</bold> l’accès aux services d’un utilisateur, <bold>sans préavis</bold>, en cas de violation des présentes CGU ou de comportement nuisible à la plateforme ou aux autres utilisateurs.",
-                    "p2": "L'utilisateur peut également demander la suppression de son compte à tout moment par simple demande à l’adresse : <email>contact@makiti-group.cm</email>"
+                    "p2": "L'utilisateur peut également demander la suppression de son compte à tout moment par simple demande à l’adresse : <email>contact@makiti.cm</email>"
                 },
                 "termsModification": {
                     "title": "Modifications des CGU",
@@ -568,7 +618,7 @@
                     "title": "Contact",
                     "p1": "Pour toute question, réclamation ou demande d'information relative aux présentes CGU, vous pouvez nous contacter aux coordonnées suivantes :",
                     "p2": "<bold>Makiti SARL</bold>",
-                    "p3": "Email : <email>contact@makiti-group.cm</email>",
+                    "p3": "Email : <email>contact@makiti.cm</email>",
                     "p4": "Téléphone : <phone>+237 680 095 453</phone>",
                     "p5": "Site web : <link1>www.makiti-group.com</link1>"
                 }
@@ -585,7 +635,7 @@
                     "title": "Siège social",
                     "p1": "Yaounde, Santa Barbara - face Sonel",
                     "p2": "Téléphone : <phone>+237 680 095 453</phone>",
-                    "p3": "Adresse e-mail : <email>contact@makiti-group.cm</email>",
+                    "p3": "Adresse e-mail : <email>contact@makiti.cm</email>",
                     "p4": "Représentée par : M. Aboubakar Ousmanou, en sa qualité de Gérant"
                 },
                 "hosting": {
@@ -645,7 +695,7 @@
                 "contact": {
                     "title": "Contact",
                     "p1": "Pour toute question relative aux présentes mentions légales, à l'utilisation du site ou à vos données personnelles :",
-                    "p2": "<email>contact@makiti-group.cm</email>",
+                    "p2": "<email>contact@makiti.cm</email>",
                     "p3": "Siège social : Yaounde, Santa Barbara",
                     "p4": "Téléphone : <phone>+237 680 095 453</phone>"
                 }

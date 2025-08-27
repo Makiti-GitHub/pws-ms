@@ -13,7 +13,7 @@ const OurJourneySection = () => {
 			/>
 
 			<div>
-				{journeyListMock.map((item, index) => (
+				{journeyListMock.map((_, index) => (
 					<div
 						key={`timeline-item-${index}`}
 						className="flex items-stretch gap-3 sm:gap-6 lg:gap-10 xl:gap-[60px]"
@@ -39,14 +39,26 @@ const OurJourneySection = () => {
 								<div className="space-y-3 lg:space-y-6">
 									<div className="flex items-center gap-2.5">
 										<span className="border-[0.5px] rounded-lg border-outline-variant px-3 py-1">
-											{item.date}
+											{t(
+												`pages.about.sections.ourJourney.activities.activity${
+													index + 1
+												}.date`,
+											)}
 										</span>
 										<span className="text-on-surface font-seravek_medium text-2xl lg:text-3xl xl:text-4xl">
-											{item.title}
+											{t(
+												`pages.about.sections.ourJourney.activities.activity${
+													index + 1
+												}.title`,
+											)}
 										</span>
 									</div>
 									<p className="text-lg lg:text-xl xl:text-2xl text-on-surface-variant leading-5 lg:leading-7 xl:leading-10">
-										{item.desc}
+										{t(
+											`pages.about.sections.ourJourney.activities.activity${
+												index + 1
+											}.desc`,
+										)}
 									</p>
 								</div>
 							</div>

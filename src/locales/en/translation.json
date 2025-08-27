@@ -278,10 +278,18 @@
                                 "answer": "Yes! Starlink offers portability options. The Mini and Roam kits are designed for easy relocation. Standard kits can be moved but may require service address updates and potential plan changes."
                             },
                             "question6": {
+                                "question": "How can I configure my router to be compatible with Makiti Internet?",
+                                "answer": "To configure your router, access its administration interface by logging in to the default IP address (often 192.168.1.1 or 192.168.0.1) via your browser. Then, look for the WAN or Internet connection settings. Select the PPPoE connection mode and enter the identifiers provided by Makiti."
+                            },
+                            "question7": {
+                                "question": "What are the steps I need to follow to activate my Makiti Internet kit ?",
+                                "answer": "Activating your Makiti Internet kit is done in three simple steps : <ul><li>1. <bold>Physical Connection</bold> : Connect the Ethernet cable provided to the WAN port of your router and to the power adapter. Connect the power adapter to the receiver box of your kit.</li><li>2. <bold>Router Configuration</bold> : Follow the instructions above to configure the <bold>PPPoE</bold> connection mode on your router.</li><li>3. <bold>Online Activation</bold> : Once the router is configured, open your browser. You will be automatically redirected to Makiti's activation page where you can complete the procedure and start browsing.</li></ul>"
+                            },
+                            "question61": {
                                 "question": "How long does it take to start a project and deliver results?",
                                 "answer": "Project kickoff typically takes 2-3 weeks, covering team setup and requirement analysis. Delivery timelines depend on project scope: simple websites (4-8 weeks), complex apps (3-12 months), enterprise solutions (6-18 months). You'll get a detailed roadmap upfront, with consistent progress updates at every stage."
                             },
-                            "question7": {
+                            "question71": {
                                 "question": "What technologies and skills do your teams specialize in?",
                                 "answer": "Our teams are experts in modern tech stacks: Fronted (React, Vue.js, Angular), Backend (Node.js, Python, Java), Mobile (React Native, Flutter), Cloud (AWS, Azure, GCP), DevOps (Docker, Kubernetes), AI/ML (Tenserflow, PyTorch), and databases (ProgreSQL, MongoDB). We stay sharp by constantly evolving with the latest tools and best practices."
                             }
@@ -361,7 +369,12 @@
                 "rightSection": {
                     "phone": "Phone",
                     "email": "Email",
-                    "businessHours": "Business Hours"
+                    "businessHours": {
+                        "title": "Business Hours",
+                        "p1": "Monday to Friday: 9 AM - 6 PM",
+                        "p2": "Saturday: 10 AM - 4 PM",
+                        "p3": "Sunday: Closed"
+                    }
                 }
             }
         },
@@ -369,9 +382,46 @@
             "title": "About Makiti SARL",
             "subtitle": "Leading the future of technology solutions with innovative products, expert services, and a commitment to secure, connected experiences.",
             "sections": {
+                "ourMission": {
+                    "title": "Our Mission",
+                    "p1": "At Makiti SARL, we're dedicated to empowering businesses and individuals with cutting-edge technology solutions. From e-commerce and product sourcing to IT software development and satellite connectivity, we provide the tools and expertise needed to thrive in the digital age.",
+                    "p2": "Our team of experienced professionals combines technical expertise with exceptional customer service to deliver solutions that not only meet but exceed expectations. We build on customer focus, human investment, quality, and a bold vision for digital innovation.",
+                    "stats": {
+                        "happyClients": "Happy Clients",
+                        "activeYears": "Active Years",
+                        "supportAvailable": "Support Available"
+                    }
+                },
                 "ourJourney": {
                     "title": "Our Journey",
-                    "subtitle": "From bold ideas to transformative digital innovation, we empower the future by turning vision into reality through technology."
+                    "subtitle": "From bold ideas to transformative digital innovation, we empower the future by turning vision into reality through technology.",
+                    "activities": {
+                        "activity1": {
+                            "date": "2021",
+                            "title": "Company Founded",
+                            "desc": "The adventure of Makiti SARL began with a visionary idea by our founder, Honorable Abdel. Operating a shop in Emana, Yaoundé, offering mobile phone recharges and Canal+ subscriptions, he perceived the untapped potential and contacted MJ in Germany. The 'first suitcase' containing phones and German treats like Haribos was a bold test that sold out within weeks, proving the quality of German products had won people over."
+                        },
+                        "activity2": {
+                            "date": "2022",
+                            "title": "Building Trust & Clientele",
+                            "desc": "2022 saw the emergence of a loyal and demanding clientele. Our customers trusted us, placing specific orders for Zara or Chanel perfumes, demonstrating valuable confidence in our service. This success led to the decision to officially found a company."
+                        },
+                        "activity3": {
+                            "date": "2023",
+                            "title": "Official Establishment",
+                            "desc": "Makiti SARL was officially established with a clear vocation for E-commerce. We recruited our first employees: a young graphic designer whom we supported by funding training, and an IT student whose role as a 'data analyst' was crucial for collecting data and making forecasts. Thanks to our data analyst's training, we landed our first major client and worked on a Big Data project for a year."
+                        },
+                        "activity4": {
+                            "date": "2024",
+                            "title": "Strategic Partnership",
+                            "desc": "2024 marked a key year with a strategic partnership: Makiti SARL became a partner of Makiti Group. This alliance allowed us to broaden our horizons, adding a new branch dedicated to IT software development to our E-commerce offerings."
+                        },
+                        "activity5": {
+                            "date": "2025",
+                            "title": "Continued Innovation",
+                            "desc": "Today, we continue to thrive in E-commerce, enriching our catalog with IT products such as servers, USB sticks, micro SD cards, laptops, and more, while strengthening our expertise in IT services. The journey of Makiti SARL is one of constant growth, built on customer focus, human investment, quality, and a bold vision for digital innovation."
+                        }
+                    }
                 }
             }
         },
@@ -449,7 +499,7 @@
                         "<bold>Right to withdraw consent</bold>, at any time for processing based on consent.",
                         "<bold>Right to portability</bold>, where applicable, within the limits provided for by law."
                     ],
-                    "p2": "To exercise your rights, please contact us at the following address : <bold><email>contact@makiti-group.cm</email></bold>"
+                    "p2": "To exercise your rights, please contact us at the following address : <bold><email>contact@makiti.cm</email></bold>"
                 },
                 "cookiesAndTrackers": {
                     "title": "Cookies and trackers",
@@ -472,7 +522,7 @@
                     "p1": "For any questions regarding this privacy policy or your personal data, you can contact us using the following contact details :",
                     "p2": "<bold>Makiti SARL</bold>",
                     "p3": "Website : <link1>www.makiti-group.com</link1>",
-                    "p4": "Email address : <email>contact@makiti-group.cm</email>",
+                    "p4": "Email address : <email>contact@makiti.cm</email>",
                     "p5": "Telephone : <phone>+237 680 095 453</phone>"
                 }
             }
@@ -484,7 +534,7 @@
             "sections": {
                 "presentation": {
                     "title": "Presentation of Makiti SARL",
-                    "p1": "Makiti SARL is a company incorporated under Cameroonian law, registered in the Trade and Personal Property Credit Register (RCCM) under number <bold><italic>M052318275229B</italic></bold>, with its registered office located in Yaoundé-Santa Barbara, opposite Sonel. It develops and provides digital solutions to facilitate access to products and services, in particular via its <bold>Matoa</bold> platform and associated applications."
+                    "p1": "Makiti SARL is a company incorporated under Cameroonian law, registered in the Trade and Personal Property Credit Register (RCCM) under number <bold><italic>M052318275229B</italic></bold>, with its registered office located in Yaoundé-Santa Barbara, opposite Sonel. The company develops and provides digital solutions designed to facilitate access to products and services."
                 },
                 "definitions": {
                     "title": "Definitions",
@@ -552,7 +602,7 @@
                 "suspensionAndTermination": {
                     "title": "Suspension and termination",
                     "p1": "Makiti SARL reserves the right to <bold>temporarily or permanently suspend</bold> a user's access to the services, <bold>without notice</bold>, in the event of a breach of these Terms of Use or behaviour that is harmful to the platform or other users.",
-                    "p2": "The user may also request the deletion of their account at any time by sending a simple request to : <bold><email>contact@makiti-group.cm</email><bold>"
+                    "p2": "The user may also request the deletion of their account at any time by sending a simple request to : <bold><email>contact@makiti.cm</email><bold>"
                 },
                 "termsModification": {
                     "title": "Changes to the Terms of Use",
@@ -568,7 +618,7 @@
                     "title": "Contact",
                     "p1": "For any questions, complaints or requests for information relating to these Terms of Use, you can contact us at the following address :",
                     "p2": "<bold>Makiti SARL</bold>",
-                    "p3": "Email : <email>contact@makiti-group.cm</email>",
+                    "p3": "Email : <email>contact@makiti.cm</email>",
                     "p4": "Telephone : <phone>+237 680 095 453</phone>",
                     "p5": "Website : <link1>www.makiti-group.com</link1>"
                 }
@@ -585,7 +635,7 @@
                     "title": "Head office",
                     "p1": "Yaounde, Santa Barbara - opposite Sonel",
                     "p2": "Telephone : <phone>+237 680 095 453</phone>",
-                    "p3": "Email address : <email>contact@makiti-group.cm</email>",
+                    "p3": "Email address : <email>contact@makiti.cm</email>",
                     "p4": "Represented by : M. Aboubakar Ousmanou, in his capacity as Manager"
                 },
                 "hosting": {
@@ -645,7 +695,7 @@
                 "contact": {
                     "title": "Contact",
                     "p1": "For any questions regarding these legal notices, the use of the website or your personal data:",
-                    "p2": "<email>contact@makiti-group.cm</email>",
+                    "p2": "<email>contact@makiti.cm</email>",
                     "p3": "Headquarters : Yaounde, Santa Barbara",
                     "p4": "Telephone : <phone>+237 680 09 54 53</phone>"
                 }

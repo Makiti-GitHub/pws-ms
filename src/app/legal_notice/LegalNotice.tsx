@@ -32,7 +32,7 @@ const LegalNotice = () => {
 					/>
 					<TransParagraph
 						transKey="pages.legalNotice.sections.headOffice.p3"
-						emails={['contact@makiti-group.cm']}
+						emails={['contact@makiti.cm']}
 					/>
 					<TransParagraph transKey="pages.legalNotice.sections.headOffice.p4" />
 				</div>
@@ -195,7 +195,7 @@ const LegalNotice = () => {
 					<TransParagraph transKey="pages.legalNotice.sections.contact.p1" />
 					<TransParagraph
 						transKey="pages.legalNotice.sections.contact.p2"
-						emails={['contact@makiti-group.cm']}
+						emails={['contact@makiti.cm']}
 					/>
 					<TransParagraph transKey="pages.legalNotice.sections.contact.p3" />
 					<TransParagraph

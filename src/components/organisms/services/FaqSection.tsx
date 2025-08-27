@@ -6,7 +6,7 @@ import {
 } from '@/components/ui/accordion'
 import { frequentlyAskedQuestionsMock } from '@/data/mock'
 import { MinusIcon, PlusIcon } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 
 const FaqSection = () => {
 	const { t } = useTranslation()
@@ -63,13 +63,26 @@ const FaqSection = () => {
 								</p>
 							</AccordionTrigger>
 							<AccordionContent className="flex flex-col gap-4 text-balance">
-								<p>
+								{/* <p>
 									{t(
 										`pages.services.internetKitConfiguration.sections.faq.questions.question${
 											index + 1
 										}.answer`,
 									)}
-								</p>
+								</p> */}
+								<Trans
+									i18nKey={t(
+										`pages.services.internetKitConfiguration.sections.faq.questions.question${
+											index + 1
+										}.answer`,
+									)}
+									components={{
+										ul: <ul className="pl-4" />,
+										li: <li className="mb-2" />,
+										bold: <strong className="font-seravek_bold" />,
+										italic: <span className="font-seravek_italic" />,
+									}}
+								/>
 							</AccordionContent>
 						</AccordionItem>
 					))}

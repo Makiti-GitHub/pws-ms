@@ -18,23 +18,15 @@ const About: PageComponent = () => {
 				/>
 
 				<div>
-					<div className="w-full grid xl:grid-cols-7 gap-[52px] pt-[61px] pb-[45px]">
-						<div className="flex flex-col gap-5 xl:col-span-3 2xl:col-span-2">
+					<div className="w-full grid xl:grid-cols-8 gap-[52px] pt-[61px] pb-[45px]">
+						<div className="flex flex-col gap-5 xl:col-span-3 2xl:col-span-3">
 							<div className="space-y-2">
 								<h2 className="font-seravek_bold text-on-surface w-max text-3xl sm:text-[32px] sm:leading-16 xl:leading-20">
-									{'Our Mission'}
+									{t('pages.about.sections.ourMission.title')}
 								</h2>
 								<div className="space-y-8 text-base text-on-surface-variant sm:text-xl leading-normal">
-									<p>
-										{
-											"At Makiti SARL, we're dedicated to empowering businesses and individuals with cutting-edge technology solutions. From e-commerce and product sourcing to IT software development and satellite connectivity, we provide the tools and expertise needed to thrive in the digital age."
-										}
-									</p>
-									<p>
-										{
-											'Our team of experienced professionals combines technical expertise with exceptional customer service to deliver solutions that not only meet but exceed expectations. We build on customer focus, human investment, quality, and a bold vision for digital innovation.'
-										}
-									</p>
+									<p>{t('pages.about.sections.ourMission.p1')}</p>
+									<p>{t('pages.about.sections.ourMission.p2')}</p>
 								</div>
 							</div>
 
@@ -44,7 +36,9 @@ const About: PageComponent = () => {
 										<AnimatedCounter from={0} to={50} />
 										<span>+</span>
 									</p>
-									<p className="text-lg text-on-surface-variant">{`Happy Clients`}</p>
+									<p className="text-lg text-on-surface-variant">
+										{t('pages.about.sections.ourMission.stats.happyClients')}
+									</p>
 								</div>
 
 								<div className="space-y-1">
@@ -52,7 +46,9 @@ const About: PageComponent = () => {
 										<AnimatedCounter from={0} to={5} />
 										<span>+</span>
 									</p>
-									<p className="text-lg text-on-surface-variant">Active Years</p>
+									<p className="text-lg text-on-surface-variant">
+										{t('pages.about.sections.ourMission.stats.activeYears')}
+									</p>
 								</div>
 
 								<div className="space-y-1">
@@ -62,7 +58,9 @@ const About: PageComponent = () => {
 										<AnimatedCounter from={0} to={7} />
 									</p>
 									<p className="text-lg text-on-surface-variant">
-										{t(`Support Available`)}
+										{t(
+											'pages.about.sections.ourMission.stats.supportAvailable',
+										)}
 									</p>
 								</div>
 							</div>

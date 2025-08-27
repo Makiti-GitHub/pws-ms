@@ -95,11 +95,17 @@ const PartnersSection = () => {
 								key={`partner-${index}`}
 								className="col-span-1 w-full max-h-[46px] flex justify-center"
 							>
-								<Image
+								<img
 									src={partner}
 									alt="Partner"
 									className="w-auto max-w-full h-full max-h-[46px] object-contain aspect-auto"
 								/>
+
+								{/* <Image
+									src={partner}
+									alt="Partner"
+									className="w-auto max-w-full h-full max-h-[46px] object-contain aspect-auto"
+								/> */}
 							</div>
 						))}
 					</div>

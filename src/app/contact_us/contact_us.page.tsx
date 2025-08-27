@@ -306,13 +306,13 @@ const ContactUs: PageComponent = () => {
 								</div>
 
 								<p className="text-xl font-seravek_medium text-on-surface-variant">
-									{t('pages.contactUs.sections.rightSection.businessHours')}
+									{t('pages.contactUs.sections.rightSection.businessHours.title')}
 								</p>
 							</div>
 							<div className="text-on-surface-variant text-base">
-								<p>Monday to Friday: 9 AM - 6 PM</p>
-								<p>Saturday: 10 AM - 4 PM</p>
-								<p>Sunday: Closed</p>
+								<p>{t('pages.contactUs.sections.rightSection.businessHours.p1')}</p>
+								<p>{t('pages.contactUs.sections.rightSection.businessHours.p2')}</p>
+								<p>{t('pages.contactUs.sections.rightSection.businessHours.p3')}</p>
 							</div>
 						</div>
 					</aside>

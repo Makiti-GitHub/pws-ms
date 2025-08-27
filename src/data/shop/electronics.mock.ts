@@ -26,7 +26,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-1',
 		name: 'Dell PowerEdge R740XD',
 		description:
-			'A powerful, high-capacity rack server designed for data-intensive workloads, offering scalable storage, dual CPUs, and enterprise-grade performance.',
+			'Un serveur rack puissant et à haute capacité conçu pour les charges de travail intensives en données, offrant un stockage évolutif, des processeurs doubles et des performances de niveau entreprise.',
 		rating: 4.7,
 		reviews: 162,
 		images: [DellPowerEdgeR740XD],
@@ -40,7 +40,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-2',
 		name: 'PROXMOX Licences',
 		description:
-			'Unlimited VM support, Full Enterprise Repository Access, Centralized Web-Based Management, Advanced Backup & Restore, Seamless Cluster Management; Annual Subscription',
+			"Prise en charge de VM illimitée, Accès complet au référentiel d'entreprise, Gestion centralisée basée sur le Web, Sauvegarde et restauration avancées, Gestion de cluster transparente ; Abonnement annuel",
 		rating: 4.7,
 		reviews: 162,
 		images: [proxmoxLicences],
@@ -54,7 +54,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-3',
 		name: 'SanDisk Extreme Portable',
 		description:
-			'A rugged, compact SSD with fast NVMe speeds, ideal for creatives and professionals who need reliable, high-speed storage on the go.',
+			"Un SSD robuste et compact doté de vitesses NVMe rapides, idéal pour les créatifs et les professionnels qui ont besoin d'un stockage fiable et à haute vitesse en déplacement.",
 		rating: 4.7,
 		reviews: 162,
 		images: [SanDiskExtremePortable],
@@ -68,7 +68,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-4',
 		name: 'FRITZ Box 7530 AX WI-FI 6 DSL-Router',
 		description:
-			'Comprehensive package for home use, featuring high-speed internet and advanced user equipment.',
+			'Forfait complet pour usage domestique, comprenant un accès Internet à haute vitesse et un équipement utilisateur avancé.',
 		rating: 4.7,
 		reviews: 162,
 		images: [FRITZBox],
@@ -82,7 +82,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-5',
 		name: 'SanDisk Extreme Portable',
 		description:
-			'A rugged, compact SSD with fast NVMe speeds, ideal for creatives and professionals who need reliable, high-speed storage on the go.',
+			"Un SSD robuste et compact doté de vitesses NVMe rapides, idéal pour les créatifs et les professionnels qui ont besoin d'un stockage fiable et à haute vitesse en déplacement.",
 		rating: 4.7,
 		reviews: 162,
 		images: [SanDiskExtremePortableUSB],
@@ -96,7 +96,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-6',
 		name: 'Folishine Cat7 Ethernet Cable 5m',
 		description:
-			'High-Speed Gigabit RJ45 LAN Network Cable, 10Gbps 600Mhz Internet Patch Cable for Switch Router Modem Patch Panel PC (White)',
+			'Câble réseau LAN Gigabit RJ45 haute vitesse, câble Internet 10Gbps 600Mhz pour commutateur, routeur, modem, panneau de raccordement, PC (blanc)',
 		rating: 4.7,
 		reviews: 162,
 		images: [FolishineCat7],
@@ -109,7 +109,7 @@ const electronicProductsMock: Product[] = [
 	{
 		id: 'Product-7',
 		name: 'Cat6 Patch Cable',
-		description: 'Snagless Unshielded UTP RJ45 LAN Cable, PVC CM, Gray, 7ft (2.1m)',
+		description: 'Câble LAN RJ45 sans bavure non blindé UTP, PVC CM, gris, 7 pieds (2,1 m)',
 		rating: 4,
 		reviews: 75,
 		images: [product5],
@@ -121,7 +121,7 @@ const electronicProductsMock: Product[] = [
 	},
 	{
 		id: 'Product-8',
-		name: 'Dual-Lens 4G Security Camera with Auto-Zoom',
+		name: 'Caméra de sécurité 4G à double objectif avec auto-zoom',
 		rating: 4.5,
 		reviews: 147,
 		images: [product6],
@@ -130,7 +130,7 @@ const electronicProductsMock: Product[] = [
 		creationDate: '2025-02-06',
 		categories: ['electronics'],
 		tags: ['inStock'],
-		specs: ['Dual View', '4G LTE', 'IP65 Weatherproof'],
+		specs: ['Vue double', '4G LTE', 'Étanche IP65'],
 	},
 	{
 		id: 'Product-9',
@@ -143,13 +143,13 @@ const electronicProductsMock: Product[] = [
 		creationDate: '2025-02-06',
 		categories: ['electronics'],
 		tags: ['new'],
-		specs: ['Long-Lasting Technology, InfiniPower™', '2300W | 2048Wh', 'IP65 Weatherproof'],
+		specs: ['Technologie de longue durée, InfiniPower™', '2300W | 2048Wh', 'Étanche IP65'],
 	},
 	{
 		id: 'Product-10',
 		name: '400 W Solar Panel 12 V/18 V',
 		description:
-			'Monocrystalline Solar Panel N-Type, Highly Efficient Aluminium Frame, SMBB Technology, PV Module 2 x 200 Watt Solar Module for Balcony Power Plant, House Roof, Motorhome',
+			'Panneau solaire monocristallin de type N, cadre en aluminium hautement efficace, technologie SMBB, module PV 2 x 200 watts pour centrale électrique de balcon, toit de maison, camping-car',
 		rating: 4.5,
 		reviews: 147,
 		images: [product8],
@@ -163,7 +163,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-11',
 		name: 'MacBook Air',
 		description:
-			'The MacBook Air is ultra-light at 11.5 mm, ideal for on-the-go use. Its sturdy case is made from over 50% recycled aluminum.',
+			"Le MacBook Air est ultra-léger avec une épaisseur de 11,5 mm, idéal pour une utilisation en déplacement. Son boîtier robuste est réalisé à partir de plus de 50% d'aluminium recyclé.",
 		rating: 4.5,
 		reviews: 147,
 		images: [product9],
@@ -176,7 +176,7 @@ const electronicProductsMock: Product[] = [
 	{
 		id: 'Product-12',
 		name: 'Galaxy Z Fold7',
-		description: '1. Smartphone | 2. Data cable | 3. Slot tool.',
+		description: '1. Smartphone | 2. Câble de données | 3. Outil de fente.',
 		rating: 4.5,
 		reviews: 147,
 		images: [product10],
@@ -185,12 +185,12 @@ const electronicProductsMock: Product[] = [
 		creationDate: '2025-02-06',
 		categories: ['electronics'],
 		tags: ['inStock'],
-		specs: ['A charging adapter is not included with the Galaxy Z Fold7.'],
+		specs: ["Un adaptateur de charge n'est pas inclus avec le Galaxy Z Fold7."],
 	},
 	{
 		id: 'Product-13',
 		name: 'ZV-E1 full-frame vlog camera',
-		description: 'Full-frame cameraNext gen of content creation',
+		description: 'Appareil photo plein format La nouvelle génération de création de contenu',
 		rating: 4.5,
 		reviews: 147,
 		images: [product11],
@@ -204,7 +204,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-14',
 		name: 'JBL Flip Essential 2',
 		description:
-			'Enjoy music on the go with the JBL Flip Essential 2. This waterproof Bluetooth speaker offers up to 10 hours of JBL Original Pro Sound.',
+			"Profitez de la musique en déplacement avec le JBL Flip Essential 2. Cet enceinte Bluetooth étanche offre jusqu'à 10 heures de son JBL Original Pro.",
 		rating: 4.5,
 		reviews: 147,
 		images: [product12],
@@ -218,7 +218,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-15',
 		name: 'MX Keys S Combo',
 		description:
-			'Rechargeable Li-Po battery (1500mAh). Note: FileVault on macOS may block password entry at startup when using Bluetooth. Use the Logi Bolt USB receiver instead.',
+			"Batterie Li-Po rechargeable (1500mAh). Remarque : FileVault sous macOS peut bloquer la saisie du mot de passe au démarrage lors de l'utilisation du Bluetooth. Utilisez plutôt le récepteur USB Logi Bolt.",
 		rating: 4.5,
 		reviews: 147,
 		images: [product13],
@@ -232,7 +232,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-16',
 		name: 'Jabra Evolve2 65 Wireless PC Headset',
 		description:
-			'Noise Cancelling, Microsoft Teams-Certified Stereo Headphones with Long-Lasting Battery, USB-C Bluetooth Adapter, Black',
+			'Annulation de bruit, casque stéréo certifié Microsoft Teams avec batterie longue durée, adaptateur Bluetooth USB-C, noir',
 		rating: 4.5,
 		reviews: 147,
 		images: [product14],
@@ -246,7 +246,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-17',
 		name: 'LG OLED65C47LA TV 65 Inch',
 		description:
-			'(165 cm) OLED evo TV (α9 Gen7 4K AI Processor, webOS 24, Dolby Vision, up to 120 Hz) [Model Year 2024]',
+			"(165 cm) Téléviseur OLED evo (processeur α9 Gen7 4K AI, webOS 24, Dolby Vision, jusqu'à 120 Hz) [Modèle année 2024]",
 		rating: 4.5,
 		reviews: 147,
 		images: [product15],
@@ -260,7 +260,7 @@ const electronicProductsMock: Product[] = [
 		id: 'Product-18',
 		name: 'LG GSXV91MCAF, Class F, 635 L',
 		description:
-			'Fridge side-by-side, dimensions (W x H x D) 91.3 x 179 x 73.5 cm, capacity 635 L, energy efficiency class F, colour matte black, 36 dB(A).',
+			"Réfrigérateur side-by-side, dimensions (L x H x P) 91,3 x 179 x 73,5 cm, capacité 635 L, classe d'efficacité énergétique F, couleur noir mat, 36 dB(A).",
 		rating: 4.5,
 		reviews: 147,
 		images: [product16],

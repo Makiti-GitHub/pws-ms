@@ -11,10 +11,12 @@ import { toast } from 'sonner'
 
 interface ProductCardProps {
 	product: Product
+	showPrice?: boolean
 }
 
 const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 	product,
+	showPrice = true,
 	className,
 	children,
 	...props
@@ -74,12 +76,14 @@ const ProductCard: FC<React.ComponentProps<'article'> & ProductCardProps> = ({
 				</div> */}
 
 				<div className="space-y-2 lg:space-y-4">
-					<div className="flex items-center justify-between">
-						<span className="text-2xl font-seravek_bold text-secondary">{`${product.price
-							.toString()
-							.toCommaSeperatedDigits()} CFA`}</span>
-						<span>{`${product.rating} (${product.reviews} reviews)`}</span>
-					</div>
+					{showPrice ? (
+						<div className="flex items-center justify-between">
+							<span className="text-2xl font-seravek_bold text-secondary">{`${product.price
+								.toString()
+								.toCommaSeperatedDigits()} CFA`}</span>
+							<span>{`${product.rating} (${product.reviews} reviews)`}</span>
+						</div>
+					) : null}
 					<div className="w-full flex md:flex-row gap-2 lg:gap-4 items-center">
 						{/* <Button className="rounded-[8px] w-full lg:w-auto flex-1 h-max !py-2 sm:!py-3 !px-0 gap-5 lg:gap-3 2xl:gap-5 hover:cursor-pointer border border-secondary text-secondary bg-transparent hover:bg-accent/5">
 						<span className="sr-only">More details</span>{' '}

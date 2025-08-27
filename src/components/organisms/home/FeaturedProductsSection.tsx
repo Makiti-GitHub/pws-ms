@@ -21,7 +21,7 @@ const FeaturedProductsSection = () => {
 				/>
 				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 					{productsMock.slice(0, 6).map((product, index) => (
-						<ProductCard key={`product-${index}`} product={product} />
+						<ProductCard key={`product-${index}`} product={product} showPrice={false} />
 					))}
 				</div>
 			</div>
