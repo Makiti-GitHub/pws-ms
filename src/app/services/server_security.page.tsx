@@ -71,9 +71,9 @@ const ServerSecurity: PageComponent = () => {
 								))}
 							</div>
 
-							<p className="font-seravek_medium text-2xl text-center text-secondary">
+							{/* <p className="font-seravek_medium text-2xl text-center text-secondary">
 								{(665000).toString().toCommaSeperatedDigits()} CFA/{t('month')}
-							</p>
+							</p> */}
 
 							<Button
 								onClick={() => {

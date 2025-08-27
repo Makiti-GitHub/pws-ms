@@ -521,7 +521,7 @@
                     "title": "Contact",
                     "p1": "Pour toute demande relative à cette politique de confidentialité ou à vos données personnelles, vous pouvez nous contacter via les coordonnées suivantes :",
                     "p2": "<bold>Makiti SARL</bold>",
-                    "p3": "Site web : <link1>www.makiti-group.com</link1>",
+                    "p3": "Site web : <link1>www.makiti.cm</link1>",
                     "p4": "Adresse e-mail : <email>contact@makiti.cm</email>",
                     "p5": "Téléphone : <phone>+237 680 095 453</phone>"
                 }
@@ -529,7 +529,7 @@
         },
         "termsAndConditions": {
             "title": "Conditions Générales d’Utilisation (CGU) – Makiti SARL",
-            "p1": "<bold>Dernière mise à jour : (Date à insérer)<bold>",
+            "p1": "<bold>Dernière mise à jour : {{date}}<bold>",
             "p2": "Bienvenue sur la plateforme de Makiti SARL. En accédant à nos services numériques, applications ou sites web, vous acceptez, sans réserve, les présentes Conditions Générales d’Utilisation (CGU). Veuillez les lire attentivement avant toute utilisation.",
             "sections": {
                 "presentation": {
@@ -620,7 +620,7 @@
                     "p2": "<bold>Makiti SARL</bold>",
                     "p3": "Email : <email>contact@makiti.cm</email>",
                     "p4": "Téléphone : <phone>+237 680 095 453</phone>",
-                    "p5": "Site web : <link1>www.makiti-group.com</link1>"
+                    "p5": "Site web : <link1>www.makiti.cm</link1>"
                 }
             }
         },
@@ -647,7 +647,7 @@
                 },
                 "websitePurpose": {
                     "title": "Objet du site",
-                    "p1": "Le site <link1>www.makiti-group.com</link1> a pour objet la présentation des services et produits de Makiti SARL, notamment dans les domaines du numérique, de la logistique, de l'e-commerce et des services digitaux via la plateforme Matoa."
+                    "p1": "Le site <link1>www.makiti.cm</link1> a pour objet la présentation des services et produits de Makiti SARL, notamment dans les domaines du numérique, de la logistique, de l'e-commerce et des services digitaux via la plateforme Matoa."
                 },
                 "intellectualProperty": {
                     "title": "Propriété intellectuelle",

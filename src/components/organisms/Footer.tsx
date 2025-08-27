@@ -152,7 +152,7 @@ const Footer = () => {
 										/>
 									</div>
 									<a
-										href={`tel:${locationMock.phone}`}
+										href={`tel:${locationMock.phone.replace(/\s/g, '')}`}
 										target="_blank"
 										rel="noopener noreferrer"
 										className="flex-1"

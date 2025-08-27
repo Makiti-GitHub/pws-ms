@@ -146,7 +146,7 @@ const PrivacyPolicy: PageComponent = () => {
 					<div>
 						<TransParagraph
 							transKey="pages.privacyPolicy.sections.contact.p3"
-							links={['https://www.makiti-group.com']}
+							links={['https://www.makiti.cm']}
 						/>
 						<TransParagraph
 							transKey="pages.privacyPolicy.sections.contact.p4"

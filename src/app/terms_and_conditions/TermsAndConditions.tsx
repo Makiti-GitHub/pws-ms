@@ -8,7 +8,13 @@ const TermsAndConditions = () => {
 		<main className="flex flex-col gap-4 sm:gap-8 px-4 sm:px-8 md:px-[80px] lg:px-[120px] pt-[150px] pb-14 relative">
 			<h1 className="font-seravek_bold text-3xl">{t('pages.termsAndConditions.title')}</h1>
 
-			<TransParagraph transKey="pages.termsAndConditions.p1" className="text-lg" />
+			<TransParagraph
+				transKey="pages.termsAndConditions.p1"
+				values={{
+					date: new Date('2023-08-27').toLocaleDateString(),
+				}}
+				className="text-lg"
+			/>
 			<TransParagraph transKey="pages.termsAndConditions.p2" className="text-lg" />
 
 			{/** Section 1 */}
@@ -178,7 +184,7 @@ const TermsAndConditions = () => {
 						/>
 						<TransParagraph
 							transKey="pages.termsAndConditions.sections.contact.p5"
-							links={['https://www.makiti-group.com']}
+							links={['https://www.makiti.cm']}
 						/>
 					</div>
 				</div>

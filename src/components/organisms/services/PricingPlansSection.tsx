@@ -78,9 +78,9 @@ const PricingPlansSection = () => {
 							</ul>
 						</div>
 						<div className="space-y-3">
-							<p className="font-seravek_bold text-2xl text-center text-secondary">
+							{/* <p className="font-seravek_bold text-2xl text-center text-secondary">
 								{plan.price.toString().toCommaSeperatedDigits()} CFA
-							</p>
+							</p> */}
 
 							<Button
 								onClick={() => {

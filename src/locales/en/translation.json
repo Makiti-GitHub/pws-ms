@@ -521,7 +521,7 @@
                     "title": "Contact",
                     "p1": "For any questions regarding this privacy policy or your personal data, you can contact us using the following contact details :",
                     "p2": "<bold>Makiti SARL</bold>",
-                    "p3": "Website : <link1>www.makiti-group.com</link1>",
+                    "p3": "Website : <link1>www.makiti.cm</link1>",
                     "p4": "Email address : <email>contact@makiti.cm</email>",
                     "p5": "Telephone : <phone>+237 680 095 453</phone>"
                 }
@@ -529,7 +529,7 @@
         },
         "termsAndConditions": {
             "title": "Terms and Conditions of Use (TCU) – Makiti SARL",
-            "p1": "<bold>Last update: (Date to be inserted)<bold>",
+            "p1": "<bold>Last update: {{date}}<bold>",
             "p2": "Welcome to the Makiti SARL platform. By accessing our digital services, applications or websites, you unreservedly accept these Terms and Conditions of Use (TCU). Please read them carefully before use.",
             "sections": {
                 "presentation": {
@@ -620,7 +620,7 @@
                     "p2": "<bold>Makiti SARL</bold>",
                     "p3": "Email : <email>contact@makiti.cm</email>",
                     "p4": "Telephone : <phone>+237 680 095 453</phone>",
-                    "p5": "Website : <link1>www.makiti-group.com</link1>"
+                    "p5": "Website : <link1>www.makiti.cm</link1>"
                 }
             }
         },
@@ -647,7 +647,7 @@
                 },
                 "websitePurpose": {
                     "title": "Objet du site",
-                    "p1": "<link1>www.makiti-group.com</link1> is to present the services and products of Makiti SARL, particularly in the fields of digital technology, logistics, e-commerce and digital services via the Matoa platform."
+                    "p1": "<link1>www.makiti.cm</link1> is to present the services and products of Makiti SARL, particularly in the fields of digital technology, logistics, e-commerce and digital services via the Matoa platform."
                 },
                 "intellectualProperty": {
                     "title": "Intellectual property",

@@ -67,7 +67,7 @@ const LegalNotice = () => {
 				<div className="space-y-2 text-lg">
 					<TransParagraph
 						transKey="pages.legalNotice.sections.websitePurpose.p1"
-						links={['https://www.makiti-group.com']}
+						links={['https://www.makiti.cm']}
 					/>
 				</div>
 			</div>

@@ -11,11 +11,13 @@ import { toast } from 'sonner'
 
 interface ServiceCardProps {
 	service: (typeof serverSecurityOffersMock)[number]
+	showPrice?: boolean
 }
 
 const ServiceCard: FC<React.ComponentProps<'article'> & ServiceCardProps> = ({
 	service,
 	className,
+	showPrice,
 	children,
 	...props
 }) => {
@@ -87,9 +89,11 @@ const ServiceCard: FC<React.ComponentProps<'article'> & ServiceCardProps> = ({
 				</div>
 
 				<div className="space-y-3.5">
-					<p className="text-2xl text-center font-seravek_bold text-secondary">{`${service.price
-						.toString()
-						.toCommaSeperatedDigits()} CFA/${t('month')}`}</p>
+					{showPrice ? (
+						<p className="text-2xl text-center font-seravek_bold text-secondary">{`${service.price
+							.toString()
+							.toCommaSeperatedDigits()} CFA/${t('month')}`}</p>
+					) : null}
 					<div className="w-full flex flex-col lg:flex-row gap-2 sm:gap-4 items-center">
 						<Button
 							onClick={() => {

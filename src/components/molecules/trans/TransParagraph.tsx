@@ -6,9 +6,17 @@ interface TransParagraphProps {
 	phones?: string[]
 	links?: string[]
 	className?: string
+	values?: Record<string, string>
 }
 
-const TransParagraph = ({ transKey, links, emails, phones, className }: TransParagraphProps) => {
+const TransParagraph = ({
+	transKey,
+	links,
+	emails,
+	phones,
+	className,
+	values,
+}: TransParagraphProps) => {
 	const emailsRecord: Record<string, React.ReactElement> = {}
 	const linksRecord: Record<string, React.ReactElement> = {}
 	const phonesRecord: Record<string, React.ReactElement> = {}
@@ -33,7 +41,7 @@ const TransParagraph = ({ transKey, links, emails, phones, className }: TransPar
 	phones?.forEach((item, index) => {
 		phonesRecord[`phone${index === 0 ? '' : index + 1}`] = (
 			<a
-				href={`tel:${item}`}
+				href={`tel:${item.replace(/\s/g, '')}`}
 				target="_blank"
 				className="text-primary"
 				rel="noopener noreferrer"
@@ -52,6 +60,7 @@ const TransParagraph = ({ transKey, links, emails, phones, className }: TransPar
 					...linksRecord,
 					...phonesRecord,
 				}}
+				values={values}
 			/>
 		</p>
 	)
