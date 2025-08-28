@@ -284,11 +284,11 @@ const ContactUs: PageComponent = () => {
 							</div>
 							<p className="text-on-surface-variant text-base">
 								<a
-									href="mailto:info@makiti.com"
+									href="mailto:contact@makiti.cm"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									info@makiti.com
+									contact@makiti.cm
 								</a>
 							</p>
 						</div>

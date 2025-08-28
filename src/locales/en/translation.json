@@ -640,10 +640,10 @@
                 },
                 "hosting": {
                     "title": "Hosting",
-                    "p1": "The website is hosted by: <bold>(Name of host)</bold>",
-                    "p2": "Address : <bold>(Host address)</bold>",
-                    "p3": "Telephone : <phone>(Number)</phone>",
-                    "p4": "Email : <email>(Email)</email>"
+                    "p1": "The website is hosted by: <bold>{{hostName}}</bold>",
+                    "p2": "Address : <bold>{{hostAddress}}</bold>",
+                    "p3": "Telephone : <phone>{{phoneNumber}}</phone>, <phone2>{{phoneNumber1}}</phone2>",
+                    "p4": "Email : <email>{{mail}}</email>, <email2>{{mail1}}</email2>"
                 },
                 "websitePurpose": {
                     "title": "Objet du site",

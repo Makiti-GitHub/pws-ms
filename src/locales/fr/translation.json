@@ -640,10 +640,10 @@
                 },
                 "hosting": {
                     "title": "Hébergement",
-                    "p1": "Le site est hébergé par: <bold>(Nom de l’hébergeur)</bold>",
-                    "p2": "Adresse : <bold>(Adresse de l’hébergeur)</bold>",
-                    "p3": "Téléphone : <phone>(Numéro)</phone>",
-                    "p4": "E-mail : <email>(Email)</email>"
+                    "p1": "Le site est hébergé par: <bold>{{hostName}}</bold>",
+                    "p2": "Adresse : <bold>{{hostAddress}}</bold>",
+                    "p3": "Téléphone : <phone>{{phoneNumber}}</phone>, <phone2>{{phoneNumber1}}</phone2>",
+                    "p4": "E-mail : <email>{{mail}}</email>, <email2>{{mail1}}</email2>"
                 },
                 "websitePurpose": {
                     "title": "Objet du site",

@@ -45,15 +45,31 @@ const LegalNotice = () => {
 				</h2>
 
 				<div className="space-y-2 text-lg">
-					<TransParagraph transKey="pages.legalNotice.sections.hosting.p1" />
-					<TransParagraph transKey="pages.legalNotice.sections.hosting.p2" />
+					<TransParagraph
+						transKey="pages.legalNotice.sections.hosting.p1"
+						values={{
+							hostName: 'ADAC',
+						}}
+					/>
+					<TransParagraph
+						transKey="pages.legalNotice.sections.hosting.p2"
+						values={{
+							hostAddress: 'Ngousso, fin cimétière Yaoundé - Cameroun',
+						}}
+					/>
 					<TransParagraph
 						transKey="pages.legalNotice.sections.hosting.p3"
-						phones={['+49 89 3564717-70']}
+						phones={['+237 698 218 984', '+237 696 199 227']}
+						values={{
+							phoneNumber: '+237 698 218 984',
+							phoneNumber1: '+237 696 199 227',
+						}}
 					/>
 					<TransParagraph
 						transKey="pages.legalNotice.sections.hosting.p4"
-						emails={['support@contabo.de']}
+						emails={['info@adac.cm', 'contact@adac.cm']}
+						values={{ mail: 'info@adac.cm', mail1: 'contact@adac.cm' }}
+						// val
 					/>
 				</div>
 			</div>
